@@ -37,3 +37,11 @@ Symbols = {
     "BankNiftyToken"    : 26009,
     "Nse"   :   "NSE"
 }
+
+history_params = {
+     "exchange": "NSE",
+     "symboltoken": "99926009",
+     "interval": "FIVE_MINUTE",
+     "fromdate": "2024-04-15 11:15",
+     "todate": "2024-04-15 11:25"
+}

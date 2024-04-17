@@ -8,6 +8,8 @@ import pyotp, time
 from lib import *
 from Symbols import *
 from Strategy import *
+from datetime import datetime
+
 # import schedule
 
 #create object of call
@@ -18,6 +20,37 @@ obj=SmartConnect(api_key="yWjMIfbo")
 
 data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 refreshToken= data['data']['refreshToken']
+
+history_params = {
+     "exchange": "NSE",
+     "symboltoken": "99926009",
+     "interval": "FIVE_MINUTE",
+     "fromdate": "2024-04-15 09:15",
+     "todate": "2024-04-15 11:25"
+}
+params_two = {
+    "exchange": "NSE",
+    "symboltoken": "99926009",
+    "interval": "FIVE_MINUTE",
+    "fromdate": "2024-04-16 09:15",
+    "todate": "2024-04-16 10:30"
+}
+
+
+
+params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 15, 5)
+# print(params)
+# exit()
+history = obj.getCandleData(params)
+# print(params)
+
+print("the seee---")
+Historion = recent_history_forflowing(history)
+# print(Historion)
+# exit()
+
+
+print("the above is history recenting")
 
 
 
@@ -47,9 +80,12 @@ except Exception as e:
     print(f"Error: {e}")
 
 
+print('--------------------------------------')
 
 
-StreamLTP(Symbols["Nse"], Symbols["BankNifty"],Symbols["BankNiftyToken"], 300, obj)
+# StreamLTP(Symbols["Nse"], Symbols["BankNifty"],Symbols["BankNiftyToken"], 300, obj)
+StreamLTP_two(Symbols["Nse"], Symbols["BankNifty"],Symbols["BankNiftyToken"], 300, obj)
+print(StreamLTP_two)
 
 # while True:
 #     data = obj.ltpData("NSE", "SBIN-EQ", 3045)
