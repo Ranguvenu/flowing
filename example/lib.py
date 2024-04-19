@@ -113,22 +113,16 @@ def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
         i += 1
 
 
-
 def recent_history_forflowing(response_data):
     formatted_data = {}
-    # response_data = response_data.reverse()
-    # print('--------')
+
     print(response_data['data'])
-    # print('--------')
 
     response_data['data'] = list(reversed(response_data['data']))
 
-    # print(response_data['data'])
-    # exit()
     i = 1
     for item in response_data['data']:
-        # print(item)
-        # exit()
+
         timestamp = item[0]
         opening_price = item[1]
         highest_price = item[2]
@@ -136,18 +130,6 @@ def recent_history_forflowing(response_data):
         closing_price = item[4]
         volume = item[5]  # Assuming this is the volume
         spell = spell_integer(i)
-        # Convert timestamp string to a datetime object
-        # timestamp_dt = datetime.datetime.fromisoformat(timestamp[:-6])
-
-        # Construct dictionary for each data point
-        # data_point = {
-        #     f'timestamp_{spell}': timestamp,
-        #     f'opening_price_{spell}': opening_price,
-        #     f'highest_price_{spell}': highest_price,
-        #     f'lowest_price_{spell}': lowest_price,
-        #     f'closing_price_{spell}': closing_price,
-        #     f'volume_{spell}': volume
-        # }
 
         formatted_data[f'timestamp_{spell}'] = timestamp
         formatted_data[f'opening_price_{spell}'] = opening_price
@@ -187,24 +169,6 @@ def spell_integer(n):
     return ''
 
 
-# def recent_historion_time():
-#         # Get current local time
-#     # current_time = datetime.now()
-    
-#     current_time = time.localtime()
-#     current_time = time.strftime("%Y-%m-%d %H:%M", current_time)
-#     # If current minute is a multiple of 5
-#     if current_time.minute % 5 == 0:
-#         starttime = current_time.strftime("%Y-%m-%d %H:%M")
-#     else:
-#         # Find the closest past multiple of 5
-#         minutes_diff = current_time.minute % 5
-#         starttime = (current_time - timedelta(minutes=minutes_diff)).strftime("%Y-%m-%d %H:%M")
-    
-#     return starttime
-
-
-
 def recent_number_of_histories_params(exchange, symboltoken, interval, histories_count, candle_timeframe):
     local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -222,6 +186,24 @@ def recent_number_of_histories_params(exchange, symboltoken, interval, histories
         # "todate": "2024-04-15 11:25"
     }
     return history_params
+def recent_number_of_histories_params_two(exchange, symboltoken, interval, histories_count, candle_timeframe):
+    local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    into_past = candle_timeframe * histories_count*60
+    times = recent_historion_timeline(candle_timeframe, into_past)
+    # print(times['startime_from_readable'])
+    # exit()
+    history_params = {
+        "exchange": f"{exchange}",
+        "symboltoken": f"{symboltoken}",
+        "interval": f"{interval}",
+        # "fromdate": "2024-04-15 11:15",
+        "fromdate": times['startime_to_readable'],
+        "todate":times['startime_from_readable']
+        # "todate": "2024-04-15 11:25"
+    }
+    return history_params
+
 
 
 
@@ -273,3 +255,65 @@ def recent_historion_timeline(interval = False, into_past=False):
 
 
     # return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+
+def recent_historion_timeline_two_for_currentpricess(interval = False, into_past=False):
+    # Get current local time
+    
+    local_time = time.localtime()
+    current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+    # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
+
+    #the below two lines code is only for last holidays
+    current_time = "2024-04-16 11:25:00"
+    current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M:%S")
+
+    # print(type(current_time))
+    # exit()
+
+    # If current minute is a multiple of 5
+    if current_time.minute % interval == 0:
+        minutes_diff = current_time.minute % interval
+        unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
+        time_correction = (time.mktime(unix) - minutes_diff*60)
+        past_time_starts_unix = time_correction - into_past
+
+        past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
+        past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
+
+
+
+        startime_readble = current_time.strftime("%Y-%m-%d %H:%M")
+
+        return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+    else:
+        # Find the closest past multiple of 5
+        minutes_diff = current_time.minute % interval
+        unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
+        time_correction = (time.mktime(unix) - minutes_diff*60)
+        past_time_starts_unix = time_correction - into_past
+
+        past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
+        past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
+        startime_readble = datetime.fromtimestamp(time_correction)
+
+        startime_readble = startime_readble.strftime("%Y-%m-%d %H:%M")
+        return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+
+    # return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+
+
+def next_times_giving(begins="2024-04-15 15:25"):
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
+    begins_unix = int(begins_dt_format.timestamp())
+    reduced_unix = begins_unix - 5 * 60
+    reduced_time = datetime.fromtimestamp(reduced_unix)
+    formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M")
+
+    print(formatted_date)
+    return formatted_date   
+
+

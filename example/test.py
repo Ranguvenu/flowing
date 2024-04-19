@@ -99,3 +99,78 @@ def recent_historion_timeline(interval = False, into_past=False):
 # print(fruit_1)
 # print(fruit_2)
 # print(fruit_3)
+
+
+
+fruits = {"fruit_one": "apple", "fruit_two": "banana", "fruit_three": "cherry", "fruit": "sss"}
+
+# Creating dynamic variables from dictionary
+for key, value in fruits.items():
+    globals()[key] = value
+
+# Accessing dynamic variables
+# print(fruit_one)    # Output: apple
+# print(fruit_two)    # Output: banana
+# print(fruit_three)  # Output: cherry
+# print(fruit)        # Output: sss
+def times_giving(begins=False, interval=False):
+    begins = "2024-04-16 09:15"
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
+    begins_unix = int(begins_dt_format.timestamp())
+    begins_timeonly = begins_dt_format.time()
+    # while 
+
+    then_giventime = begins_timeonly.replace(hour=15, minute=30)
+    # print(then_giventime)
+    # exit()
+
+
+
+    begins_timeonly = datetime.strptime(begins_timeonly.strftime("%H:%M:%S"), "%H:%M:%S").time()
+
+    # Extract hour and minute parts
+    hour = begins_timeonly.hour
+    minute = begins_timeonly.minute
+
+
+    if (hour < 9 and hour != 3 and hour != 2 and hour != 1) or (hour == 9 and minute < 15):
+        giventime = "2024-04-16 09:14"
+        begins_unix = begins_unix - 86400
+
+    # then_giventime_bacames = make yesterdays 3:30pm
+
+    print("Hour:", hour)
+    print("Minute:", minute)
+
+    return begins_timeonly
+
+
+
+
+
+# begins = "2024-04-16 09:15"
+# new_time = "15:30"
+
+# # concatination or replacing time
+# new_begins = (datetime.strptime(begins, "%Y-%m-%d %H:%M").replace(hour=int(new_time[:2]), minute=int(new_time[3:]))).strftime("%Y-%m-%d %H:%M")
+
+# print(times_giving())
+
+
+# from datetime import datetime
+
+def next_times_giving(begins="2024-04-16 09:35"):
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
+    begins_unix = int(begins_dt_format.timestamp())
+    reduced_unix = begins_unix - 5 * 60
+    reduced_time = datetime.fromtimestamp(reduced_unix)
+    formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M")
+
+    print(formatted_date)
+    return formatted_date
+
+# Example usage:
+# times_giving_two()
+
+
+

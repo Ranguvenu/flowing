@@ -29,8 +29,8 @@ BankNiftyHistoricParams={
     "exchange": "NSE",
     "symboltoken": "99926009",
     "interval": "FIVE_MINUTE",
-    "fromdate": "2023-09-08 09:00", 
-    "todate": "2023-09-08 15:30"
+    "fromdate": "2024-04-15 11:15", 
+    "todate": "2023-09-08 11:25"
     }
 Symbols = {
     "BankNifty" : "BANKNIFTY",
