@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 
 #x1 is Least recent closing price and x5 is most recent closing price and y1 current price
 def strategy(x1, x2, x3, x4, x5, y1):
@@ -93,16 +94,23 @@ def spell_integer(n):
 
 
 def flowfilter(payload):
+    captured_output = sys.stdout = sys.stderr = open('data.txt', 'a')
 
     i = 1
-
+    # print(payload['current_green'])
+    print(payload['current_closing'])
     print(payload['a_one'])
-    print(payload['a_one_green'])
-    print(payload['a_one'])
+    # print(payload['a_one_green'])
     print(payload['a_two'])
-    print(payload['a_two_green'])
+    # print(payload['a_two_green'])
+
+
+    if payload['a_two_open']:
+        print(payload['a_two_open'])
+
 
     if payload['current_green'] and payload['current_closing'] > payload['a_one']and payload['a_one_green'] and payload['a_one']> payload['a_two']and payload['a_two_green']:
+        print('in stage')
 
         #flow_one-stage-one
         if payload['a_three_wread'] and payload['a_three_opens'] > payload['a_two']and payload['a_three_opens'] < payload['a_one']:
@@ -123,7 +131,7 @@ def flowfilter(payload):
             
              #flow_one_four    --stage_two
 
-        if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_open'] and payload['a_three_closes'] < payload['a_two_closes']:
+        if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_opens'] and payload['a_three_closes'] < payload['a_two_closes']:
             print("flow_one_four copied")
             if payload['a_four_wread'] and payload['a_four_opens'] > payload['current_closing']:
                 print("flow_one_four_one")
@@ -234,9 +242,9 @@ def flowfilter(payload):
                         print("flow_one_three_five_four")
                     if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
                         print("flow_one_three_five_five ")
-                else:
-                    print("its out of flow")
-                    exit()
+    else:
+        print("its out of flow9stage")
+        # exit()
 
 def flow_two(payload):
 

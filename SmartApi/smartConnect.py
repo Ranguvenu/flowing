@@ -185,11 +185,13 @@ class SmartConnect(object):
         # Validate the content type.
         if "json" in headers["Content-type"]:
             try:
+                print("decoding data here:", r.content)
                 data = json.loads(r.content.decode("utf8"))
              
-            except ValueError:
-                raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
-                    content=r.content))
+            except Exception as ex:
+                # Handling the exception
+                raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(content=some_content))
+
 
             # api error
             if data.get("error_type"):

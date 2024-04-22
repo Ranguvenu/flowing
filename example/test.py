@@ -1,7 +1,11 @@
-# from Strategy import *
-# test = SupportResistance(42241, 49000)
-
-import time, timedelta
+import sys
+sys.path.append('/var/www/html/myproject/')  
+# package import statement
+from smartapi import SmartConnect #or from smartapi.smartConnect import SmartConnect
+#import smartapi.smartExceptions(for smartExceptions)
+from config import *
+import pyotp, time
+from Symbols import *
 from datetime import datetime
 
 
@@ -174,3 +178,29 @@ def next_times_giving(begins="2024-04-16 09:35"):
 
 
 
+# my_dict = {}
+
+# # Method 1: Using the `not` operator
+# if not my_dict:
+#     print("Dictionary is empty")
+
+# # Method 2: Comparing its length to zero
+# if len(my_dict) == 0:
+#     print("Dictionary is empty")
+
+# # Method 3: Directly check if it's empty
+# if my_dict == {}:
+#     print("Dictionary is empty")
+
+
+def recent_number_of_histories_params(exchange=False, symboltoken=False, interval=False, histories_count=False, candle_timeframe=False, history_date=False):
+    local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # into_past = candle_timeframe * histories_count*60
+    # times = recent_historion_timeline(candle_timeframe, into_past, history_date)
+    # print(times['startime_from_readable'])
+    # exit()
+    history_params = {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-16 15:20', 'todate': '2024-04-16 15:20'}
+    return history_params
+
+print(recent_number_of_histories_params())

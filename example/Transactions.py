@@ -36,18 +36,16 @@ params_two = {
     "todate": "2024-04-16 10:30"
 }
 
+# flowing_through_history(obj)
 
 
-params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 15, 5)
-# print(params)
-# exit()
-history = obj.getCandleData(params)
-# print(params)
 
-print("the seee---")
-Historion = recent_history_forflowing(history)
-# print(Historion)
-# exit()
+    
+
+
+# current_data = {'timestamp_one': '2024-04-16T11:25:00+05:30', 'current_opens': 47541.0, 'highest_price_current': 47547.05, 'lowest_price_current': 47459.7, 'current_closing': 47488.85, 'volume_current': 0, 'current_green': False, 'current_wread': True, 'a_current_opens': 47541.0, 'a_one_opening': 47541.0, 'a_one_closes': 47488.85, 'a_one_closing': 47488.85, 'a_one': 47488.85}
+
+
 
 
 print("the above is history recenting")
@@ -56,13 +54,8 @@ print("the above is history recenting")
 
 #fetch the feedtoken
 feedToken=obj.getfeedToken()
-# SandP = SupportResistance(42241, 49999)
-# print(SandP)
-# exit()
-#fetch User Profile
-# userProfile= obj.getProfile(refreshToken)
+
 data = obj.ltpData(Symbols["Nse"], Symbols["BankNifty"], Symbols["BankNiftyToken"])
-# print(data)
 try:
     BankNiftyHistory = obj.getCandleData(BankNiftyHistoricParams)
     BankNiftyHistory = BankNiftyHistory["data"]

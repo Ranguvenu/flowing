@@ -6,6 +6,7 @@ from config import *
 import pyotp, time, timedelta
 import mysql.connector
 from datetime import datetime
+from Strategy import *
 
 #The Connection
 
@@ -140,10 +141,49 @@ def recent_history_forflowing(response_data):
         formatted_data[f'a_{spell}_green'] = True if closing_price > opening_price else False
         formatted_data[f'a_{spell}_wread'] = True if closing_price < opening_price else False
         formatted_data[f'a_{spell}_opens'] = opening_price
+        formatted_data[f'a_{spell}_open'] = opening_price
         formatted_data[f'a_{spell}_opening'] = opening_price
         formatted_data[f'a_{spell}_closes'] = closing_price
         formatted_data[f'a_{spell}_closing'] = closing_price
         formatted_data[f'a_{spell}'] = closing_price
+        i += 1
+        
+
+    return formatted_data
+        # Display the formatted data
+        # for data_point in formatted_data:
+        #     print(data_point)
+
+def current_flowing(response_data):
+    formatted_data = {}
+
+    print(response_data['data'])
+
+    response_data['data'] = list(reversed(response_data['data']))
+
+    i = 1
+    for item in response_data['data']:
+
+        timestamp = item[0]
+        opening_price = item[1]
+        highest_price = item[2]
+        lowest_price = item[3]
+        closing_price = item[4]
+        volume = item[5]  # Assuming this is the volume
+
+        formatted_data['timestamp_current'] = timestamp
+        formatted_data['opening_price_current'] = opening_price
+        formatted_data['highest_price_current'] = highest_price
+        formatted_data['lowest_price_current'] = lowest_price
+        formatted_data['closing_price_current'] = closing_price
+        formatted_data['volume_current'] = volume
+        formatted_data['current_green'] = True if closing_price > opening_price else False
+        formatted_data['current_wread'] = True if closing_price < opening_price else False
+        formatted_data['current_opens'] = opening_price
+        formatted_data['current_opening'] = opening_price
+        formatted_data['current_closes'] = closing_price
+        formatted_data['current_closing'] = closing_price
+        formatted_data['current'] = closing_price
         i += 1
         
 
@@ -169,11 +209,11 @@ def spell_integer(n):
     return ''
 
 
-def recent_number_of_histories_params(exchange, symboltoken, interval, histories_count, candle_timeframe):
+def recent_number_of_histories_params(exchange, symboltoken, interval, histories_count, candle_timeframe, history_date=False):
     local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     into_past = candle_timeframe * histories_count*60
-    times = recent_historion_timeline(candle_timeframe, into_past)
+    times = recent_historion_timeline(candle_timeframe, into_past, history_date)
     # print(times['startime_from_readable'])
     # exit()
     history_params = {
@@ -209,15 +249,17 @@ def recent_number_of_histories_params_two(exchange, symboltoken, interval, histo
 
 
 
-def recent_historion_timeline(interval = False, into_past=False):
+def recent_historion_timeline(interval = False, into_past=False, current_time=False):
     # Get current local time
-    
-    local_time = time.localtime()
-    current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+                                    # uncomment for live
+                                    # local_time = time.localtime()
+                                    # current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
     # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
 
     #the below two lines code is only for last holidays
-    current_time = "2024-04-16 11:25:00"
+    # print(current_time)
+    # exit()
+    # current_time = "2024-04-16 11:25:00"
     current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M:%S")
 
     # print(type(current_time))
@@ -307,13 +349,86 @@ def recent_historion_timeline_two_for_currentpricess(interval = False, into_past
 
 
 def next_times_giving(begins="2024-04-15 15:25"):
-    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
     begins_unix = int(begins_dt_format.timestamp())
     reduced_unix = begins_unix - 5 * 60
     reduced_time = datetime.fromtimestamp(reduced_unix)
-    formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M")
+    formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M:%S")
 
     print(formatted_date)
     return formatted_date   
 
+# To save the result data in file
+def save_data(data):
+    if data is not None:
+        with open('data.txt', 'a') as f:  # 'a' to append data to the file
+            f.write(str(data) + '\n')
+    else:
+        print("Data is None, cannot save to file.")
+
+
+
+def flowing_through_history(obj, current_date=False, history_starts=False):
+
+    history_date = "2024-04-16 15:20:00"
+    current_date = "2024-04-16 15:25:00"
+    i = 0
+    while True:
+        time.sleep(2)  # Sleep for "Intervel" seconds before running again
+
+        history_date = next_times_giving(history_date)
+
+        current_date = next_times_giving(current_date)
+        # print("timegiver H:", history_date)
+        # print("timegiver C:", current_date)
+        # exit()
+        params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_date)
+        print("params:",params)
+        current_params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_date)
+        print("params2:",current_params)
+        # obj=SmartConnect(api_key="yWjMIfbo")
+
+        history = obj.getCandleData(params)
+        print("historyyyyyyyyy:", history)
+
+        # current_history = obj.getCandleData(current_params)
+        try:
+            current_history = obj.getCandleData(current_params)
+            if current_history['errorCode'] == 'AG8001':
+                obj=SmartConnect(api_key="yWjMIfbo")
+                #login api call
+                data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+                # refreshToken= data['data']['refreshToken']
+                current_history = obj.getCandleData(current_params)
+            print("at issue:", current_history)
+        except Exception as e:
+            obj=SmartConnect(api_key="yWjMIfbo")
+            #login api call
+            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+            # refreshToken= data['data']['refreshToken']
+            current_history = obj.getCandleData(current_params)
+
+        print("the seee---")
+        # while True:
+        #     times_forhistory = 
+        Historion = recent_history_forflowing(history)
+
+        current = current_flowing(current_history)
+
+        if not current:
+            print("this is current params:", current_params)
+            print("this is current:", current)
+            print("current_raw:", current_history['errorCode'])
+
+
+        Historion.update(current)
+        flowfilter(Historion)
+
+        save_tofile = flowfilter(Historion)
+        # print("type of response:", type(Historion))
+        # exit()
+        save_data(save_tofile)
+        i += 1
+        print("after flow"+str(i))
+        time.sleep(2)  # Sleep for "Intervel" seconds before running again
 
