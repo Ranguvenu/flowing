@@ -90,187 +90,24 @@ def spell_integer(n):
     return ''
 
 
-
-
-
-def flowfilter(payload):
+def flow_two(payload):
     captured_output = sys.stdout = sys.stderr = open('data.txt', 'a')
 
-    i = 1
-    # print(payload['current_green'])
-    print(payload['current_closing'])
-    print(payload['a_one'])
-    # print(payload['a_one_green'])
-    print(payload['a_two'])
-    # print(payload['a_two_green'])
 
+    # # flow_one -stage_one
 
-    if payload['a_two_open']:
-        print(payload['a_two_open'])
-
-
-    if payload['current_green'] and payload['current_closing'] > payload['a_one']and payload['a_one_green'] and payload['a_one']> payload['a_two']and payload['a_two_green']:
-        print('in stage')
-
-        #flow_one-stage-one
-        if payload['a_three_wread'] and payload['a_three_opens'] > payload['a_two']and payload['a_three_opens'] < payload['a_one']:
-            print("flow_one_one")
-        
-        if payload['a_three_wread'] and payload['a_three_opens'] > payload['current_closing']:
-            print("flow_one_two")
-        
-        if  payload['a_three_wread'] and payload['a_three_opens'] > payload['a_one']and payload['a_three_opens'] < payload['current_closing'] and payload['a_three_opens'] > payload['a_one_closes']:
-            print("flow_one_three")
-        if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_opens'] and payload['a_three_closes'] < payload['a_two_closes']:
-            print("flow_one_four")
-
-        if payload['a_three_wread'] and payload['a_three_opens'] < payload['a_two_closes']:
-            print("flow_one_five")
-
-        #---------------------------------------------------------------------------
-            
-             #flow_one_four    --stage_two
-
-        if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_opens'] and payload['a_three_closes'] < payload['a_two_closes']:
-            print("flow_one_four copied")
-            if payload['a_four_wread'] and payload['a_four_opens'] > payload['current_closing']:
-                print("flow_one_four_one")
-            if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_three_closes']:
-                print("flow_one_four_two")
-            if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_two_closes'] and payload['a_four_opens'] > payload['a_three_closes']:
-                print("flow_one_four_three")
-            if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_one_closes'] and payload['a_four_opens'] > payload['a_two_closes']:
-                print("flow_one_four_four")
-
-            if payload['a_four_wread'] and payload['a_four_opens'] > payload['a_one_closes'] and payload['a_four_opens'] < payload['current_closing']:
-                print("flow_one_four_five  --------- signal might come from here")    
-
-            if payload['a_four_green'] and payload['a_four_opens'] < payload['a_three_opens'] and payload['a_four_closing'] < payload['a_three_closes']:
-                print("flow_one_four_six")
-
-
-
-        #---------------------------------------------------------------------------
-                
-                #flow_one_three   --stage_two
-
-        if  payload['a_three_wread'] and payload['a_three_opens'] > payload['a_one']and payload['a_three_opens'] < payload['current_closing'] and payload['a_three_opens'] > payload['a_one_closes']:
-            print("flow_one_three ------copied")
-            #in pratice it not possible to "a_four_opens == a_three_closes", make it aprox
-            if payload['a_four_green'] and payload['a_four_opens'] == payload['a_three_closes']:
-                print("flow_one_three_one")
-
-            if payload['a_four_wread'] and payload['a_four_opens'] > payload['current_closing']:
-                print("flow_one_three_two")
-            if payload['a_four_green'] and payload['a_four_opens'] < payload['a_three_closes']:
-                print("flow_one_three_three")
-            if payload['a_four_green'] and payload['a_four_opens'] > payload['a_three_closes']:
-                print("flow_one_three_four")
-            if payload['a_four_wread'] and payload['a_four_opens'] < payload['current_closing']:
-                print("flow_one_three_five")
-
-        #--------------------------------------------------------------------------------------------
-
-            #flow_one_three_one   --stage_three
-           
-           
-           #in pratice it not possible to "a_four_opens == a_three_closes", make it aprox
-            if payload['a_four_green'] and payload['a_four_opens'] == payload['a_three_closes']:
-                print("flow_one_three_one ---copied")
-
-                if payload['a_five_green']:
-                    print("flow_one_three_one_one  --signal is here (2nd degree)")
-                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
-                    print("flow_one_three_one_two --signal is here (2nd degree)")
-                    #In practice it is almost not possible, Please make it approx
-                if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
-                    print("flow_one_three_one_three -- might become the signal(3rd degree)")
-                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing']:
-                    print("flow_one_three_one_four")
-
-
-        #------------------------------------------------------------------------------------------------
-
-            #flow_one_three_three   --stage_three
-            if payload['a_four_green'] and payload['a_four_opens'] < payload['a_three_closes']:
-                print("flow_one_three_three --copied")
-
-                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_opens']:
-                    print("flow_one_three_three_one")
-                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
-                    print("flow_one_three_three_two")
-                #in pratice it not possible to "a_five_opens == a_four_closing", make it aprox
-                if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
-                    print("flow_one_three_three_three")
-                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['current_closing']:
-                    print("flow_one_three_three_four")
-                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] > payload['current_closing']:
-                    print("flow_one_three_three_five")
-
-        #---------------------------------------------------------------------------------------------------------------
-
-                # flow_one_three_four --stage_three
-                if payload['a_four_green'] and payload['a_four_opens'] > payload['a_three_closes']:
-                    print("flow_one_three_four  ---copied")
-
-                    if payload['a_five_green'] and payload['a_five_opens'] < payload['a_three_closes']:
-                        print("flow_one_three_four_one")
-                    if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closes']:
-                        print("flow_one_three_four_two")
-                    if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
-                        print("flow_one_three_four_three")
-                    # in practice it's not possible to "a_five_opens == a_four_closing", make it approximate
-                    if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
-                        print("flow_one_three_four_four")
-                    if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['current_closing']:
-                        print("flow_one_three_four_five")
-                    if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] > payload['current_closing']:
-                        print("flow_one_three_four_six")
-                # ----------------------------------------------------------------------------------------------------------------
-
-                # flow_one_three_five --stage_three
-                if payload['a_four_wread'] and payload['a_four_opens'] < payload['current_closing']:
-                    print("flow_one_three_five ---copied")
-
-                    if payload['a_five_green'] and payload['a_five_opens'] > payload['a_four_closing']:
-                        print("flow_one_three_five_one")
-                    if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_closing'] and payload['a_five_opens'] > payload['a_three_closes']:
-                        print("flow_one_three_five_two")
-                    if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_closing'] and payload['a_five_opens'] < payload['a_three_closes']:
-                        print("flow_one_three_five_three")
-                    if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_five_opens'] and payload['a_five_opens'] < payload['current_closing']:
-                        print("flow_one_three_five_four")
-                    if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
-                        print("flow_one_three_five_five ")
-    else:
-        print("its out of flow9stage")
-        # exit()
-
-def flow_two(payload):
-
-    payload['current_closing'] = True
-
-    # flow_one -stage_one
-    payload['current_green'] = True
-    payload['a_one_green'] = True
-    payload['a_two_wread'] = True
-    payload['a_two_opens'] = True
-    payload['a_one_closing'] = True
     if payload['current_green'] and payload['a_one_green'] and payload['a_two_wread'] and payload['a_two_opens'] > payload['a_one_closing'] and payload['a_two_opens'] < payload['current_closing']:
 
         print("flow_two -stage_one")
-
         # flow_two_one --stage-two-start
-        payload['a_three_wread'] = True
-        payload['a_three_opens'] = True
+
         if payload['a_three_wread'] and payload['a_three_opens'] < payload['current_closing']:
             print("flow_two_one --stage_two")
         # flow_two_two --stage_two
         if payload['a_three_wread'] and payload['a_three_opens'] > payload['current_closing']:
             print("flow_two_two --stage_two falsy")
         # flow_two_three --stage_two
-        payload['a_two_closing'] = True
-        payload['a_three_green'] = True
+
         if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
             print("flow_two_three")
         # flow_two_four --stage_two
@@ -284,9 +121,7 @@ def flow_two(payload):
         if payload['a_three_wread'] and payload['a_three_opens'] < payload['current_closing']:
             print("flow_two_one --stage_two -copied")
             # flow_two_one_one ---stage_three-starts
-            payload['a_four_opens'] = True
-            payload['a_four_green'] = True
-            payload['a_three_closing'] = True
+
             #                  approx
             if payload['a_four_green'] and payload['a_four_opens'] == payload['a_three_closing']:
                 print("flow_two_one_one ---stage_three")
@@ -303,7 +138,6 @@ def flow_two(payload):
             if payload['a_four_green'] and payload['a_four_opens'] < payload['a_two_closing']:
                 print("flow_two_one_five ---stage_three")
             # flow_two_one_six ---stage_three
-            payload['a_four_wread'] = True
             if payload['a_four_wread'] and payload['a_four_opens'] > payload['current_closing']:
                 print("flow_two_one_six ---stage_three")
 
@@ -359,29 +193,18 @@ def flow_two(payload):
             # flow_two_five_five --stage_three
             if payload['a_four_green'] and payload['a_four_opens'] > payload['current_closing']:
                 print("flow_two_five_five --stage_three")
-
-    """ flow_two_one_one series going to come here -------------------------------------------"""
-
-
-
-
-                    # flow_two_three_one_one stage_four_starts
-    if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
-        print("flow_two_three ---stage_three_starts_for_four --copied2")
-        # flow_two_three_one ---stage_three_for_four -copied
-        if payload['a_four_green'] and payload['a_four_opens'] > payload['a_two_closing']:
+        
+        if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
+            print("flow_two_three ---stage_three_starts_for_four --copied2")
+            # flow_two_three_one ---stage_three_for_four -copied
             print("flow_two_three_one ---stage_four_starts -copied ")
             # flow_two_three_one_one ----stage_four starts
-            payload['a_five_green'] = True
             if payload['a_five_green']:
                 print("flow_two_three_one_one ----stage_four started")
             # flow_two_three_one_two ----stage_four
-            payload['a_five_opens'] = True
             if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing']:
                 print("flow_two_three_one_two ----stage_four")
             # flow_two_three_one_three ----stage_four
-            payload['a_four_closing'] = True
-            payload['a_five_wread'] = True
             if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                 print("flow_two_three_one_three ----stage_four")
             # flow_two_three_one_four ----stage_four
@@ -397,78 +220,86 @@ def flow_two(payload):
             if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
                 print("flow_two_three_one_seven ----stage_four")
 
-    # flow_two_three_two ----stage_four_starts -copied
-    if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
-        print("flow_two_three ---stage_four_starts -copied")
-        # flow_two_three_two ---stage_three
-        if payload['a_one_green'] and payload['a_four_opens'] < payload['a_two_closing']:
-            print("flow_two_three_two ---stage_four_starts")
 
-            # flow_two_three_two_one ---stage_four_starts -copied
-            if payload['a_five_green']:
-                print("flow_two_three_two_one _starts_started")
-            # flow_two_three_two_two
-            if payload['a_five_wread'] and payload['a_five_wread'] == payload['a_four_closing']:
-                print("flow_two_three_two_two ---stage_four")
-            # flow_two_three_two_three
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['a_three_closing']:
-                print("flow_two_three_two_three ---stage_four")
-            if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_closing']:
-                print("flow_two_three_two_four ---stage_four")
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['current_closing']:
-                print("flow_two_three_two_five ---stage_four")
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
-                print("flow_two_three_two_six ---stage_four")
+    #flow_two_one_one series going to come here -------------------------------------------"""
 
-    # flow_two_three_two ----stage_four_starts -copied
-    if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
-        print("flow_two_three ---stage_four_starts -copied")
-        # flow_two_three_three ---stage_three
-        if payload['a_four_wread'] and payload['a_four_opens'] == payload['a_three_closing']:
-            print("flow_two_three_three ---stage_four_starts - copied")
-            # flow_two_three_three_one ------stage_four_starts
-            if payload['a_five_green'] and payload['a_five_opens'] == payload['a_three_closing']:
-                print("flow_two_three_three_one ---stage_four_started")
-            # flow_two_three_three_two ---stage_four
-            if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
-                print("flow_two_three_three_two ---stage_four")
-            # flow_two_three_three_three ---stage_four
-            if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
-                print("flow_two_three_three_three ---stage_four")
-            # flow_two_three_three_four ---stage_four
-            if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
-                print("flow_two_three_three_four ---stage_four")
-            # flow_two_three_three_five ---stage_four
-            if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing'] and payload['a_five_opens'] < payload['a_four_closing']:
-                print("flow_two_three_three_five ---stage_four")
-            # flow_two_three_three_six ---stage_four
-            if payload['a_five_wread'] and payload['a_five_opens'] < payload['current_closing']:
-                print("flow_two_three_three_six ---stage_four")
-            # flow_two_three_three_seven ---stage_four
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
-                print("flow_two_three_three_seven ---stage_four")
 
-    # flow_two_three_two ----stage_four_starts -copied
-    if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
-        print("flow_two_three ---stage_four_starts -copied")
-        # flow_two_three_four ---stage_three
-        if payload['a_four_wread'] and payload['a_four_opens'] > payload['a_three_closing'] and payload['a_four_opens'] < payload['current_closing']:
-            print("flow_two_three_four ---stage_three")
-            # flow_two_three_four_one ---stage_four_starts
-            if payload['a_five_green'] and payload['a_five_opens'] > payload['a_four_closing']:
-                print("flow_two_three_four_one ---stage_four_started")
-            # flow_two_three_four_two ---stage_three
-            if payload['a_five_green'] and payload['a_five_opens'] == payload['a_four_closing']:
-                print("flow_two_three_four_two ---stage_three")
-            # flow_two_three_four_three ---stage_three
-            if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
-                print("flow_two_three_four_three ---stage_three")
-            # flow_two_three_four_four ---stage_three
-            if payload['a_five_wread'] and payload['a_five_opens'] < payload['current_closing']:
-                print("flow_two_three_four_four ---stage_three")
-            # flow_two_three_four_five ---stage_three
-            if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
-                print("flow_two_three_four_five ---stage_three")
+
+
+                # flow_two_three_one_one stage_four_starts
+
+        # flow_two_three_two ----stage_four_starts -copied
+        if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
+            print("flow_two_three ---stage_four_starts -copied")
+            # flow_two_three_two ---stage_three
+            if payload['a_one_green'] and payload['a_four_opens'] < payload['a_two_closing']:
+                print("flow_two_three_two ---stage_four_starts")
+
+                # flow_two_three_two_one ---stage_four_starts -copied
+                if payload['a_five_green']:
+                    print("flow_two_three_two_one _starts_started")
+                # flow_two_three_two_two
+                if payload['a_five_wread'] and payload['a_five_wread'] == payload['a_four_closing']:
+                    print("flow_two_three_two_two ---stage_four")
+                # flow_two_three_two_three
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['a_three_closing']:
+                    print("flow_two_three_two_three ---stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_closing']:
+                    print("flow_two_three_two_four ---stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['current_closing']:
+                    print("flow_two_three_two_five ---stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
+                    print("flow_two_three_two_six ---stage_four")
+
+        # flow_two_three_two ----stage_four_starts -copied
+        if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
+            print("flow_two_three ---stage_four_starts -copied")
+            # flow_two_three_three ---stage_three
+            if payload['a_four_wread'] and payload['a_four_opens'] == payload['a_three_closing']:
+                print("flow_two_three_three ---stage_four_starts - copied")
+                # flow_two_three_three_one ------stage_four_starts
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_three_closing']:
+                    print("flow_two_three_three_one ---stage_four_started")
+                # flow_two_three_three_two ---stage_four
+                if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
+                    print("flow_two_three_three_two ---stage_four")
+                # flow_two_three_three_three ---stage_four
+                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
+                    print("flow_two_three_three_three ---stage_four")
+                # flow_two_three_three_four ---stage_four
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
+                    print("flow_two_three_three_four ---stage_four")
+                # flow_two_three_three_five ---stage_four
+                if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing'] and payload['a_five_opens'] < payload['a_four_closing']:
+                    print("flow_two_three_three_five ---stage_four")
+                # flow_two_three_three_six ---stage_four
+                if payload['a_five_wread'] and payload['a_five_opens'] < payload['current_closing']:
+                    print("flow_two_three_three_six ---stage_four")
+                # flow_two_three_three_seven ---stage_four
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
+                    print("flow_two_three_three_seven ---stage_four")
+
+        # flow_two_three_two ----stage_four_starts -copied
+        if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
+            print("flow_two_three ---stage_four_starts -copied")
+            # flow_two_three_four ---stage_three
+            if payload['a_four_wread'] and payload['a_four_opens'] > payload['a_three_closing'] and payload['a_four_opens'] < payload['current_closing']:
+                print("flow_two_three_four ---stage_three")
+                # flow_two_three_four_one ---stage_four_starts
+                if payload['a_five_green'] and payload['a_five_opens'] > payload['a_four_closing']:
+                    print("flow_two_three_four_one ---stage_four_started")
+                # flow_two_three_four_two ---stage_three
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_four_closing']:
+                    print("flow_two_three_four_two ---stage_three")
+                # flow_two_three_four_three ---stage_three
+                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
+                    print("flow_two_three_four_three ---stage_three")
+                # flow_two_three_four_four ---stage_three
+                if payload['a_five_wread'] and payload['a_five_opens'] < payload['current_closing']:
+                    print("flow_two_three_four_four ---stage_three")
+                # flow_two_three_four_five ---stage_three
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
+                    print("flow_two_three_four_five ---stage_three")
 
 
 
@@ -503,31 +334,34 @@ def flow_two(payload):
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
                     print("flow_two_four_one_seven ----stage_four")
 
-    # flow_two_four --stage_three_starts -copied
-    if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_closing']:
-        print("flow_two_four --stage_three_starts -copied")
+        # flow_two_four --stage_three_starts -copied
+        if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_closing']:
+            print("flow_two_four --stage_three_starts -copied")
 
-        # flow_two_four_two --stage_three_starts
-        if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_three_closing']:
-            print("flow_two_four_two --stage_three_starts_for_four - copied")
-            # flow_two_four_two_one --stage_four
-            if payload['a_five_green'] and payload['a_two_opens'] < payload['a_four_closing']:
-                print("flow_two_four_two_one --stage_three_started")
-            # flow_two_four_two_two --stage_three
-            if payload['a_five_green'] and payload['a_five_opens'] == payload['a_four_closing']:
-                print("flow_two_four_two_two --stage_three")
-            # flow_two_four_three --stage_three
-            if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_closing']:
-                print("flow_two_four_three --stage_three")
-            # flow_two_four_two_four --stage_three
-            if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
-                print("flow_two_four_two_four --stage_three")
-            # flow_two_four_two_five --stage_three
-            if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
-                print("flow_two_four_two_five --stage_three")
-            # flow_two_four_two_six --stage_three
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['current_closing']:
-                print("flow_two_four_two_six --stage_three")
-            # flow_two_four_two_seven --stage_three
-            if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
-                print("flow_two_four_two_seven --stage_three")
+            # flow_two_four_two --stage_three_starts
+            if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_three_closing']:
+                print("flow_two_four_two --stage_three_starts_for_four - copied")
+                # flow_two_four_two_one --stage_four
+                if payload['a_five_green'] and payload['a_two_opens'] < payload['a_four_closing']:
+                    print("flow_two_four_two_one --stage_three_started")
+                # flow_two_four_two_two --stage_three
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_four_closing']:
+                    print("flow_two_four_two_two --stage_three")
+                # flow_two_four_three --stage_three
+                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_closing']:
+                    print("flow_two_four_three --stage_three")
+                # flow_two_four_two_four --stage_three
+                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
+                    print("flow_two_four_two_four --stage_three")
+                # flow_two_four_two_five --stage_three
+                if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
+                    print("flow_two_four_two_five --stage_three")
+                # flow_two_four_two_six --stage_three
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['current_closing']:
+                    print("flow_two_four_two_six --stage_three")
+                # flow_two_four_two_seven --stage_three
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
+                    print("flow_two_four_two_seven --stage_three")
+        
+    else:
+        print("It's out of second flow")
