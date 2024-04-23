@@ -185,7 +185,6 @@ class SmartConnect(object):
         # Validate the content type.
         if "json" in headers["Content-type"]:
             try:
-                print("decoding data here:", r.content)
                 data = json.loads(r.content.decode("utf8"))
              
             except Exception as ex:

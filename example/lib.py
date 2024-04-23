@@ -58,10 +58,9 @@ def Ltp_insertion(i, Ltp):
         'database': 'mydb'
     }
     dbconnection = mysql.connector.connect(**db_config)
-    print(dbconnection)
     cursor = dbconnection.cursor()
     insert_query = "INSERT INTO streamed_data (symbol, price, Exchange) VALUES (%s, %s, %s)"
-    print(Ltp)
+    # print(Ltp)
     # exit()
     data_to_insert = [Ltp['data']['tradingsymbol'], Ltp['data']['ltp'], Ltp['data']['exchange']]
     cursor.execute(insert_query, data_to_insert)
@@ -80,8 +79,6 @@ def get_records(Table, NumberOfRecentRecords):
 
     return Records
 
-
-
 def Db_Connection():
     db_config = {
         'host': 'localhost',
@@ -92,7 +89,7 @@ def Db_Connection():
     return mysql.connector.connect(**db_config)
 def round_up_to_nearest_five(x):
     return 5 * ((x + 4) // 5)
-
+    
 def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
     i = 0
     while True:
