@@ -4,7 +4,7 @@ sys.path.append('/var/www/html/myproject/')
 from smartapi import SmartConnect #or from smartapi.smartConnect import SmartConnect
 #import smartapi.smartExceptions(for smartExceptions)
 from config import *
-import pyotp, time
+import pyotp, time, timedelta
 from Symbols import *
 from datetime import datetime
 
@@ -163,15 +163,15 @@ def times_giving(begins=False, interval=False):
 
 # from datetime import datetime
 
-def next_times_giving(begins="2024-04-16 09:35"):
-    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
-    begins_unix = int(begins_dt_format.timestamp())
-    reduced_unix = begins_unix - 5 * 60
-    reduced_time = datetime.fromtimestamp(reduced_unix)
-    formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M")
+# def next_times_giving(begins="2024-04-16 09:35"):
+#     begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M")
+#     begins_unix = int(begins_dt_format.timestamp())
+#     reduced_unix = begins_unix - 5 * 60
+#     reduced_time = datetime.fromtimestamp(reduced_unix)
+#     formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M")
 
-    print(formatted_date)
-    return formatted_date
+#     print(formatted_date)
+#     return formatted_date
 
 # Example usage:
 # times_giving_two()
@@ -193,14 +193,82 @@ def next_times_giving(begins="2024-04-16 09:35"):
 #     print("Dictionary is empty")
 
 
-def recent_number_of_histories_params(exchange=False, symboltoken=False, interval=False, histories_count=False, candle_timeframe=False, history_date=False):
-    local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+# def next_five():
+#     current_time = time.localtime()
+#     current_time = current_time.strptime()
 
-    # into_past = candle_timeframe * histories_count*60
-    # times = recent_historion_timeline(candle_timeframe, into_past, history_date)
-    # print(times['startime_from_readable'])
+#     print(current_time)
+
+# next_five()
+
+def next_fivemloop_inseconds():
+    local_time = time.localtime()
+    current_time = int(time.strftime("%M", local_time))
+    # print(time.strftime("%M", local_time))
     # exit()
-    history_params = {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-16 15:20', 'todate': '2024-04-16 15:20'}
-    return history_params
+    # Sample next_time
+    next_time = time.strftime("%Y-%m-%d %H:%M", local_time)
 
-print(recent_number_of_histories_params())
+    if current_time % 5 != 0:
+        current_time = (current_time // 5 + 1) * 5
+
+    # Split next_time into date and time components
+    date_part, time_part = next_time.split()
+
+    # Replace the minute part with current_time
+    new_time = time_part[:3] + str(current_time)
+
+    # Reconstruct the modified next_time
+    modified_next_time = date_part + ' ' + new_time
+    modified_next_time = datetime.strptime(modified_next_time, "%Y-%m-%d %H:%M")
+    modified_next_time = int(modified_next_time.timestamp())
+    now_the_time = int(time.time())
+    next_loop_inseconds = modified_next_time - now_the_time
+    return next_loop_inseconds
+
+
+# def test():
+
+#     return {'history_date':'history_date', 'current_date':'current_date'}
+# testsse = test()
+# print(testsse['history_date'])
+
+import sys
+sys.path.append('/var/www/html/myproject/')  
+from smartapi import SmartConnect
+from config import *
+import pyotp
+from datetime import datetime, timedelta
+from datetime import datetime, time, timedelta
+
+def into_the_yesterday(begins="2024-04-15 09:15:00"):
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
+    
+    # Extract time component from begins_dt_format
+    time_component = begins_dt_format.time()
+
+    # Define the target times for comparison
+    target_time_1 = time(9, 15, 0)
+    target_time_2 = time(9, 10, 0)
+    target_time_1 = datetime.strptime("09:15:00", "%H:%M:%S")
+    target_time_1 = target_time_1.time()
+    target_time_2 = datetime.strptime("09:10:00", "%H:%M:%S")
+    target_time_2 = target_time_2.time()
+    # print(target_time_1.time())
+    # exit()
+
+    # If time is exactly 9:15, return yesterday's 15:35
+    if time_component == target_time_1:
+        # Calculate yesterday's date by subtracting 1 day
+        yesterday = begins_dt_format - timedelta(days=1)
+        # Create a new datetime object for yesterday's 15:35
+        return datetime(year=yesterday.year, month=yesterday.month, day=yesterday.day, hour=15, minute=35, second=0)
+    # If time is exactly 9:10, return yesterday's 15:30
+    elif time_component == target_time_2:
+        # Calculate yesterday's date by subtracting 1 day
+        yesterday = begins_dt_format - timedelta(days=1)
+        # Create a new datetime object for yesterday's 15:30
+        return datetime(year=yesterday.year, month=yesterday.month, day=yesterday.day, hour=15, minute=30, second=0)
+    else:
+        return begins  # Return False if neither condition is met
+# print(next_times_giving())
