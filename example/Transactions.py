@@ -32,13 +32,41 @@ params_two = {
     "exchange": "NSE",
     "symboltoken": "99926009",
     "interval": "FIVE_MINUTE",
-    "fromdate": "2024-04-16 09:15",
-    "todate": "2024-04-16 10:30"
+    "fromdate": "2024-04-25 11:15",
+    "todate": "2024-04-25 11:20"
 }
+history_date = "2024-03-27 15:25:00"
+current_date = "2024-03-27 15:30:00"
+# stream_into_flow(obj)
+# dates = flowing_through_history_two(obj, current_date, history_date)
+# dates = flowing_through_history_two(obj, current_date, history_date)
+# dates = flowing_through_history_two(obj, current_date, history_date)
 
+# exit()
+while True:
+    try:
+        dates = flowing_through_history_two(obj, current_date, history_date)
+        history_date = dates['history_date']
+        current_date = dates['current_date']
+        # exit()
+        # stream_into_flow(obj)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        print("Attempting to reconnect...")
+        # Reconnect and continue the loop
+        
+        obj = SmartConnect(api_key="yWjMIfbo")
+        history_date = "2024-04-26 09:15:00"
+        current_date = "2024-04-26 09:20:00"
+        continue# print(obj.getCandleData(params_two))
+# exit()
 # flowing_through_history(obj)
 
+# history_date = "2024-04-16 15:20:00"
+# current_date = "2024-04-16 15:25:00"
 
+#Live stream into the flowing currents
+# stream_into_flow(obj)
 
     
 

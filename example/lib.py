@@ -5,9 +5,10 @@ from smartapi import SmartConnect
 from config import *
 import pyotp, time, timedelta
 import mysql.connector
-from datetime import datetime
+from datetime import datetime, timedelta
 from Strategy import *
-
+import smtplib
+from email.mime.text import MIMEText
 #The Connection
 
 def StreamLTP(Exchange, Symbol, SymbolCode, Intervel, connection):
@@ -58,10 +59,9 @@ def Ltp_insertion(i, Ltp):
         'database': 'mydb'
     }
     dbconnection = mysql.connector.connect(**db_config)
-    print(dbconnection)
     cursor = dbconnection.cursor()
     insert_query = "INSERT INTO streamed_data (symbol, price, Exchange) VALUES (%s, %s, %s)"
-    print(Ltp)
+    # print(Ltp)
     # exit()
     data_to_insert = [Ltp['data']['tradingsymbol'], Ltp['data']['ltp'], Ltp['data']['exchange']]
     cursor.execute(insert_query, data_to_insert)
@@ -80,8 +80,6 @@ def get_records(Table, NumberOfRecentRecords):
 
     return Records
 
-
-
 def Db_Connection():
     db_config = {
         'host': 'localhost',
@@ -92,7 +90,7 @@ def Db_Connection():
     return mysql.connector.connect(**db_config)
 def round_up_to_nearest_five(x):
     return 5 * ((x + 4) // 5)
-
+    
 def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
     i = 0
     while True:
@@ -102,7 +100,26 @@ def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
         Ltp_insertion(i, Ltp)
         current_time_struct = time.localtime()
         print("Last Trading Price: ", Ltp['data']['ltp'], "@",  time.strftime("%H:%M:%S", current_time_struct))
-
+        
+        # Calculate the time until the next multiple of five minutes
+        current_minute = current_time_struct.tm_min
+        next_iteration_minute = round_up_to_nearest_five(current_minute)
+        minutes_to_sleep = (next_iteration_minute - current_minute) % 60
+        if minutes_to_sleep == 0:
+            minutes_to_sleep = 5
+        print(minutes_to_sleep) 
+        time.sleep(minutes_to_sleep * 60)  # Sleep until the next multiple of five minutes
+        i += 1
+def StreamLTP_twotwo(Exchange, Symbol, SymbolCode, Intervel, connection):
+    i = 0
+    while True:
+        Ltp = connection.ltpData(Exchange, Symbol, SymbolCode)
+        print(Ltp)
+        print('goodthings take time')
+        Ltp_insertion(i, Ltp)
+        current_time_struct = time.localtime()
+        print("Last Trading Price: ", Ltp['data']['ltp'], "@",  time.strftime("%H:%M:%S", current_time_struct))
+        
         # Calculate the time until the next multiple of five minutes
         current_minute = current_time_struct.tm_min
         next_iteration_minute = round_up_to_nearest_five(current_minute)
@@ -117,7 +134,6 @@ def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
 def recent_history_forflowing(response_data):
     formatted_data = {}
 
-    print(response_data['data'])
 
     response_data['data'] = list(reversed(response_data['data']))
 
@@ -156,8 +172,6 @@ def recent_history_forflowing(response_data):
 
 def current_flowing(response_data):
     formatted_data = {}
-
-    print(response_data['data'])
 
     response_data['data'] = list(reversed(response_data['data']))
 
@@ -209,13 +223,40 @@ def spell_integer(n):
     return ''
 
 
-def recent_number_of_histories_params(exchange, symboltoken, interval, histories_count, candle_timeframe, history_date=False):
+def recent_number_of_histories_params(exchange, symboltoken, interval, histories_count, candle_timeframe, history_date=False, forlive = False):
     local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     into_past = candle_timeframe * histories_count*60
-    times = recent_historion_timeline(candle_timeframe, into_past, history_date)
+    if forlive:
+        times = recent_historion_timeline(candle_timeframe, into_past, history_date)
+    else:
+        times = recent_historion_timeline_forlive(candle_timeframe, into_past, history_date)
+
+
     # print(times['startime_from_readable'])
     # exit()
+    history_params = {
+        "exchange": f"{exchange}",
+        "symboltoken": f"{symboltoken}",
+        "interval": f"{interval}",
+        # "fromdate": "2024-04-15 11:15",
+        "fromdate": times['startime_to_readable'],
+        "todate":times['startime_from_readable']
+        # "todate": "2024-04-15 11:25"
+    }
+    return history_params
+
+def recent_number_of_histories_params_forlive(exchange, symboltoken, interval, histories_count, candle_timeframe, history_date=False, live_history = False):
+    local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+    # history_date = False
+    into_past = candle_timeframe * histories_count*60
+    times = recent_historion_timeline(candle_timeframe, into_past, history_date, live_history)
+    # print(times)
+    # exit()
+    # if live_history:
+    #     print(times)
+    #     exit()
+
     history_params = {
         "exchange": f"{exchange}",
         "symboltoken": f"{symboltoken}",
@@ -245,39 +286,43 @@ def recent_number_of_histories_params_two(exchange, symboltoken, interval, histo
     return history_params
 
 
-
-
-
-
-def recent_historion_timeline(interval = False, into_past=False, current_time=False):
+def recent_historion_timeline_forlive(interval = False, into_past=False, current_time=False, forlive_history = False):
     # Get current local time
-                                    # uncomment for live
-                                    # local_time = time.localtime()
-                                    # current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+    # uncomment for live
+
+    # current_time = "2024-04-23 15:30:00"
+    if current_time == False:
+        local_time = time.localtime()
+        current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
     # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
 
     #the below two lines code is only for last holidays
     # print(current_time)
     # exit()
     # current_time = "2024-04-16 11:25:00"
+    # print('datatime doesnt match', current_time)
     current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M:%S")
-
+    # print('dsssssssssssssss:', current_time)
+    # exit()
     # print(type(current_time))
     # exit()
-
     # If current minute is a multiple of 5
     if current_time.minute % interval == 0:
+        # print(type(current_time))
+        # exit()
         minutes_diff = current_time.minute % interval
         unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
-        time_correction = (time.mktime(unix) - minutes_diff*60)
+        time_correction = (time.mktime(unix) - interval*60) if forlive_history else (time.mktime(unix) - minutes_diff*60)
+
         past_time_starts_unix = time_correction - into_past
+        time_correction = datetime.fromtimestamp(time_correction)
 
         past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
         past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
 
+        
+        startime_readble = time_correction.strftime("%Y-%m-%d %H:%M")
 
-
-        startime_readble = current_time.strftime("%Y-%m-%d %H:%M")
 
         return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
 
@@ -285,7 +330,72 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
         # Find the closest past multiple of 5
         minutes_diff = current_time.minute % interval
         unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
-        time_correction = (time.mktime(unix) - minutes_diff*60)
+
+        time_correction = (time.mktime(unix) - minutes_diff*60 - interval*60) if forlive_history else (time.mktime(unix) - minutes_diff*60)
+
+        past_time_starts_unix = time_correction - into_past
+
+        past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
+        past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
+        startime_readble = datetime.fromtimestamp(time_correction)
+
+        startime_readble = startime_readble.strftime("%Y-%m-%d %H:%M")
+        return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+
+    # return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+
+
+
+
+def recent_historion_timeline(interval = False, into_past=False, current_time=False, forlive_history = False):
+    # Get current local time
+    # uncomment for live
+
+    # current_time = "2024-04-23 15:30:00"
+    if current_time == False:
+        local_time = time.localtime()
+        current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+    # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
+
+    #the below two lines code is only for last holidays
+    # print(current_time)
+    # exit()
+    # current_time = "2024-04-16 11:25:00"
+    # print('datatime doesnt match', current_time)
+    current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
+    # print('dsssssssssssssss:', current_time)
+    # exit()
+    # print(type(current_time))
+    # exit()
+    # If current minute is a multiple of 5
+    if current_time.minute % interval == 0:
+        # print(type(current_time))
+        # exit()
+        minutes_diff = current_time.minute % interval
+        unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
+        time_correction = (time.mktime(unix) - interval*60) if forlive_history else (time.mktime(unix) - minutes_diff*60 -600)
+
+        past_time_starts_unix = time_correction - into_past
+        time_correction = datetime.fromtimestamp(time_correction)
+
+        past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
+        past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
+
+        
+        startime_readble = time_correction.strftime("%Y-%m-%d %H:%M")
+
+
+        return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
+
+    else:
+        # Find the closest past multiple of 5
+        minutes_diff = current_time.minute % interval
+        unix = time.strptime(str(current_time), '%Y-%m-%d %H:%M:%S')
+
+        time_correction = (time.mktime(unix) - minutes_diff*60 - interval*60) if forlive_history else (time.mktime(unix) - minutes_diff*60 -600)
+
         past_time_starts_unix = time_correction - into_past
 
         past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
@@ -307,11 +417,9 @@ def recent_historion_timeline_two_for_currentpricess(interval = False, into_past
     # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
 
     #the below two lines code is only for last holidays
-    current_time = "2024-04-16 11:25:00"
+    # current_time = "2024-04-16 11:25:00"
     current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M:%S")
 
-    # print(type(current_time))
-    # exit()
 
     # If current minute is a multiple of 5
     if current_time.minute % interval == 0:
@@ -349,7 +457,14 @@ def recent_historion_timeline_two_for_currentpricess(interval = False, into_past
 
 
 def next_times_giving(begins="2024-04-15 15:25"):
+    print("before",begins)
+
+    begins = into_the_yesterday(begins)
+    # print("after",begins)
+    # exit()
     begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
+    # print(begins_dt_format)
+    # exit()
     begins_unix = int(begins_dt_format.timestamp())
     reduced_unix = begins_unix - 5 * 60
     reduced_time = datetime.fromtimestamp(reduced_unix)
@@ -361,7 +476,7 @@ def next_times_giving(begins="2024-04-15 15:25"):
 # To save the result data in file
 def save_data(data):
     if data is not None:
-        with open('data.txt', 'a') as f:  # 'a' to append data to the file
+        with open('data_two.txt', 'a') as f:  # 'a' to append data to the file
             f.write(str(data) + '\n')
     else:
         print("Data is None, cannot save to file.")
@@ -400,7 +515,7 @@ def flowing_through_history(obj, current_date=False, history_starts=False):
                 data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
                 # refreshToken= data['data']['refreshToken']
                 current_history = obj.getCandleData(current_params)
-            print("at issue:", current_history)
+
         except Exception as e:
             obj=SmartConnect(api_key="yWjMIfbo")
             #login api call
@@ -432,3 +547,212 @@ def flowing_through_history(obj, current_date=False, history_starts=False):
         print("after flow"+str(i))
         time.sleep(2)  # Sleep for "Intervel" seconds before running again
 
+def flowing_through_history_two(obj, current_date=False, history_date=False):
+
+
+    i = 0
+    while True:
+        time.sleep(2)  # Sleep for "Intervel" seconds before running again
+
+        history_date = next_times_giving(history_date)
+
+        current_date = next_times_giving(current_date)
+
+        params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_date)
+        current_params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_date)
+
+        history = obj.getCandleData(params)
+
+        try:
+            current_history = obj.getCandleData(current_params)
+
+            # exit()
+        except Exception as e:
+            obj=SmartConnect(api_key="yWjMIfbo")
+            #login api call
+            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+            # refreshToken= data['data']['refreshToken']
+            current_history = obj.getCandleData(current_params)
+
+        Historion = recent_history_forflowing(history)
+
+
+        try:
+            current = current_flowing(current_history)
+        except Exception as e:
+            print('the error is:', e)
+
+
+
+        if not current:
+            print("this is current params:", current_params)
+            print("this is current:", current)
+
+
+        Historion.update(current)
+        flowfilter(Historion, current_params['todate'])
+        save_tofile = flow_two(Historion, current_params['todate'])
+
+        fourth_flow(Historion, current_params['todate'])
+        high_fiveflow(Historion, current_params['todate'])
+
+
+        save_data(save_tofile)
+        i += 1
+        print("after flow"+str(i))
+        time.sleep(2)  # Sleep for "Intervel" seconds before running again
+    return {'history_date':history_date, 'current_date':current_date}
+
+
+
+def stream_into_flow(obj):
+    i = 0
+    while True:
+        # captured_outputs = sys.stdout = sys.stderr = open('data.txt', 'a')
+
+
+
+        # time.sleep(2)  # Sleep for "Intervel" seconds before running again
+        live_history_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 12, 5, False, False)
+        print("live_history_params:",live_history_params)
+
+        current_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 0, 5, False, True)
+
+        history = obj.getCandleData(live_history_params)
+        print("historyyyyyyyyy:", history)
+
+        # current_history = obj.getCandleData(current_params)
+        try:
+            current_history = obj.getCandleData(current_params)
+            print("at issue:", current_history)
+        except Exception as e:
+            obj=SmartConnect(api_key="yWjMIfbo")
+            #login api call
+            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+            current_history = obj.getCandleData(current_params)
+
+        print("the seee---")
+
+        Historion = recent_history_forflowing(history)
+        # print(current_history)
+        # exit()
+        current = current_flowing(current_history)
+        print("current data:",current_flowing)
+        if not current:
+            print("this is current params:", current_params)
+            print("this is current:", current)
+
+
+        Historion.update(current)
+        # print("Total live text:",Historion)
+        # exit()
+        flowfilter(Historion, current_params['todate'])
+        flow_two(Historion, current_params['fromdate'])
+
+
+
+        save_tofile = flow_two(Historion)
+        # next_fivemloop_insecondss = next_fivemloop_inseconds()
+        save_data(save_tofile)
+        i += 1
+        print("after flow"+str(i))
+
+        # time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
+        if next_fivemloop_inseconds() != 0:
+            time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
+        elif next_fivemloop_inseconds() <= 0:
+            time.sleep(300)
+
+
+
+
+def next_fivemloop_inseconds():
+    local_time = time.localtime()
+    current_time = int(time.strftime("%M", local_time))
+    # print(time.strftime("%M", local_time))
+    # exit()
+    # Sample next_time
+    next_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+
+    if current_time % 5 != 0:
+        current_time = (current_time // 5 + 1) * 5
+
+    # Split next_time into date and time components
+    date_part, time_part = next_time.split()
+
+    # Replace the minute part with current_time
+    new_time = time_part[:3] + str(current_time)
+
+    # Reconstruct the modified next_time
+    modified_next_time = date_part + ' ' + new_time
+    print("Next History time:", modified_next_time)
+    modified_next_time = datetime.strptime(modified_next_time, "%Y-%m-%d %H:%M")
+    modified_next_time = int(modified_next_time.timestamp())
+    now_the_time = time.time()
+    now_the_time = int(now_the_time - (now_the_time % 60))
+    next_loop_inseconds = modified_next_time - now_the_time
+    if next_loop_inseconds <= 0:
+        return 0
+    return next_loop_inseconds
+
+
+
+def into_the_yesterday(begins="2024-04-15 09:15:00"):
+    begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
+    
+    # Extract time component from begins_dt_format
+    time_component = begins_dt_format.time()
+
+    # Define the target times for comparison
+    # target_time_1 = time(9, 15, 0)
+    # target_time_2 = time(9, 10, 0)
+    target_time_1 = datetime.strptime("09:15:00", "%H:%M:%S")
+    target_time_1 = target_time_1.time()
+    target_time_2 = datetime.strptime("09:10:00", "%H:%M:%S")
+    target_time_2 = target_time_2.time()
+    # print(target_time_1.time())
+    # exit()
+
+    # If time is exactly 9:15, return yesterday's 15:35
+    if time_component == target_time_1:
+        # Calculate yesterday's date by subtracting 1 day
+        yesterday = begins_dt_format - timedelta(days=1)
+        # Create a new datetime object for yesterday's 15:35
+        yesterday = datetime(year=yesterday.year, month=yesterday.month, day=yesterday.day, hour=15, minute=30, second=0)
+
+        yesterday = datetime.strftime(yesterday, "%Y-%m-%d %H:%M:%S")
+        return yesterday
+    # If time is exactly 9:10, return yesterday's 15:30
+    elif time_component == target_time_2:
+        # Calculate yesterday's date by subtracting 1 day
+        yesterday = begins_dt_format - timedelta(days=1)
+        # Create a new datetime object for yesterday's 15:30
+        yesterday = datetime(year=yesterday.year, month=yesterday.month, day=yesterday.day, hour=15, minute=25, second=0)
+        yesterday = datetime.strftime(yesterday, "%Y-%m-%d %H:%M:%S")
+
+        return yesterday
+    else:
+        return begins  # Return False if neither condition is met
+
+
+
+def send_email(subject, body):
+
+    # Email configuration
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587  # Gmail's TLS port
+    sender_email = 'venucharyrangu@gmail.com'
+    receiver_email = 'venu.chary@moodle.com'
+    smtp_username = 'venucharyrangu@gmail.com'
+    smtp_password = 'dbvb zwju zuvr hgjv'
+    
+    msg = MIMEText(body)
+    msg['Subject'] = subject
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.sendmail(sender_email, receiver_email, msg.as_string())
+    server.quit()
