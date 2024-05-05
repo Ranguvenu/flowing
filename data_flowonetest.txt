@@ -1,0 +1,1622 @@
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-25 15:30
+its out of flow9stage
+This is current closing: 48497.3
+Testing at: 2024-04-25 15:25
+its out of flow9stage
+This is current closing: 48457.7
+Testing at: 2024-04-25 15:20
+its out of flow9stage
+This is current closing: 48449.0
+Testing at: 2024-04-25 15:15
+its out of flow9stage
+This is current closing: 48482.8
+Testing at: 2024-04-25 15:10
+its out of flow9stage
+This is current closing: 48495.35
+Testing at: 2024-04-25 15:05
+its out of flow9stage
+This is current closing: 48535.25
+Testing at: 2024-04-25 15:00
+its out of flow9stage
+This is current closing: 48563.45
+Testing at: 2024-04-25 14:55
+its out of flow9stage
+This is current closing: 48547.95
+Testing at: 2024-04-25 14:50
+its out of flow9stage
+This is current closing: 48562.75
+Testing at: 2024-04-25 14:45
+its out of flow9stage
+This is current closing: 48579.1
+Testing at: 2024-04-25 14:40
+its out of flow9stage
+This is current closing: 48559.9
+Testing at: 2024-04-25 14:35
+its out of flow9stage
+This is current closing: 48602.2
+Testing at: 2024-04-25 14:30
+in stage
+flow_one_five
+This is current closing: 48568.1
+Testing at: 2024-04-25 14:25
+its out of flow9stage
+This is current closing: 48543.8
+Testing at: 2024-04-25 14:20
+its out of flow9stage
+This is current closing: 48503.95
+Testing at: 2024-04-25 14:15
+its out of flow9stage
+This is current closing: 48531.3
+Testing at: 2024-04-25 14:10
+in stage
+flow_one_five
+This is current closing: 48516.65
+Testing at: 2024-04-25 14:05
+its out of flow9stage
+This is current closing: 48459.45
+Testing at: 2024-04-25 14:00
+its out of flow9stage
+This is current closing: 48401.15
+Testing at: 2024-04-25 13:55
+its out of flow9stage
+This is current closing: 48443.85
+Testing at: 2024-04-25 13:50
+its out of flow9stage
+This is current closing: 48461.0
+Testing at: 2024-04-25 13:45
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_five stage_three
+This is current closing: 48426.05
+Testing at: 2024-04-25 13:40
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_five  --------- signal might come from here
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_five  ---------  stage_two_starts_for_stage_three signal might come from here copied
+flow_one_four copied two
+This is current closing: 48368.15
+Testing at: 2024-04-25 13:35
+in stage
+flow_one_two
+This is current closing: 48357.95
+Testing at: 2024-04-25 13:30
+its out of flow9stage
+This is current closing: 48342.7
+Testing at: 2024-04-25 13:25
+its out of flow9stage
+This is current closing: 48332.1
+Testing at: 2024-04-25 13:20
+its out of flow9stage
+This is current closing: 48377.25
+Testing at: 2024-04-25 13:15
+its out of flow9stage
+This is current closing: 48357.85
+Testing at: 2024-04-25 13:10
+its out of flow9stage
+This is current closing: 48327.2
+Testing at: 2024-04-25 13:05
+its out of flow9stage
+This is current closing: 48365.35
+Testing at: 2024-04-25 13:00
+in stage
+flow_one_five
+This is current closing: 48285.95
+Testing at: 2024-04-25 12:55
+its out of flow9stage
+This is current closing: 48241.9
+Testing at: 2024-04-25 12:50
+its out of flow9stage
+This is current closing: 48213.05
+Testing at: 2024-04-25 12:45
+its out of flow9stage
+This is current closing: 48228.4
+Testing at: 2024-04-25 12:40
+its out of flow9stage
+This is current closing: 48265.55
+Testing at: 2024-04-25 12:35
+in stage
+flow_one_five
+This is current closing: 48207.45
+Testing at: 2024-04-25 12:30
+its out of flow9stage
+This is current closing: 48198.9
+Testing at: 2024-04-25 12:25
+its out of flow9stage
+This is current closing: 48173.35
+Testing at: 2024-04-25 12:20
+its out of flow9stage
+This is current closing: 48181.9
+Testing at: 2024-04-25 12:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_one It's out of first flow
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48161.75
+Testing at: 2024-04-25 12:10
+in stage
+flow_one_two
+This is current closing: 48149.5
+Testing at: 2024-04-25 12:05
+its out of flow9stage
+This is current closing: 48146.95
+Testing at: 2024-04-25 12:00
+its out of flow9stage
+This is current closing: 48136.35
+Testing at: 2024-04-25 11:55
+its out of flow9stage
+This is current closing: 48202.15
+Testing at: 2024-04-25 11:50
+its out of flow9stage
+This is current closing: 48196.3
+Testing at: 2024-04-25 11:45
+its out of flow9stage
+This is current closing: 48198.15
+Testing at: 2024-04-25 11:40
+its out of flow9stage
+This is current closing: 48213.2
+Testing at: 2024-04-25 11:35
+its out of flow9stage
+This is current closing: 48222.2
+Testing at: 2024-04-25 11:30
+its out of flow9stage
+This is current closing: 48227.45
+Testing at: 2024-04-25 11:25
+its out of flow9stage
+This is current closing: 48206.15
+Testing at: 2024-04-25 11:20
+its out of flow9stage
+This is current closing: 48292.95
+Testing at: 2024-04-25 11:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_four stage_three
+This is current closing: 48288.75
+Testing at: 2024-04-25 11:10
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_four
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_four stage_two_for_stage_three copied
+flow_one_four_four_three stage_three
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48274.75
+Testing at: 2024-04-25 11:05
+in stage
+flow_one_three
+flow_one_three ------copied
+flow_one_three_five
+flow_one_three_five
+flow_one_three copied
+flow_one_three copied
+flow_one_three copied
+This is current closing: 48180.55
+Testing at: 2024-04-25 11:00
+its out of flow9stage
+This is current closing: 48137.85
+Testing at: 2024-04-25 10:55
+its out of flow9stage
+This is current closing: 48105.75
+Testing at: 2024-04-25 10:50
+its out of flow9stage
+This is current closing: 48217.65
+Testing at: 2024-04-25 10:45
+its out of flow9stage
+This is current closing: 48239.9
+Testing at: 2024-04-25 10:40
+its out of flow9stage
+This is current closing: 48265.6
+Testing at: 2024-04-25 10:35
+its out of flow9stage
+This is current closing: 48246.0
+Testing at: 2024-04-25 10:30
+its out of flow9stage
+This is current closing: 48261.05
+Testing at: 2024-04-25 10:25
+its out of flow9stage
+This is current closing: 48299.2
+Testing at: 2024-04-25 10:20
+its out of flow9stage
+This is current closing: 48318.75
+Testing at: 2024-04-25 10:15
+its out of flow9stage
+This is current closing: 48302.45
+Testing at: 2024-04-25 10:10
+its out of flow9stage
+This is current closing: 48193.25
+Testing at: 2024-04-25 10:05
+its out of flow9stage
+This is current closing: 48209.25
+Testing at: 2024-04-25 10:00
+its out of flow9stage
+This is current closing: 48157.0
+Testing at: 2024-04-25 09:55
+its out of flow9stage
+This is current closing: 48102.55
+Testing at: 2024-04-25 09:50
+its out of flow9stage
+This is current closing: 48107.9
+Testing at: 2024-04-25 09:45
+its out of flow9stage
+This is current closing: 48135.35
+Testing at: 2024-04-25 09:40
+its out of flow9stage
+This is current closing: 48174.8
+Testing at: 2024-04-25 09:35
+in stage
+flow_one_five
+This is current closing: 48121.5
+Testing at: 2024-04-25 09:30
+its out of flow9stage
+This is current closing: 48026.55
+Testing at: 2024-04-25 09:25
+its out of flow9stage
+This is current closing: 47942.05
+Testing at: 2024-04-25 09:20
+its out of flow9stage
+This is current closing: 47948.15
+Testing at: 2024-04-25 09:15
+its out of flow9stage
+This is current closing: 47948.15
+Testing at: 2024-04-24 15:30
+its out of flow9stage
+This is current closing: 48195.35
+Testing at: 2024-04-24 15:25
+its out of flow9stage
+This is current closing: 48167.35
+Testing at: 2024-04-24 15:20
+its out of flow9stage
+This is current closing: 48195.2
+Testing at: 2024-04-24 15:15
+its out of flow9stage
+This is current closing: 48176.55
+Testing at: 2024-04-24 15:10
+its out of flow9stage
+This is current closing: 48201.55
+Testing at: 2024-04-24 15:05
+its out of flow9stage
+This is current closing: 48186.3
+Testing at: 2024-04-24 15:00
+its out of flow9stage
+This is current closing: 48202.55
+Testing at: 2024-04-24 14:55
+in stage
+flow_one_five
+This is current closing: 48200.2
+Testing at: 2024-04-24 14:50
+its out of flow9stage
+This is current closing: 48193.15
+Testing at: 2024-04-24 14:45
+its out of flow9stage
+This is current closing: 48167.45
+Testing at: 2024-04-24 14:40
+its out of flow9stage
+This is current closing: 48168.7
+Testing at: 2024-04-24 14:35
+its out of flow9stage
+This is current closing: 48171.15
+Testing at: 2024-04-24 14:30
+its out of flow9stage
+This is current closing: 48187.7
+Testing at: 2024-04-24 14:25
+its out of flow9stage
+This is current closing: 48202.55
+Testing at: 2024-04-24 14:20
+its out of flow9stage
+This is current closing: 48207.55
+Testing at: 2024-04-24 14:15
+its out of flow9stage
+This is current closing: 48205.85
+Testing at: 2024-04-24 14:10
+its out of flow9stage
+This is current closing: 48195.8
+Testing at: 2024-04-24 14:05
+its out of flow9stage
+This is current closing: 48201.25
+Testing at: 2024-04-24 14:00
+its out of flow9stage
+This is current closing: 48188.55
+Testing at: 2024-04-24 13:55
+its out of flow9stage
+This is current closing: 48208.5
+Testing at: 2024-04-24 13:50
+its out of flow9stage
+This is current closing: 48203.6
+Testing at: 2024-04-24 13:45
+its out of flow9stage
+This is current closing: 48205.95
+Testing at: 2024-04-24 13:40
+its out of flow9stage
+This is current closing: 48210.15
+Testing at: 2024-04-24 13:35
+its out of flow9stage
+This is current closing: 48213.7
+Testing at: 2024-04-24 13:30
+its out of flow9stage
+This is current closing: 48220.45
+Testing at: 2024-04-24 13:25
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_one stage_three_started
+This is current closing: 48215.4
+Testing at: 2024-04-24 13:20
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_two stage_three
+This is current closing: 48210.55
+Testing at: 2024-04-24 13:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_two
+flow_one_four copied two
+flow_one_four_two --stage_two_for_stage_three copies
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48203.25
+Testing at: 2024-04-24 13:10
+in stage
+flow_one_five
+This is current closing: 48190.7
+Testing at: 2024-04-24 13:05
+its out of flow9stage
+This is current closing: 48178.2
+Testing at: 2024-04-24 13:00
+its out of flow9stage
+This is current closing: 48171.05
+Testing at: 2024-04-24 12:55
+its out of flow9stage
+This is current closing: 48174.7
+Testing at: 2024-04-24 12:50
+its out of flow9stage
+This is current closing: 48174.9
+Testing at: 2024-04-24 12:45
+its out of flow9stage
+This is current closing: 48199.1
+Testing at: 2024-04-24 12:40
+its out of flow9stage
+This is current closing: 48190.5
+Testing at: 2024-04-24 12:35
+its out of flow9stage
+This is current closing: 48176.75
+Testing at: 2024-04-24 12:30
+its out of flow9stage
+This is current closing: 48193.25
+Testing at: 2024-04-24 12:25
+its out of flow9stage
+This is current closing: 48184.7
+Testing at: 2024-04-24 12:20
+its out of flow9stage
+This is current closing: 48192.8
+Testing at: 2024-04-24 12:15
+its out of flow9stage
+This is current closing: 48200.15
+Testing at: 2024-04-24 12:10
+its out of flow9stage
+This is current closing: 48200.8
+Testing at: 2024-04-24 12:05
+its out of flow9stage
+This is current closing: 48184.65
+Testing at: 2024-04-24 12:00
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-25 15:30
+its out of flow9stage
+This is current closing: 48497.3
+Testing at: 2024-04-25 15:25
+its out of flow9stage
+This is current closing: 48457.7
+Testing at: 2024-04-25 15:20
+its out of flow9stage
+This is current closing: 48449.0
+Testing at: 2024-04-25 15:15
+its out of flow9stage
+This is current closing: 48482.8
+Testing at: 2024-04-25 15:10
+its out of flow9stage
+This is current closing: 48495.35
+Testing at: 2024-04-25 15:05
+its out of flow9stage
+This is current closing: 48535.25
+Testing at: 2024-04-25 15:00
+its out of flow9stage
+This is current closing: 48563.45
+Testing at: 2024-04-25 14:55
+its out of flow9stage
+This is current closing: 48547.95
+Testing at: 2024-04-25 14:50
+its out of flow9stage
+This is current closing: 48562.75
+Testing at: 2024-04-25 14:45
+its out of flow9stage
+This is current closing: 48579.1
+Testing at: 2024-04-25 14:40
+its out of flow9stage
+This is current closing: 48559.9
+Testing at: 2024-04-25 14:35
+its out of flow9stage
+This is current closing: 48602.2
+Testing at: 2024-04-25 14:30
+in stage
+flow_one_five
+This is current closing: 48568.1
+Testing at: 2024-04-25 14:25
+its out of flow9stage
+This is current closing: 48543.8
+Testing at: 2024-04-25 14:20
+its out of flow9stage
+This is current closing: 48503.95
+Testing at: 2024-04-25 14:15
+its out of flow9stage
+This is current closing: 48531.3
+Testing at: 2024-04-25 14:10
+in stage
+flow_one_five
+This is current closing: 48516.65
+Testing at: 2024-04-25 14:05
+its out of flow9stage
+This is current closing: 48459.45
+Testing at: 2024-04-25 14:00
+its out of flow9stage
+This is current closing: 48401.15
+Testing at: 2024-04-25 13:55
+its out of flow9stage
+This is current closing: 48443.85
+Testing at: 2024-04-25 13:50
+its out of flow9stage
+This is current closing: 48461.0
+Testing at: 2024-04-25 13:45
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_five stage_three
+This is current closing: 48426.05
+Testing at: 2024-04-25 13:40
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_five  --------- signal might come from here
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_five  ---------  stage_two_starts_for_stage_three signal might come from here copied
+flow_one_four copied two
+This is current closing: 48368.15
+Testing at: 2024-04-25 13:35
+in stage
+flow_one_two
+This is current closing: 48357.95
+Testing at: 2024-04-25 13:30
+its out of flow9stage
+This is current closing: 48342.7
+Testing at: 2024-04-25 13:25
+its out of flow9stage
+This is current closing: 48332.1
+Testing at: 2024-04-25 13:20
+its out of flow9stage
+This is current closing: 48377.25
+Testing at: 2024-04-25 13:15
+its out of flow9stage
+This is current closing: 48357.85
+Testing at: 2024-04-25 13:10
+its out of flow9stage
+This is current closing: 48327.2
+Testing at: 2024-04-25 13:05
+its out of flow9stage
+This is current closing: 48365.35
+Testing at: 2024-04-25 13:00
+in stage
+flow_one_five
+This is current closing: 48285.95
+Testing at: 2024-04-25 12:55
+its out of flow9stage
+This is current closing: 48241.9
+Testing at: 2024-04-25 12:50
+its out of flow9stage
+This is current closing: 48213.05
+Testing at: 2024-04-25 12:45
+its out of flow9stage
+This is current closing: 48228.4
+Testing at: 2024-04-25 12:40
+its out of flow9stage
+This is current closing: 48265.55
+Testing at: 2024-04-25 12:35
+in stage
+flow_one_five
+This is current closing: 48207.45
+Testing at: 2024-04-25 12:30
+its out of flow9stage
+This is current closing: 48198.9
+Testing at: 2024-04-25 12:25
+its out of flow9stage
+This is current closing: 48173.35
+Testing at: 2024-04-25 12:20
+its out of flow9stage
+This is current closing: 48181.9
+Testing at: 2024-04-25 12:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_one It's out of first flow
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48161.75
+Testing at: 2024-04-25 12:10
+in stage
+flow_one_two
+This is current closing: 48149.5
+Testing at: 2024-04-25 12:05
+its out of flow9stage
+This is current closing: 48146.95
+Testing at: 2024-04-25 12:00
+its out of flow9stage
+This is current closing: 48136.35
+Testing at: 2024-04-25 11:55
+its out of flow9stage
+This is current closing: 48202.15
+Testing at: 2024-04-25 11:50
+its out of flow9stage
+This is current closing: 48196.3
+Testing at: 2024-04-25 11:45
+its out of flow9stage
+This is current closing: 48198.15
+Testing at: 2024-04-25 11:40
+its out of flow9stage
+This is current closing: 48213.2
+Testing at: 2024-04-25 11:35
+its out of flow9stage
+This is current closing: 48222.2
+Testing at: 2024-04-25 11:30
+its out of flow9stage
+This is current closing: 48227.45
+Testing at: 2024-04-25 11:25
+its out of flow9stage
+This is current closing: 48206.15
+Testing at: 2024-04-25 11:20
+its out of flow9stage
+This is current closing: 48292.95
+Testing at: 2024-04-25 11:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_four stage_three
+This is current closing: 48288.75
+Testing at: 2024-04-25 11:10
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_four
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_four stage_two_for_stage_three copied
+flow_one_four_four_three stage_three
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48274.75
+Testing at: 2024-04-25 11:05
+in stage
+flow_one_three
+flow_one_three ------copied
+flow_one_three_five
+flow_one_three_five
+flow_one_three copied
+flow_one_three copied
+flow_one_three copied
+This is current closing: 48180.55
+Testing at: 2024-04-25 11:00
+its out of flow9stage
+This is current closing: 48137.85
+Testing at: 2024-04-25 10:55
+its out of flow9stage
+This is current closing: 48105.75
+Testing at: 2024-04-25 10:50
+its out of flow9stage
+This is current closing: 48217.65
+Testing at: 2024-04-25 10:45
+its out of flow9stage
+This is current closing: 48239.9
+Testing at: 2024-04-25 10:40
+its out of flow9stage
+This is current closing: 48265.6
+Testing at: 2024-04-25 10:35
+its out of flow9stage
+This is current closing: 48246.0
+Testing at: 2024-04-25 10:30
+its out of flow9stage
+This is current closing: 48261.05
+Testing at: 2024-04-25 10:25
+its out of flow9stage
+This is current closing: 48299.2
+Testing at: 2024-04-25 10:20
+its out of flow9stage
+This is current closing: 48318.75
+Testing at: 2024-04-25 10:15
+its out of flow9stage
+This is current closing: 48302.45
+Testing at: 2024-04-25 10:10
+its out of flow9stage
+This is current closing: 48193.25
+Testing at: 2024-04-25 10:05
+its out of flow9stage
+This is current closing: 48209.25
+Testing at: 2024-04-25 10:00
+its out of flow9stage
+This is current closing: 48157.0
+Testing at: 2024-04-25 09:55
+its out of flow9stage
+This is current closing: 48102.55
+Testing at: 2024-04-25 09:50
+its out of flow9stage
+This is current closing: 48107.9
+Testing at: 2024-04-25 09:45
+its out of flow9stage
+This is current closing: 48135.35
+Testing at: 2024-04-25 09:40
+its out of flow9stage
+This is current closing: 48174.8
+Testing at: 2024-04-25 09:35
+in stage
+flow_one_five
+This is current closing: 48121.5
+Testing at: 2024-04-25 09:30
+its out of flow9stage
+This is current closing: 48026.55
+Testing at: 2024-04-25 09:25
+its out of flow9stage
+This is current closing: 47942.05
+Testing at: 2024-04-25 09:20
+its out of flow9stage
+This is current closing: 47948.15
+Testing at: 2024-04-25 09:15
+its out of flow9stage
+This is current closing: 47948.15
+Testing at: 2024-04-24 15:30
+its out of flow9stage
+This is current closing: 48195.35
+Testing at: 2024-04-24 15:25
+its out of flow9stage
+This is current closing: 48167.35
+Testing at: 2024-04-24 15:20
+its out of flow9stage
+This is current closing: 48195.2
+Testing at: 2024-04-24 15:15
+its out of flow9stage
+This is current closing: 48176.55
+Testing at: 2024-04-24 15:10
+its out of flow9stage
+This is current closing: 48201.55
+Testing at: 2024-04-24 15:05
+its out of flow9stage
+This is current closing: 48186.3
+Testing at: 2024-04-24 15:00
+its out of flow9stage
+This is current closing: 48202.55
+Testing at: 2024-04-24 14:55
+in stage
+flow_one_five
+This is current closing: 48200.2
+Testing at: 2024-04-24 14:50
+its out of flow9stage
+This is current closing: 48193.15
+Testing at: 2024-04-24 14:45
+its out of flow9stage
+This is current closing: 48167.45
+Testing at: 2024-04-24 14:40
+its out of flow9stage
+This is current closing: 48168.7
+Testing at: 2024-04-24 14:35
+its out of flow9stage
+This is current closing: 48171.15
+Testing at: 2024-04-24 14:30
+its out of flow9stage
+This is current closing: 48187.7
+Testing at: 2024-04-24 14:25
+its out of flow9stage
+This is current closing: 48202.55
+Testing at: 2024-04-24 14:20
+its out of flow9stage
+This is current closing: 48207.55
+Testing at: 2024-04-24 14:15
+its out of flow9stage
+This is current closing: 48205.85
+Testing at: 2024-04-24 14:10
+its out of flow9stage
+This is current closing: 48195.8
+Testing at: 2024-04-24 14:05
+its out of flow9stage
+This is current closing: 48201.25
+Testing at: 2024-04-24 14:00
+its out of flow9stage
+This is current closing: 48188.55
+Testing at: 2024-04-24 13:55
+its out of flow9stage
+This is current closing: 48208.5
+Testing at: 2024-04-24 13:50
+its out of flow9stage
+This is current closing: 48203.6
+Testing at: 2024-04-24 13:45
+its out of flow9stage
+This is current closing: 48205.95
+Testing at: 2024-04-24 13:40
+its out of flow9stage
+This is current closing: 48210.15
+Testing at: 2024-04-24 13:35
+its out of flow9stage
+This is current closing: 48213.7
+Testing at: 2024-04-24 13:30
+its out of flow9stage
+This is current closing: 48220.45
+Testing at: 2024-04-24 13:25
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_one stage_three_started
+This is current closing: 48215.4
+Testing at: 2024-04-24 13:20
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_two stage_three
+This is current closing: 48210.55
+Testing at: 2024-04-24 13:15
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_two
+flow_one_four copied two
+flow_one_four_two --stage_two_for_stage_three copies
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48203.25
+Testing at: 2024-04-24 13:10
+in stage
+flow_one_five
+This is current closing: 48190.7
+Testing at: 2024-04-24 13:05
+its out of flow9stage
+This is current closing: 48178.2
+Testing at: 2024-04-24 13:00
+its out of flow9stage
+This is current closing: 48171.05
+Testing at: 2024-04-24 12:55
+its out of flow9stage
+This is current closing: 48174.7
+Testing at: 2024-04-24 12:50
+its out of flow9stage
+This is current closing: 48174.9
+Testing at: 2024-04-24 12:45
+its out of flow9stage
+This is current closing: 48199.1
+Testing at: 2024-04-24 12:40
+its out of flow9stage
+This is current closing: 48190.5
+Testing at: 2024-04-24 12:35
+its out of flow9stage
+This is current closing: 48176.75
+Testing at: 2024-04-24 12:30
+its out of flow9stage
+This is current closing: 48193.25
+Testing at: 2024-04-24 12:25
+its out of flow9stage
+This is current closing: 48184.7
+Testing at: 2024-04-24 12:20
+its out of flow9stage
+This is current closing: 48192.8
+Testing at: 2024-04-24 12:15
+its out of flow9stage
+This is current closing: 48200.15
+Testing at: 2024-04-24 12:10
+its out of flow9stage
+This is current closing: 48200.8
+Testing at: 2024-04-24 12:05
+its out of flow9stage
+This is current closing: 48184.65
+Testing at: 2024-04-24 12:00
+its out of flow9stage
+This is current closing: 48198.7
+Testing at: 2024-04-24 11:55
+its out of flow9stage
+This is current closing: 48182.95
+Testing at: 2024-04-24 11:50
+its out of flow9stage
+This is current closing: 48191.4
+Testing at: 2024-04-24 11:45
+its out of flow9stage
+This is current closing: 48188.6
+Testing at: 2024-04-24 11:40
+its out of flow9stage
+This is current closing: 48191.2
+Testing at: 2024-04-24 11:35
+its out of flow9stage
+This is current closing: 48195.45
+Testing at: 2024-04-24 11:30
+its out of flow9stage
+This is current closing: 48198.75
+Testing at: 2024-04-24 11:25
+its out of flow9stage
+This is current closing: 48191.8
+Testing at: 2024-04-24 11:20
+its out of flow9stage
+This is current closing: 48180.5
+Testing at: 2024-04-24 11:15
+its out of flow9stage
+This is current closing: 48197.5
+Testing at: 2024-04-24 11:10
+its out of flow9stage
+This is current closing: 48215.65
+Testing at: 2024-04-24 11:05
+its out of flow9stage
+This is current closing: 48199.85
+Testing at: 2024-04-24 11:00
+its out of flow9stage
+This is current closing: 48211.85
+Testing at: 2024-04-24 10:55
+its out of flow9stage
+This is current closing: 48205.35
+Testing at: 2024-04-24 10:50
+its out of flow9stage
+This is current closing: 48225.55
+Testing at: 2024-04-24 10:45
+in stage
+flow_one_one
+This is current closing: 48217.35
+Testing at: 2024-04-24 10:40
+its out of flow9stage
+This is current closing: 48210.7
+Testing at: 2024-04-24 10:35
+its out of flow9stage
+This is current closing: 48198.15
+Testing at: 2024-04-24 10:30
+its out of flow9stage
+This is current closing: 48209.65
+Testing at: 2024-04-24 10:25
+its out of flow9stage
+This is current closing: 48213.55
+Testing at: 2024-04-24 10:20
+its out of flow9stage
+This is current closing: 48214.65
+Testing at: 2024-04-24 10:15
+its out of flow9stage
+This is current closing: 48166.3
+Testing at: 2024-04-24 10:10
+its out of flow9stage
+This is current closing: 48176.3
+Testing at: 2024-04-24 10:05
+its out of flow9stage
+This is current closing: 48170.4
+Testing at: 2024-04-24 10:00
+its out of flow9stage
+This is current closing: 48179.05
+Testing at: 2024-04-24 09:55
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_one stage_three_started
+This is current closing: 48170.7
+Testing at: 2024-04-24 09:50
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_three stage_three
+This is current closing: 48135.2
+Testing at: 2024-04-24 09:45
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_three stage_two_for_stage_three copied
+flow_one_four_three_three ---stage_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48099.95
+Testing at: 2024-04-24 09:40
+in stage
+flow_one_one
+This is current closing: 48088.25
+Testing at: 2024-04-24 09:35
+its out of flow9stage
+This is current closing: 48065.55
+Testing at: 2024-04-24 09:30
+its out of flow9stage
+This is current closing: 48044.75
+Testing at: 2024-04-24 09:25
+its out of flow9stage
+This is current closing: 48068.0
+Testing at: 2024-04-24 09:20
+its out of flow9stage
+This is current closing: 48069.3
+Testing at: 2024-04-24 09:15
+its out of flow9stage
+This is current closing: 48069.3
+Testing at: 2024-04-23 15:30
+its out of flow9stage
+This is current closing: 47935.6
+Testing at: 2024-04-23 15:25
+its out of flow9stage
+This is current closing: 47957.4
+Testing at: 2024-04-23 15:20
+its out of flow9stage
+This is current closing: 47991.6
+Testing at: 2024-04-23 15:15
+its out of flow9stage
+This is current closing: 48003.1
+Testing at: 2024-04-23 15:10
+its out of flow9stage
+This is current closing: 47961.3
+Testing at: 2024-04-23 15:05
+its out of flow9stage
+This is current closing: 48008.25
+Testing at: 2024-04-23 15:00
+its out of flow9stage
+This is current closing: 48039.7
+Testing at: 2024-04-23 14:55
+its out of flow9stage
+This is current closing: 48000.3
+Testing at: 2024-04-23 14:50
+its out of flow9stage
+This is current closing: 48031.6
+Testing at: 2024-04-23 14:45
+in stage
+flow_one_three
+flow_one_three ------copied
+flow_one_three_four
+flow_one_three copied
+flow_one_three copied
+flow_one_three_four copied
+flow_one_three_four_five stage_four
+flow_one_three copied
+flow_one_three_four copied for_stage_four
+flow_one_three_four_four stage_four
+This is current closing: 47983.0
+Testing at: 2024-04-23 14:40
+its out of flow9stage
+This is current closing: 47978.2
+Testing at: 2024-04-23 14:35
+its out of flow9stage
+This is current closing: 47972.5
+Testing at: 2024-04-23 14:30
+its out of flow9stage
+This is current closing: 47998.95
+Testing at: 2024-04-23 14:25
+its out of flow9stage
+This is current closing: 47991.85
+Testing at: 2024-04-23 14:20
+its out of flow9stage
+This is current closing: 48012.3
+Testing at: 2024-04-23 14:15
+its out of flow9stage
+This is current closing: 47977.15
+Testing at: 2024-04-23 14:10
+its out of flow9stage
+This is current closing: 47951.1
+Testing at: 2024-04-23 14:05
+its out of flow9stage
+This is current closing: 48003.3
+Testing at: 2024-04-23 14:00
+its out of flow9stage
+This is current closing: 47986.2
+Testing at: 2024-04-23 13:55
+its out of flow9stage
+This is current closing: 47979.95
+Testing at: 2024-04-23 13:50
+its out of flow9stage
+This is current closing: 47991.8
+Testing at: 2024-04-23 13:45
+its out of flow9stage
+This is current closing: 47998.5
+Testing at: 2024-04-23 13:40
+its out of flow9stage
+This is current closing: 47994.75
+Testing at: 2024-04-23 13:35
+its out of flow9stage
+This is current closing: 47984.05
+Testing at: 2024-04-23 13:30
+its out of flow9stage
+This is current closing: 47988.3
+Testing at: 2024-04-23 13:25
+its out of flow9stage
+This is current closing: 47949.9
+Testing at: 2024-04-23 13:20
+its out of flow9stage
+This is current closing: 47912.85
+Testing at: 2024-04-23 13:15
+its out of flow9stage
+This is current closing: 47977.85
+Testing at: 2024-04-23 13:10
+its out of flow9stage
+This is current closing: 47976.15
+Testing at: 2024-04-23 13:05
+its out of flow9stage
+This is current closing: 48008.9
+Testing at: 2024-04-23 13:00
+its out of flow9stage
+This is current closing: 48051.45
+Testing at: 2024-04-23 12:55
+its out of flow9stage
+This is current closing: 48048.65
+Testing at: 2024-04-23 12:50
+its out of flow9stage
+This is current closing: 48032.2
+Testing at: 2024-04-23 12:45
+its out of flow9stage
+This is current closing: 48040.0
+Testing at: 2024-04-23 12:40
+its out of flow9stage
+This is current closing: 48060.5
+Testing at: 2024-04-23 12:35
+its out of flow9stage
+This is current closing: 48055.8
+Testing at: 2024-04-23 12:30
+its out of flow9stage
+This is current closing: 48064.8
+Testing at: 2024-04-23 12:25
+its out of flow9stage
+This is current closing: 48074.5
+Testing at: 2024-04-23 12:20
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_two
+flow_one_four copied two
+flow_one_four_two --stage_two_for_stage_three copies
+flow_one_four_two_three --stage_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48063.45
+Testing at: 2024-04-23 12:15
+in stage
+flow_one_five
+This is current closing: 48047.6
+Testing at: 2024-04-23 12:10
+its out of flow9stage
+This is current closing: 48017.9
+Testing at: 2024-04-23 12:05
+its out of flow9stage
+This is current closing: 47993.55
+Testing at: 2024-04-23 12:00
+its out of flow9stage
+This is current closing: 48000.45
+Testing at: 2024-04-23 11:55
+its out of flow9stage
+This is current closing: 47998.8
+Testing at: 2024-04-23 11:50
+its out of flow9stage
+This is current closing: 47984.05
+Testing at: 2024-04-23 11:45
+its out of flow9stage
+This is current closing: 48009.55
+Testing at: 2024-04-23 11:40
+its out of flow9stage
+This is current closing: 47996.7
+Testing at: 2024-04-23 11:35
+its out of flow9stage
+This is current closing: 47996.4
+Testing at: 2024-04-23 11:30
+its out of flow9stage
+This is current closing: 48015.55
+Testing at: 2024-04-23 11:25
+its out of flow9stage
+This is current closing: 48018.6
+Testing at: 2024-04-23 11:20
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_two
+flow_one_four copied two
+flow_one_four_two --stage_two_for_stage_three copies
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 47996.2
+Testing at: 2024-04-23 11:15
+in stage
+flow_one_five
+This is current closing: 47982.75
+Testing at: 2024-04-23 11:10
+its out of flow9stage
+This is current closing: 47974.35
+Testing at: 2024-04-23 11:05
+its out of flow9stage
+This is current closing: 47947.45
+Testing at: 2024-04-23 11:00
+its out of flow9stage
+This is current closing: 47974.25
+Testing at: 2024-04-23 10:55
+its out of flow9stage
+This is current closing: 47962.65
+Testing at: 2024-04-23 10:50
+its out of flow9stage
+This is current closing: 47943.85
+Testing at: 2024-04-23 10:45
+its out of flow9stage
+This is current closing: 47958.2
+Testing at: 2024-04-23 10:40
+its out of flow9stage
+This is current closing: 48018.2
+Testing at: 2024-04-23 10:35
+its out of flow9stage
+This is current closing: 48000.1
+Testing at: 2024-04-23 10:30
+its out of flow9stage
+This is current closing: 48001.75
+Testing at: 2024-04-23 10:25
+its out of flow9stage
+This is current closing: 48064.2
+Testing at: 2024-04-23 10:20
+its out of flow9stage
+This is current closing: 48059.6
+Testing at: 2024-04-23 10:15
+its out of flow9stage
+This is current closing: 48069.6
+Testing at: 2024-04-23 10:10
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_two
+flow_one_four copied two
+flow_one_four_two --stage_two_for_stage_three copies
+flow_one_four_two_four --stage_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 48057.5
+Testing at: 2024-04-23 10:05
+in stage
+flow_one_five
+This is current closing: 48049.4
+Testing at: 2024-04-23 10:00
+its out of flow9stage
+This is current closing: 48008.85
+Testing at: 2024-04-23 09:55
+its out of flow9stage
+This is current closing: 47958.55
+Testing at: 2024-04-23 09:50
+its out of flow9stage
+This is current closing: 47960.25
+Testing at: 2024-04-23 09:45
+its out of flow9stage
+This is current closing: 48010.35
+Testing at: 2024-04-23 09:40
+its out of flow9stage
+This is current closing: 48011.45
+Testing at: 2024-04-23 09:35
+its out of flow9stage
+This is current closing: 48014.35
+Testing at: 2024-04-23 09:30
+its out of flow9stage
+This is current closing: 48045.25
+Testing at: 2024-04-23 09:25
+its out of flow9stage
+This is current closing: 48048.5
+Testing at: 2024-04-23 09:20
+its out of flow9stage
+This is current closing: 48072.3
+Testing at: 2024-04-23 09:15
+its out of flow9stage
+This is current closing: 48072.3
+Testing at: 2024-04-22 15:30
+its out of flow9stage
+This is current closing: 47994.85
+Testing at: 2024-04-22 15:25
+its out of flow9stage
+This is current closing: 47970.65
+Testing at: 2024-04-22 15:20
+its out of flow9stage
+This is current closing: 47930.3
+Testing at: 2024-04-22 15:15
+its out of flow9stage
+This is current closing: 47959.95
+Testing at: 2024-04-22 15:10
+in stage
+flow_one_five
+This is current closing: 47913.9
+Testing at: 2024-04-22 15:05
+its out of flow9stage
+This is current closing: 47890.8
+Testing at: 2024-04-22 15:00
+its out of flow9stage
+This is current closing: 47850.05
+Testing at: 2024-04-22 14:55
+its out of flow9stage
+This is current closing: 47870.0
+Testing at: 2024-04-22 14:50
+its out of flow9stage
+This is current closing: 47933.2
+Testing at: 2024-04-22 14:45
+its out of flow9stage
+This is current closing: 47944.4
+Testing at: 2024-04-22 14:40
+in stage
+flow_one_five
+This is current closing: 47845.0
+Testing at: 2024-04-22 14:35
+its out of flow9stage
+This is current closing: 47824.85
+Testing at: 2024-04-22 14:30
+its out of flow9stage
+This is current closing: 47793.65
+Testing at: 2024-04-22 14:25
+its out of flow9stage
+This is current closing: 47820.25
+Testing at: 2024-04-22 14:20
+its out of flow9stage
+This is current closing: 47839.0
+Testing at: 2024-04-22 14:15
+its out of flow9stage
+This is current closing: 47837.45
+Testing at: 2024-04-22 14:10
+its out of flow9stage
+This is current closing: 47853.85
+Testing at: 2024-04-22 14:05
+its out of flow9stage
+This is current closing: 47866.5
+Testing at: 2024-04-22 14:00
+its out of flow9stage
+This is current closing: 47850.05
+Testing at: 2024-04-22 13:55
+its out of flow9stage
+This is current closing: 47828.15
+Testing at: 2024-04-22 13:50
+its out of flow9stage
+This is current closing: 47853.2
+Testing at: 2024-04-22 13:45
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_three stage_three
+This is current closing: 47833.4
+Testing at: 2024-04-22 13:40
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_three stage_two_for_stage_three copied
+flow_one_four_three_two ---stage_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 47827.45
+Testing at: 2024-04-22 13:35
+in stage
+flow_one_one
+This is current closing: 47818.75
+Testing at: 2024-04-22 13:30
+its out of flow9stage
+This is current closing: 47800.25
+Testing at: 2024-04-22 13:25
+its out of flow9stage
+This is current closing: 47793.65
+Testing at: 2024-04-22 13:20
+its out of flow9stage
+This is current closing: 47803.25
+Testing at: 2024-04-22 13:15
+its out of flow9stage
+This is current closing: 47783.3
+Testing at: 2024-04-22 13:10
+its out of flow9stage
+This is current closing: 47757.25
+Testing at: 2024-04-22 13:05
+its out of flow9stage
+This is current closing: 47780.25
+Testing at: 2024-04-22 13:00
+its out of flow9stage
+This is current closing: 47783.25
+Testing at: 2024-04-22 12:55
+its out of flow9stage
+This is current closing: 47769.0
+Testing at: 2024-04-22 12:50
+its out of flow9stage
+This is current closing: 47764.85
+Testing at: 2024-04-22 12:45
+its out of flow9stage
+This is current closing: 47802.95
+Testing at: 2024-04-22 12:40
+its out of flow9stage
+This is current closing: 47808.45
+Testing at: 2024-04-22 12:35
+its out of flow9stage
+This is current closing: 47826.05
+Testing at: 2024-04-22 12:30
+its out of flow9stage
+This is current closing: 47802.2
+Testing at: 2024-04-22 12:25
+its out of flow9stage
+This is current closing: 47840.7
+Testing at: 2024-04-22 12:20
+its out of flow9stage
+This is current closing: 47835.7
+Testing at: 2024-04-22 12:15
+its out of flow9stage
+This is current closing: 47825.7
+Testing at: 2024-04-22 12:10
+its out of flow9stage
+This is current closing: 47851.9
+Testing at: 2024-04-22 12:05
+its out of flow9stage
+This is current closing: 47861.3
+Testing at: 2024-04-22 12:00
+its out of flow9stage
+This is current closing: 47872.1
+Testing at: 2024-04-22 11:55
+in stage
+flow_one_one
+This is current closing: 47856.45
+Testing at: 2024-04-22 11:50
+its out of flow9stage
+This is current closing: 47842.65
+Testing at: 2024-04-22 11:45
+its out of flow9stage
+This is current closing: 47804.95
+Testing at: 2024-04-22 11:40
+its out of flow9stage
+This is current closing: 47845.0
+Testing at: 2024-04-22 11:35
+its out of flow9stage
+This is current closing: 47849.5
+Testing at: 2024-04-22 11:30
+its out of flow9stage
+This is current closing: 47812.05
+Testing at: 2024-04-22 11:25
+its out of flow9stage
+This is current closing: 47838.25
+Testing at: 2024-04-22 11:20
+its out of flow9stage
+This is current closing: 47809.1
+Testing at: 2024-04-22 11:15
+its out of flow9stage
+This is current closing: 47822.6
+Testing at: 2024-04-22 11:10
+its out of flow9stage
+This is current closing: 47838.05
+Testing at: 2024-04-22 11:05
+its out of flow9stage
+This is current closing: 47822.05
+Testing at: 2024-04-22 11:00
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-25 15:30
+its out of flow9stage
+This is current closing: 48987.35
+Testing at: 2024-04-29 13:00
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-25 15:30
+its out of flow9stage
+This is current closing: 48497.3
+Testing at: 2024-04-25 15:25
+its out of flow9stage
+This is current closing: 48457.7
+Testing at: 2024-04-25 15:20
+its out of flow9stage
+This is current closing: 48449.0
+Testing at: 2024-04-25 15:15
+its out of flow9stage
+This is current closing: 48482.8
+Testing at: 2024-04-25 15:10
+its out of flow9stage
+This is current closing: 48495.35
+Testing at: 2024-04-25 15:05
+its out of flow9stage
+This is current closing: 48535.25
+Testing at: 2024-04-25 15:00
+its out of flow9stage
+This is current closing: 48563.45
+Testing at: 2024-04-25 14:55
+its out of flow9stage
+This is current closing: 48547.95
+Testing at: 2024-04-25 14:50
+its out of flow9stage
+This is current closing: 48562.75
+Testing at: 2024-04-25 14:45
+its out of flow9stage
+This is current closing: 48579.1
+Testing at: 2024-04-25 14:40
+its out of flow9stage
+This is current closing: 48559.9
+Testing at: 2024-04-25 14:35
+its out of flow9stage
+This is current closing: 48602.2
+Testing at: 2024-04-25 14:30
+in stage
+flow_one_five
+This is current closing: 48568.1
+Testing at: 2024-04-25 14:25
+its out of flow9stage
+This is current closing: 48543.8
+Testing at: 2024-04-25 14:20
+its out of flow9stage
+This is current closing: 48503.95
+Testing at: 2024-04-25 14:15
+its out of flow9stage
+This is current closing: 48531.3
+Testing at: 2024-04-25 14:10
+in stage
+flow_one_five
+This is current closing: 48516.65
+Testing at: 2024-04-25 14:05
+its out of flow9stage
+This is current closing: 48459.45
+Testing at: 2024-04-25 14:00
+its out of flow9stage
+This is current closing: 48401.15
+Testing at: 2024-04-25 13:55
+its out of flow9stage
+This is current closing: 48443.85
+Testing at: 2024-04-25 13:50
+its out of flow9stage
+This is current closing: 48461.0
+Testing at: 2024-04-25 13:45
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_six
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_six stage_two_starts_stage_three copied
+flow_one_four_six_five stage_three
+This is current closing: 48426.05
+Testing at: 2024-04-25 13:40
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_five  --------- signal might come from here
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_five  ---------  stage_two_starts_for_stage_three signal might come from here copied
+flow_one_four copied two
+This is current closing: 48368.15
+Testing at: 2024-04-25 13:35
+in stage
+flow_one_two
+This is current closing: 48357.95
+Testing at: 2024-04-25 13:30
+its out of flow9stage
+This is current closing: 48342.7
+Testing at: 2024-04-25 13:25
+its out of flow9stage
+This is current closing: 48332.1
+Testing at: 2024-04-25 13:20
+its out of flow9stage
+This is current closing: 48377.25
+Testing at: 2024-04-25 13:15
+its out of flow9stage
+This is current closing: 48357.85
+Testing at: 2024-04-25 13:10
+its out of flow9stage
+This is current closing: 48327.2
+Testing at: 2024-04-25 13:05
+its out of flow9stage
+This is current closing: 48365.35
+Testing at: 2024-04-25 13:00
+in stage
+flow_one_five
