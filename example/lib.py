@@ -552,55 +552,58 @@ def flowing_through_history_two(obj, current_date=False, history_date=False):
 
     i = 0
     while True:
-        time.sleep(2)  # Sleep for "Intervel" seconds before running again
+        time.sleep(1)  # Sleep for "Intervel" seconds before running again
 
         history_date = next_times_giving(history_date)
 
         current_date = next_times_giving(current_date)
-
-        params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_date)
-        current_params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_date)
-
-        history = obj.getCandleData(params)
-
         try:
-            current_history = obj.getCandleData(current_params)
 
-            # exit()
+            params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_date)
+            current_params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_date)
+
+            history = obj.getCandleData(params)
+
+            try:
+                current_history = obj.getCandleDataw(current_params)
+
+                # exit()
+            except Exception as e:
+                obj=SmartConnect(api_key="yWjMIfbo")
+                #login api call
+                data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+                # refreshToken= data['data']['refreshToken']
+                current_history = obj.getCandleData(current_params)
+
+            Historion = recent_history_forflowing(history)
+
+
+            try:
+                current = current_flowing(current_history)
+            except Exception as e:
+                print('the error is:', e)
+
+
+
+            if not current:
+                print("this is current params:", current_params)
+                print("this is current:", current)
+
+
+            Historion.update(current)
+            flowfilter(Historion, current_params['todate'])
+            save_tofile = flow_two(Historion, current_params['todate'])
+
+            fourth_flow(Historion, current_params['todate'])
+            high_fiveflow(Historion, current_params['todate'])
+
+
+            save_data(save_tofile)
+            i += 1
+            print("after flow"+str(i))
+            time.sleep(1)  # Sleep for "Intervel" seconds before running again
         except Exception as e:
-            obj=SmartConnect(api_key="yWjMIfbo")
-            #login api call
-            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-            # refreshToken= data['data']['refreshToken']
-            current_history = obj.getCandleData(current_params)
-
-        Historion = recent_history_forflowing(history)
-
-
-        try:
-            current = current_flowing(current_history)
-        except Exception as e:
-            print('the error is:', e)
-
-
-
-        if not current:
-            print("this is current params:", current_params)
-            print("this is current:", current)
-
-
-        Historion.update(current)
-        flowfilter(Historion, current_params['todate'])
-        save_tofile = flow_two(Historion, current_params['todate'])
-
-        fourth_flow(Historion, current_params['todate'])
-        high_fiveflow(Historion, current_params['todate'])
-
-
-        save_data(save_tofile)
-        i += 1
-        print("after flow"+str(i))
-        time.sleep(2)  # Sleep for "Intervel" seconds before running again
+            return {'history_date': history_date, 'current_date': current_date}
     return {'history_date':history_date, 'current_date':current_date}
 
 
@@ -756,3 +759,5 @@ def send_email(subject, body):
     server.login(smtp_username, smtp_password)
     server.sendmail(sender_email, receiver_email, msg.as_string())
     server.quit()
+
+

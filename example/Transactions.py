@@ -35,17 +35,21 @@ params_two = {
     "fromdate": "2024-04-25 11:15",
     "todate": "2024-04-25 11:20"
 }
-history_date = "2024-03-27 15:25:00"
-current_date = "2024-03-27 15:30:00"
+history_date = "2024-03-28 15:25:00"
+current_date = "2024-03-28 15:30:00"
 # stream_into_flow(obj)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
+# exit()
+dates = flowing_through_history_two(obj, current_date, history_date)
 
 # exit()
 while True:
     try:
         dates = flowing_through_history_two(obj, current_date, history_date)
+
+
         history_date = dates['history_date']
         current_date = dates['current_date']
         # exit()
