@@ -1,7 +1,7 @@
 import sys
 sys.path.append('/var/www/html/myproject/')  
 # package import statement
-from smartapi import SmartConnect #or from smartapi.smartConnect import SmartConnect
+from SmartApi import SmartConnect #or from smartapi.smartConnect import SmartConnect
 #import smartapi.smartExceptions(for smartExceptions)
 from config import *
 import pyotp, time
@@ -9,6 +9,9 @@ from lib import *
 from Symbols import *
 from Strategy import *
 from datetime import datetime
+
+from SmartApi.smartWebSocketV2 import SmartWebSocketV2
+from logzero import logger
 
 # import schedule
 
@@ -21,6 +24,96 @@ obj=SmartConnect(api_key="yWjMIfbo")
 data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 refreshToken= data['data']['refreshToken']
 
+
+
+#-----------------------------------------------------------------------------
+
+
+# options_params = {
+#     "name":"BANKNIFTY",
+#     "expirydate":"08MAY2024"
+# }
+# options = obj.optionGreek(options_params)
+# exchange = "NFO"
+# searchscrip = "BANKNIFTY15MAY2448900CE"
+# searchScriptData = obj.searchScrip(exchange, searchscrip)
+# print('and the token is:',searchScriptData['data'][0]['symboltoken'])
+# option_ltp =  obj.ltpData("NFO", "BANKNIFTY15MAY2448900CE", searchScriptData['data'][0]['symboltoken'])
+
+# banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
+# rounded_ltp = banknifty_ltp['data']['ltp'] % 100 
+# # print("unrouded", banknifty_ltp['data']['ltp'])
+# rounded_ltp = round(banknifty_ltp['data']['ltp'] - rounded_ltp)
+
+    # Email configuration
+
+from SmartApi.smartWebSocketV2 import SmartWebSocketV2
+from logzero import logger
+AUTH_TOKEN = data['data']['jwtToken']
+API_KEY = "yWjMIfbo"
+CLIENT_CODE = "V280771"
+FEED_TOKEN = data['data']['feedToken']
+correlation_id = "abc123"
+action = 1
+mode = 1
+token_list = [
+    {
+        "exchangeType": 1,
+        "tokens": ["26009"]
+    }
+]
+
+    #retry_strategy=0 for simple retry mechanism
+sws = SmartWebSocketV2(AUTH_TOKEN, API_KEY, CLIENT_CODE, FEED_TOKEN,max_retry_attempt=2, retry_strategy=0, retry_delay=10, retry_duration=30)
+
+def on_data(wsapp, message):
+    logger.info("Ticks: {}".format(message))
+    # close_connection()
+
+def on_control_message(wsapp, message):
+    logger.info(f"Control Message: {message}")
+
+def on_open(wsapp):
+    logger.info("on open")
+    some_error_condition = False
+    if some_error_condition:
+        error_message = "Simulated error"
+        if hasattr(wsapp, 'on_error'):
+            wsapp.on_error("Custom Error Type", error_message)
+    else:
+        sws.subscribe(correlation_id, mode, token_list)
+        # sws.unsubscribe(correlation_id, mode, token_list1)
+
+def on_error(wsapp, error):
+    logger.error(error)
+
+def on_close(wsapp):
+    logger.info("Close")
+
+def close_connection():
+    sws.close_connection()
+
+
+# Assign the callbacks.
+sws.on_open = on_open
+sws.on_data = on_data
+sws.on_error = on_error
+sws.on_close = on_close
+sws.on_control_message = on_control_message
+
+sws.connect()
+# print("The bank:",banknifty_ltp)
+exit()
+
+
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
 history_params = {
      "exchange": "NSE",
      "symboltoken": "99926009",
@@ -32,12 +125,12 @@ params_two = {
     "exchange": "NSE",
     "symboltoken": "99926009",
     "interval": "FIVE_MINUTE",
-    "fromdate": "2024-04-25 11:15",
-    "todate": "2024-04-25 11:20"
+    "fromdate": "2024-05-07 11:15",
+    "todate": "2024-05-07 11:20"
 }
-history_date = "2024-03-28 15:25:00"
-current_date = "2024-03-28 15:30:00"
-# stream_into_flow(obj)
+history_date = "2024-05-08 15:25:00"
+current_date = "2024-05-08 15:30:00"
+# stream_into_flow(obj)2024-03-20 12:40:00     2024-02-23 11:20
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)

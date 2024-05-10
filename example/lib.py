@@ -567,7 +567,6 @@ def flowing_through_history_two(obj, current_date=False, history_date=False):
             try:
                 current_history = obj.getCandleDataw(current_params)
 
-                # exit()
             except Exception as e:
                 obj=SmartConnect(api_key="yWjMIfbo")
                 #login api call
@@ -761,3 +760,119 @@ def send_email(subject, body):
     server.quit()
 
 
+
+
+def ranger_options(obj):
+
+    banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
+    rounded_ltp = banknifty_ltp['data']['ltp'] % 100 
+    rounded_ltp = round(banknifty_ltp['data']['ltp'] - rounded_ltp)
+
+
+    i = 0
+    range_starts = rounded_ltp - 200
+    options_inrange = {}
+
+    while i <= 11:
+        symbol_name = "BANKNIFTY"
+        validate = "15MAY24"
+        type = 'CE'
+
+        options_inrange["option_" + spell_integer(i)] = symbol_name + validate + str(range_starts) + type
+        range_starts += 100
+        i += 1
+    options_inrange['current_ltp'] = banknifty_ltp['data']['ltp']
+    return options_inrange
+
+
+
+def the_best_option(obj):
+    i = 11
+    closest_option = {'symbol': None, 'price': float('inf')}
+    investing_amount = 2555
+    options_inrange = ranger_options(obj)
+    existing_difference = float('inf')
+    # print("ranged:",options_inrange)
+    # exit()
+    while i >= 0:
+        option_symbol = options_inrange[f'option_' + spell_integer(i)]  # Assuming options_inrange is a dictionary
+        time.sleep(1)
+        searchScriptData = obj.searchScrip("NFO", option_symbol)
+        time.sleep(2)
+        option_ltp = obj.ltpData("NFO", option_symbol, searchScriptData['data'][0]['symboltoken'])
+        ltp_per_lot = option_ltp['data']['ltp'] * 15
+
+        difference = abs(ltp_per_lot - investing_amount)
+
+        if difference < existing_difference:
+            closest_option['price'] = ltp_per_lot
+            closest_option['symbol'] = option_symbol
+            existing_difference = difference
+        # print("ltp_per_lot:", ltp_per_lot)
+        # print("difference:", difference)
+        # print("ltp:", option_ltp['data']['ltp'])
+        # print('test:', ltp_per_lot)
+
+        # exit()
+        i -= 1
+    return closest_option
+
+
+
+
+
+
+
+def web_stream(data):
+    AUTH_TOKEN = data['data']['jwtToken']
+    API_KEY = "yWjMIfbo"
+    CLIENT_CODE = "V280771"
+    FEED_TOKEN = "feedToken"
+    correlation_id = "abc123"
+    action = 1
+    mode = 1
+    token_list = [
+        {
+            "exchangeType": 1,
+            "tokens": ["26009"]
+        }
+    ]
+
+        #retry_strategy=0 for simple retry mechanism
+    sws = SmartWebSocketV2(AUTH_TOKEN, API_KEY, CLIENT_CODE, FEED_TOKEN,max_retry_attempt=2, retry_strategy=0, retry_delay=10, retry_duration=30)
+    def on_data(wsapp, message):
+        logger.info("Ticks: {}".format(message))
+        # close_connection()
+
+    def on_control_message(wsapp, message):
+        logger.info(f"Control Message: {message}")
+
+    def on_open(wsapp):
+        logger.info("on open")
+        some_error_condition = False
+        if some_error_condition:
+            error_message = "Simulated error"
+            if hasattr(wsapp, 'on_error'):
+                wsapp.on_error("Custom Error Type", error_message)
+        else:
+            sws.subscribe(correlation_id, mode, token_list)
+            # sws.unsubscribe(correlation_id, mode, token_list1)
+
+    def on_error(wsapp, error):
+        logger.error(error)
+
+    def on_close(wsapp):
+        logger.info("Close")
+
+    def close_connection():
+        sws.close_connection()
+
+
+    # Assign the callbacks.
+    sws.on_open = on_open
+    sws.on_data = on_data
+    sws.on_error = on_error
+    sws.on_close = on_close
+    sws.on_control_message = on_control_message
+
+    sws.connect()

@@ -1,5 +1,6 @@
 # package import statement
-from smartapi import SmartConnect #or from smartapi.smartConnect import SmartConnect
+from SmartApi import SmartConnect #or from smartapi.smartConnect import SmartConnect
+
 #import smartapi.smartExceptions(for smartExceptions)
 
 #create object of call
@@ -7,7 +8,8 @@ obj=SmartConnect(api_key="your api key")
 
 #login api call
 
-data = obj.generateSession("Your Client ID","Your Password")
+data = obj.generateSession("Your Client ID","Your Password","Your totp")
+
 refreshToken= data['data']['refreshToken']
 
 #fetch the feedtoken
@@ -82,10 +84,81 @@ try:
 except Exception as e:
     print("Logout failed: {}".format(e.message))
 
+##Estimate Charges
+# params = {
+#     "orders": [
+#         {
+#             "product_type": "DELIVERY",
+#             "transaction_type": "BUY",
+#             "quantity": "10",
+#             "price": "800",
+#             "exchange": "NSE",
+#             "symbol_name": "745AS33",
+#             "token": "17117"
+#         },
+#         # {
+#         #     "product_type": "DELIVERY",
+#         #     "transaction_type": "BUY",
+#         #     "quantity": "10",
+#         #     "price": "800",
+#         #     "exchange": "BSE",
+#         #     "symbol_name": "PIICL151223",
+#         #     "token": "726131"
+#         # }
+#     ]
+# }
+# estimateCharges = obj.estimateCharges(params)
+# print(estimateCharges);
 
+# params = {
+#     "isin":"INE528G01035",
+#     "quantity":"1"
+# }
+# verifyDis = obj.verifyDis(params)
+# print(verifyDis);
+
+# params = {
+#     "dpId":"33200",
+#     "ReqId":"2351614738654050",
+#     "boid":"1203320018563571",
+#     "pan":"JZTPS2255C"
+# }
+# generateTPIN = obj.generateTPIN(params)
+# print(generateTPIN);
+
+# params = {
+#     "ReqId":"2351614738654050"
+# }
+# getTranStatus = obj.getTranStatus(params)
+# print(getTranStatus);
+
+# params = {
+#     "name":"TCS",
+#     "expirydate":"25JAN2024"
+# }
+# optionGreek = obj.optionGreek(params)
+# print(optionGreek);
+
+# params = {
+#     "datatype":"PercOIGainers",
+#     "expirytype":"NEAR" 
+# }
+# gainersLosers = obj.gainersLosers(params)
+# print(gainersLosers);
+
+# putCallRatio = obj.putCallRatio()
+# print(putCallRatio);
+
+# params = {
+#     "expirytype":"NEAR",
+#     "datatype":"Long Built Up"
+# }
+# OIBuildup = obj.oIBuildup(params)
+# print(OIBuildup);
 
 ## WebSocket
-from smartapi import WebSocket
+
+from SmartApi.webSocket import WebSocket
 
 FEED_TOKEN= "your feed token"
 CLIENT_CODE="your client Id"

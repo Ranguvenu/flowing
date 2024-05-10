@@ -1,12 +1,10 @@
 from __future__ import unicode_literals,absolute_import
 
 from SmartApi.smartConnect import SmartConnect
-# from smartapi.webSocket import WebSocket
+# from SmartApi.webSocket import WebSocket
 from SmartApi.smartApiWebsocket import SmartWebSocket
 
-__all__ = ["SmartConnect", "SmartWebSocket", "SmartWebSocketV2"]
-
-from SmartApi.smartWebSocketV2 import SmartWebSocketV2
+__all__ = ["SmartConnect","SmartWebSocket"]
 
 
 

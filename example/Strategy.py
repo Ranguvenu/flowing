@@ -99,6 +99,8 @@ def flowfilter(payload, timeofcalling):
     # exit()
     print("This is current closing:",payload['current_closing'])
     print("Testing at:", timeofcalling)
+    # print("Testing at data:", payload)
+    # exit()
 
     if payload['current_green'] and payload['current_closing'] > payload['a_one']and payload['a_one_green'] and payload['a_one']> payload['a_two']and payload['a_two_green']:
         print('in stage')
@@ -139,8 +141,6 @@ def flowfilter(payload, timeofcalling):
                 print("flow_one_one_six --- stage_three")
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_one_one_six_one ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> on second candle please check other flow.")
-                    greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_one_one_six_two ---- stage_four")
                 if payload['a_five_wread'] and payload['a_one_closing'] > payload['a_five_opens'] > payload['a_four_closing']:
@@ -153,14 +153,10 @@ def flowfilter(payload, timeofcalling):
                     print("flow_one_one_six_six ---- stage_four")
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
                     print("flow_one_one_six_seven ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>WithSecondLight. Please check other flow")
-                    greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
 
 
                 if payload['a_five_green'] and payload['a_five_opens'] < payload['a_three_closing']:
                     print("flow_one_one_six_eight ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>WithSecondLight.  Please check other flow")
-                    greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
 
 
             # stage four in stage three
@@ -169,9 +165,6 @@ def flowfilter(payload, timeofcalling):
 
                 if payload['a_five_green']:
                     print("flow_one_one_two_one --- stage_four_started")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> WithSecondLight")
-
-                    greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
 
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_one_one_two_two --- stage_four")
@@ -569,10 +562,34 @@ def flowfilter(payload, timeofcalling):
                 print("flow_one_three_four copied")
                 if payload['a_five_green'] and payload['a_five_opens'] < payload['a_three_closing']:
                     print("flow_one_three_four_one stage_four_started")
+                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+
+                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
+                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+                        greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+                    else:
+                        greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
+
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
                     print("flow_one_three_four_two stage_four")
+                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+
+                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
+                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+                        greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+                    else:
+                        greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
+
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_one_three_four_three stage_four")
+                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
+                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
+                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+                        greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+                    else:
+                        greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
+
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_one_three_four_four stage_four")
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['current_closing']:
@@ -688,61 +705,22 @@ def flow_two(payload, weareat=False):
                 print("flow_two_one_two --- stage_three copied")
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
                     print("flow_two_one_two_one --- stage_four_started")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
                 if payload['a_five_green'] and payload['a_five_opens'] == payload['a_three_closing']:
                     print("flow_two_one_two_two --- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 if payload['a_five_green'] and payload['a_five_opens'] < payload['a_three_closing'] and payload['a_five_opens'] > payload['a_two_closing']:
                     print("flow_two_one_two_three --- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
                     print('flow_two_one_two_four --- stage_four')
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
                 if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
                     print("flow_two_one_two_five --- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_two_one_two_six --- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
@@ -812,7 +790,8 @@ def flow_two(payload, weareat=False):
             # flow_two_one_five --- stage_three
             if payload['a_four_green'] and payload['a_four_opens'] < payload['a_two_closing']:
                 print("flow_two_one_five --- stage_three")
-
+                # print('and this our payload:', payload)
+                # exit()
                 if payload['a_five_green'] and payload['a_five_opens']:
                     print("flow_two_one_five_one ---- stage_four_started")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -823,7 +802,7 @@ def flow_two(payload, weareat=False):
                         greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
-                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_opens']:
+                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_two_one_five_two ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -873,6 +852,40 @@ def flow_two(payload, weareat=False):
             # flow_two_three_four ---stage_three
             if payload['a_four_wread'] and payload['a_four_opens'] > payload['a_three_closing'] and payload['a_four_opens'] < payload['current_closing']:
                 print("flow_two_three_four ---stage_three")
+            if payload['a_four_wread'] and payload['a_four_opens'] > payload['current_closing']:
+                print("flow_two_three_five ---stage_three")
+            if payload['a_four_wread'] and payload['a_four_opens'] <  payload['a_three_closing']:
+                print("flow_two_three_six ---stage_three")
+                print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                if (payload['highest_price_one'] < payload['a_two_opens']):
+                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
+                    greenery_recording(payload['current_closing'], weareat, True, 'two')
+                else:
+                    greenery_recording(payload['current_closing'], weareat, False, 'two')
+
+
+            if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_three_closing']:
+                print("flow_two_three_six ---stage_three")
+
+                if payload['a_five_green'] and payload['a_five_opens'] > payload['a_four_closing']:
+                    print("flow_two_three_six_one ----stage_four")
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_four_closing']:
+                    print("flow_two_three_six_two ----stage_four")
+                if payload['a_five_green'] and payload['a_two_closing'] < payload['a_five_opens'] < payload['a_four_closing']:
+                    print("flow_two_three_six_three ----stage_four")
+                if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
+                    print("flow_two_three_six_four ----stage_four")
+                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
+                    print("flow_two_three_six_five ----stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_three_closing']:
+                    print("flow_two_three_six_six ----stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_closing']:
+                    print("flow_two_three_six_seven ----stage_four")
+                if payload['a_five_wread'] and payload['current_closing'] > payload['a_five_opens'] > payload['a_three_closing']:
+                    print("flow_two_three_six_eight ----stage_four")
+                if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
+                    print("flow_two_three_six_nine ----stage_four")
+
 
         # flow_two_four --stage_three_starts -copied
         if payload['a_three_green'] and payload['a_three_opens'] == payload['a_two_closing']:
@@ -950,35 +963,24 @@ def flow_two(payload, weareat=False):
                 # flow_two_three_one_one ----stage_four starts
                 if payload['a_five_green']:
                     print("flow_two_three_one_one ----stage_four started")
-                    print("Greening from hereprevious>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 # flow_two_three_one_two ----stage_four
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing']:
                     print("flow_two_three_one_two ----stage_four")
-                    print("Greening from hereprevious>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
                 # flow_two_three_one_three ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_two_three_one_three ----stage_four")
-                    print("Greening from hereP>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 # flow_two_three_one_four ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_five_opens'] < payload['a_three_closing']:
                     print("flow_two_three_one_four ----stage_four")
-                    print("Greening from hereprevious>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
                 # flow_two_three_one_five ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_closing']:
                     print("flow_two_three_one_five ----stage_four")
-                    print("Greening from herepreviousprevious>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
                 # flow_two_three_one_six ----stage_four
@@ -1012,54 +1014,22 @@ def flow_two(payload, weareat=False):
                 # flow_two_three_two_one ---stage_four_starts -copied
                 if payload['a_five_green']:
                     print("flow_two_three_two_one _starts_started")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 # flow_two_three_two_two
                 if payload['a_five_wread'] and payload['a_five_wread'] == payload['a_four_closing']:
                     print("flow_two_three_two_two ---stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
-
 
                 # flow_two_three_two_three
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['a_three_closing']:
                     print("flow_two_three_two_three ---stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_closing']:
                     print("flow_two_three_two_four ---stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['current_closing']:
                     print("flow_two_three_two_five ---stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-                    if (payload['highest_price_one'] < payload['a_three_opens']):
-                        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
-                        greenery_recording(payload['current_closing'], weareat, True, 'two')
-                    else:
-                        greenery_recording(payload['current_closing'], weareat, False, 'two')
 
 
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
@@ -1285,37 +1255,30 @@ def flow_two(payload, weareat=False):
                 #flow_two_five_one_one ----stage_four_started
                 if payload['a_five_green']:
                     print("flow_two_five_one_one ----stage_four_started Verified")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_two --stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_two_five_one_two ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_three --stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_two_five_one_three ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_four --stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_four_closing'] and payload['a_four_opens'] < payload['a_three_closing']:
                     print("flow_two_five_one_four ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_five ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_three_green']:
                     print("flow_two_five_one_five ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_six ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['a_three_closing'] and payload['a_five_opens'] < payload['current_closing']:
                     print("flow_two_five_one_six ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 #flow_two_five_one_seven ----stage_four
                 if payload['a_five_wread'] and payload['a_five_opens'] > payload['current_closing']:
                     print("flow_two_five_one_seven ----stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
 
@@ -1608,16 +1571,13 @@ def fourth_flow(payload, time):
 
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing']:
                     print("flow_four_three_six_one ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
                 if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
                     print("flow_four_three_six_two ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_two_closing']:
                     print("flow_four_three_six_three ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_four_three_six_four ---- stage_four")
@@ -1635,13 +1595,11 @@ def fourth_flow(payload, time):
             if payload['a_four_green'] and payload['a_four_opens'] < payload['a_two_closing']:
                 print("flow_four_three_eight -- stage_three")
 
-                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_four_closing']:
+                if payload['a_five_green']:
                     print("flow_four_three_eight_one ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_four_three_eight_two -- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_wread'] and payload['a_five_opens'] == payload['a_four_closing']:
                     print("flow_four_three_eight_three -- stage_four")
@@ -1660,23 +1618,18 @@ def fourth_flow(payload, time):
                 print("flow_four_three_nine -- stage_three")
                 if payload['a_five_green'] and payload['a_five_opens'] > payload['a_three_closing']:
                     print("flow_four_three_nine_one ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_green'] and payload['a_five_opens'] == payload['a_three_closing']:
                     print("flow_four_three_nine_two ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
-                if payload['a_five_green'] and payload['a_five_opens'] < payload['a_three_closing']:
+                if payload['a_five_green'] and payload['a_four_closing'] < payload['a_five_opens'] < payload['a_three_closing']:
                     print("flow_four_three_nine_three ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_green'] and payload['a_five_opens'] == payload['a_two_closing']:
                     print("flow_four_three_nine_four ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_green'] and payload['a_five_opens'] < payload['a_two_closing']:
                     print("flow_four_three_nine_five ---- stage_four")
-                    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
                 if payload['a_five_wread'] and payload['a_five_opens'] < payload['a_four_closing']:
                     print("flow_four_three_nine_six ---- stage_four")
@@ -2134,7 +2087,7 @@ def high_fiveflow(payload, time):
     
     captured_output = sys.stdout = sys.stderr = open('highfivedata.txt', 'a')
     print("High fiving at:", time)
-    if payload['current_green'] and payload['a_one_wread'] and payload['a_two_wread'] and payload['a_two_opens'] < payload['current_closing']:
+    if payload['current_green'] and payload['a_one_wread'] and payload['a_two_wread'] and payload['a_one_opens'] < payload['a_two_opens'] < payload['current_closing']:
         print("flow_five Welcome to high five flow")
 
         if payload['a_three_green'] and payload['a_three_opens'] > payload['a_two_closing']:
