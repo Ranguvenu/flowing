@@ -51,19 +51,19 @@ params_two = {
     "fromdate": "2024-05-07 11:15",
     "todate": "2024-05-07 11:20"
 }
-history_date = "2024-05-08 15:25:00"
-current_date = "2024-05-08 15:30:00"
+history_date = "2024-05-16 15:25:00"
+current_date = "2024-05-16 15:30:00"
 # stream_into_flow(obj)2024-03-20 12:40:00     2024-02-23 11:20
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # exit()
-dates = stream_into_flow(obj,data)
+dates = flowing_through_history_two(obj, current_date, history_date)
 
-exit()
+# exit()
 while True:
     try:
-        dates = stream_into_flow(obj)
+        dates = flowing_through_history_two(obj, current_date, history_date)
 
 
         history_date = dates['history_date']
@@ -74,7 +74,7 @@ while True:
         print(f"An error occurred: {e}")
         print("Attempting to reconnect...")
         # Reconnect and continue the loop
-
+        
         obj = SmartConnect(api_key="yWjMIfbo")
         history_date = "2024-04-26 09:15:00"
         current_date = "2024-04-26 09:20:00"

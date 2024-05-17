@@ -1,6 +1,6 @@
 #Operational Functions
 import sys
-sys.path.append('/var/www/html/myproject/')  
+sys.path.append('/var/www/html/myproject/')
 from smartapi import SmartConnect
 from config import *
 import pyotp, time, timedelta
@@ -253,6 +253,8 @@ def recent_number_of_histories_params_forlive(exchange, symboltoken, interval, h
     times = recent_historion_timeline(candle_timeframe, into_past, history_date, live_history)
     # print(times)
     # exit()
+    # print(times)
+    # exit()
     # if live_history:
     #     print(times)
     #     exit()
@@ -351,9 +353,9 @@ def recent_historion_timeline_forlive(interval = False, into_past=False, current
 
 def recent_historion_timeline(interval = False, into_past=False, current_time=False, forlive_history = False):
     # Get current local time
-    # uncomment for live
+    # uncomment for live------------------------------------------------------
 
-    # current_time = "2024-04-23 15:30:00"
+    # current_time = "2024-05-14 09:25"
     if current_time == False:
         local_time = time.localtime()
         current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
@@ -607,7 +609,7 @@ def flowing_through_history_two(obj, current_date=False, history_date=False):
 
 
 
-def stream_into_flow(obj):
+def stream_into_flow(connection_obj, connection_data):
     i = 0
     while True:
         # captured_outputs = sys.stdout = sys.stderr = open('data.txt', 'a')
@@ -619,7 +621,8 @@ def stream_into_flow(obj):
         print("live_history_params:",live_history_params)
 
         current_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 0, 5, False, True)
-
+        # print('current paramsssssssssssss',current_params)
+        # exit()
         history = obj.getCandleData(live_history_params)
         print("historyyyyyyyyy:", history)
 
@@ -639,7 +642,7 @@ def stream_into_flow(obj):
         # print(current_history)
         # exit()
         current = current_flowing(current_history)
-        print("current data:",current_flowing)
+        # print("current data:",current_flowing)
         if not current:
             print("this is current params:", current_params)
             print("this is current:", current)
@@ -648,14 +651,16 @@ def stream_into_flow(obj):
         Historion.update(current)
         # print("Total live text:",Historion)
         # exit()
-        flowfilter(Historion, current_params['todate'])
-        flow_two(Historion, current_params['fromdate'])
+        flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+        flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
 
 
+        fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
+        high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
 
-        save_tofile = flow_two(Historion)
-        # next_fivemloop_insecondss = next_fivemloop_inseconds()
-        save_data(save_tofile)
+        # save_tofile = flow_two(Historion)
+        # # next_fivemloop_insecondss = next_fivemloop_inseconds()
+        # save_data(save_tofile)
         i += 1
         print("after flow"+str(i))
 
@@ -775,7 +780,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "15MAY24"
+        validate = "22MAY24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer(i)] = symbol_name + validate + str(range_starts) + type
@@ -783,6 +788,33 @@ def ranger_options(obj):
         i += 1
     options_inrange['current_ltp'] = banknifty_ltp['data']['ltp']
     return options_inrange
+
+
+def ranger_options_tokens(obj):
+    i = 11
+    closest_option = {'symbol': None, 'price': float('inf')}
+    investing_amount = 2555
+    options_inrange = ranger_options(obj)
+    existing_difference = float('inf')
+    token_collection = [{}]
+    tokens_array = []
+    token_name = {}
+    token_collection[0]['exchangeType'] = 2
+    while i >= 0:
+        option_symbol = options_inrange[f'option_' + spell_integer(i)]  # Assuming options_inrange is a dictionary
+        time.sleep(1)
+        searchScriptData = obj.searchScrip("NFO", option_symbol)
+        print('for name:',searchScriptData)
+        # exit()
+        # print(searchScriptData)
+        # exit()
+        tokens_array.append(searchScriptData['data'][0]['symboltoken'])
+        token_name[searchScriptData['data'][0]['symboltoken']] = searchScriptData['data'][0]['tradingsymbol']
+        i -= 1
+    token_collection[0]['exchangeType'] = 2
+    token_collection[0]['tokens'] = tokens_array
+    # print(tokemns)
+    return [token_collection, token_name]
 
 
 
@@ -876,3 +908,17 @@ def web_stream(data):
     sws.on_control_message = on_control_message
 
     sws.connect()
+
+def best_option_fromlive(response_data, forname=False):
+    closest_key = None
+    closest_value = float('inf')
+    target_value = 2500
+
+    for item in response_data:
+        for key, value in item.items():
+            multiplied_value = value * 15
+            if (multiplied_value <= target_value and (target_value - multiplied_value) < target_value - closest_value) or closest_key is None:
+                closest_key = key
+                closest_value = multiplied_value
+
+    return {'token': closest_key, 'price': closest_value, 'optionname': forname[closest_key], 'shareprice': closest_value/15}
