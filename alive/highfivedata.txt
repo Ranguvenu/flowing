@@ -1,0 +1,157 @@
+High fiving at: 2024-05-24 09:20
+flow_five Welcome to high five flow
+flow_five_six -- stage_two
+flow_five_six -- stage_two
+flow_five_six_eight --- stage_three
+flow_five_six_eight --- stage_three
+flow_five_six_eight_nine ---- stage_four
+after flow1
+Next History time: 2024-05-24 09:30
+Next History time: 2024-05-24 09:30
+High fiving at: 2024-05-24 09:25
+after flow2
+Next History time: 2024-05-24 09:30
+Next History time: 2024-05-24 09:30
+High fiving at: 2024-05-24 09:30
+after flow3
+Next History time: 2024-05-24 09:35
+Next History time: 2024-05-24 09:35
+High fiving at: 2024-05-24 09:35
+after flow4
+Next History time: 2024-05-24 09:40
+Next History time: 2024-05-24 09:40
+High fiving at: 2024-05-24 09:40
+after flow5
+Next History time: 2024-05-24 09:45
+Next History time: 2024-05-24 09:45
+High fiving at: 2024-05-24 09:45
+after flow6
+Next History time: 2024-05-24 09:50
+Next History time: 2024-05-24 09:50
+High fiving at: 2024-05-24 09:50
+after flow7
+Next History time: 2024-05-24 09:55
+Next History time: 2024-05-24 09:55
+High fiving at: 2024-05-24 09:55
+after flow8
+Next History time: 2024-05-24 10:0
+Next History time: 2024-05-24 10:0
+High fiving at: 2024-05-24 10:00
+after flow9
+Next History time: 2024-05-24 10:5
+Next History time: 2024-05-24 10:5
+High fiving at: 2024-05-24 10:05
+after flow10
+Next History time: 2024-05-24 10:10
+Next History time: 2024-05-24 10:10
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 58, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 648, in stream_into_flow
+    Historion = recent_history_forflowing(history)
+  File "/var/www/html/myproject/example/lib.py", line 138, in recent_history_forflowing
+    response_data['data'] = list(reversed(response_data['data']))
+TypeError: 'NoneType' object is not reversible
+High fiving at: 2024-05-24 10:15
+after flow1
+Next History time: 2024-05-24 10:25
+Next History time: 2024-05-24 10:25
+High fiving at: 2024-05-24 10:20
+after flow2
+Next History time: 2024-05-24 10:25
+Next History time: 2024-05-24 10:25High fiving at: 2024-05-24 10:25
+after flow3
+Next History time: 2024-05-24 10:30
+Next History time: 2024-05-24 10:30
+High fiving at: 2024-05-24 10:30
+after flow4
+Next History time: 2024-05-24 10:35
+Next History time: 2024-05-24 10:35
+High fiving at: 2024-05-24 10:35
+after flow5
+Next History time: 2024-05-24 10:40
+Next History time: 2024-05-24 10:40
+High fiving at: 2024-05-24 10:40
+after flow6
+Next History time: 2024-05-24 10:45
+Next History time: 2024-05-24 10:45
+High fiving at: 2024-05-24 10:45
+after flow7
+Next History time: 2024-05-24 10:50
+Next History time: 2024-05-24 10:50
+High fiving at: 2024-05-24 10:50
+after flow8
+Next History time: 2024-05-24 10:55
+Next History time: 2024-05-24 10:55
+High fiving at: 2024-05-24 10:55
+after flow9
+Next History time: 2024-05-24 11:0
+Next History time: 2024-05-24 11:0
+High fiving at: 2024-05-24 11:00
+after flow10
+Next History time: 2024-05-24 11:5
+Next History time: 2024-05-24 11:5
+High fiving at: 2024-05-24 11:05
+after flow11
+Next History time: 2024-05-24 11:10
+Next History time: 2024-05-24 11:10
+High fiving at: 2024-05-24 11:10
+after flow12
+Next History time: 2024-05-24 11:15
+Next History time: 2024-05-24 11:15
+High fiving at: 2024-05-24 11:15
+after flow13
+Next History time: 2024-05-24 11:20
+Next History time: 2024-05-24 11:20
+High fiving at: 2024-05-24 11:20
+after flow14
+Next History time: 2024-05-24 11:25
+Next History time: 2024-05-24 11:25
+High fiving at: 2024-05-24 11:25
+after flow15
+Next History time: 2024-05-24 11:30
+Next History time: 2024-05-24 11:30
+High fiving at: 2024-05-24 11:30
+after flow16
+Next History time: 2024-05-24 11:35
+Next History time: 2024-05-24 11:35
+High fiving at: 2024-05-24 11:35
+after flow17
+Next History time: 2024-05-24 11:40
+Next History time: 2024-05-24 11:40
+High fiving at: 2024-05-24 11:40
+after flow18
+Next History time: 2024-05-24 11:45
+Next History time: 2024-05-24 11:45
+High fiving at: 2024-05-24 11:45
+after flow19
+Next History time: 2024-05-24 11:50
+Next History time: 2024-05-24 11:50
+High fiving at: 2024-05-24 11:50
+after flow20
+Next History time: 2024-05-24 11:55
+Next History time: 2024-05-24 11:55
+High fiving at: 2024-05-24 11:55
+after flow21
+Next History time: 2024-05-24 12:0
+Next History time: 2024-05-24 12:0
+High fiving at: 2024-05-24 12:00
+after flow22
+Next History time: 2024-05-24 12:5
+Next History time: 2024-05-24 12:5
+High fiving at: 2024-05-24 12:05
+flow_five Welcome to high five flow
+flow_five_one -- stage_two_started
+flow_five_one -- stage_two_started
+flow_five_one_six --- stage_three
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 58, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 667, in stream_into_flow
+    high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
+  File "/var/www/html/myproject/example/Strategy.py", line 2380, in high_fiveflow
+    print(pickup_fromstream(connection_obj, connection_data))
+  File "/var/www/html/myproject/example/live_stream.py", line 38, in pickup_fromstream
+    ranger_options =  ranger_options_tokens(obj)
+NameError: name 'ranger_options_tokens' is not defined

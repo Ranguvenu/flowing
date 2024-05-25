@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
 from db import *
-from live_stream import *
+# from live_stream import *
 
 #x1 is Least recent closing price and x5 is most recent closing price and y1 current price
 def strategy(x1, x2, x3, x4, x5, y1):
@@ -93,7 +93,11 @@ def spell_integer(n):
 
 
 def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=False):
-    captured_output = sys.stdout = sys.stderr = open('datafilsterflow.txt', 'a')
+    if connection_data:
+        captured_output = sys.stdout = sys.stderr = open('alive/datafilsterflow.txt', 'a')
+    else:
+        captured_output = sys.stdout = sys.stderr = open('datafilsterflow.txt', 'a')
+
 
     i = 1
     # print(payload)
@@ -658,7 +662,12 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
 
 
 def flow_two(payload, weareat=False, connection_data=False, connection_obj=False):
-    captured_output = sys.stdout = sys.stderr = open('dataflowtwo.txt', 'a')
+    if connection_data:
+        captured_output = sys.stdout = sys.stderr = open('alive/dataflowtwo.txt', 'a')
+    else:
+        captured_output = sys.stdout = sys.stderr = open('dataflowtwo.txt', 'a')
+
+
     print("Now we are at:", weareat)
     print("Second flow has been called. now the current is:", payload['current_closing'])
 
@@ -1462,7 +1471,11 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
 
 
 def fourth_flow(payload, time, connection_data=False, connection_obj=False):
-    captured_output = sys.stdout = sys.stderr = open('datafour.txt', 'a')
+    if connection_data:
+        captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
+    else:
+        captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
+
     print("Now the fourth flow is at:", time)
     print("And the current closing is:", payload['current_closing'])
 
@@ -2187,7 +2200,10 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
 
 
 def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
-    captured_output = sys.stdout = sys.stderr = open('highfivedata.txt', 'a')
+    if connection_data:
+        captured_output = sys.stdout = sys.stderr = open('alive/highfivedata.txt', 'a')
+    else:
+        captured_output = sys.stdout = sys.stderr = open('highfivedata.txt', 'a')
     print("High fiving at:", time)
     if payload['current_green'] and payload['a_one_wread'] and payload['a_two_wread'] and payload['a_one_opens'] < payload['a_two_opens'] < payload['current_closing']:
         print("flow_five Welcome to high five flow")
@@ -2658,7 +2674,6 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                         greenery_recording(payload['current_closing'], time, True, 'five')
                     else:
                         greenery_recording(payload['current_closing'], time, False, 'five')
-
 
             if payload['a_four_wread'] and payload['a_four_opens'] < payload['current_closing']:
                 print("flow_five_six_eight --- stage_three")

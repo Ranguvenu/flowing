@@ -6,7 +6,7 @@ from SmartApi import SmartConnect #or from smartapi.smartConnect import SmartCon
 from config import *
 import pyotp, time
 from lib import *
-from live_stream import *
+# from live_stream import *
 from Symbols import *
 from Strategy import *
 from datetime import datetime
@@ -51,15 +51,19 @@ params_two = {
     "fromdate": "2024-05-07 11:15",
     "todate": "2024-05-07 11:20"
 }
-history_date = "2024-05-16 15:25:00"
-current_date = "2024-05-16 15:30:00"
+history_date = "2024-05-22 15:25:00"
+current_date = "2024-05-22 15:30:00"
 # stream_into_flow(obj)2024-03-20 12:40:00     2024-02-23 11:20
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # exit()
-dates = flowing_through_history_two(obj, current_date, history_date)
+historyhistory = {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-05-22 09:30', 'todate': '2024-05-22 09:30'}
 
+# print(obj.getCandleData(historyhistory))
+# exit()
+
+dates = flowing_through_history_two(obj, current_date, history_date)
 # exit()
 while True:
     try:

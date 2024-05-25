@@ -9,10 +9,14 @@ from datetime import datetime, timedelta
 from Strategy import *
 import smtplib
 from email.mime.text import MIMEText
+# from live_stream import *
+from Symbols import *
+from SmartApi.smartWebSocketV2 import SmartWebSocketV2
+from logzero import logger
 #The Connection
-
+# pickup_fromstream()
+# exit()
 def StreamLTP(Exchange, Symbol, SymbolCode, Intervel, connection):
-
 
     # Example: Execute a SELECT query
     # cursor.execute("SELECT * FROM ltp_data")
@@ -126,14 +130,13 @@ def StreamLTP_twotwo(Exchange, Symbol, SymbolCode, Intervel, connection):
         minutes_to_sleep = (next_iteration_minute - current_minute) % 60
         if minutes_to_sleep == 0:
             minutes_to_sleep = 5
-        print(minutes_to_sleep) 
+        print(minutes_to_sleep)
         time.sleep(minutes_to_sleep * 60)  # Sleep until the next multiple of five minutes
         i += 1
 
 
 def recent_history_forflowing(response_data):
     formatted_data = {}
-
 
     response_data['data'] = list(reversed(response_data['data']))
 
@@ -367,7 +370,7 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
     # current_time = "2024-04-16 11:25:00"
     # print('datatime doesnt match', current_time)
     current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
-    # print('dsssssssssssssss:', current_time)
+    # print('dsssssssssssssss:', type(current_time))
     # exit()
     # print(type(current_time))
     # exit()
@@ -388,7 +391,7 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
         
         startime_readble = time_correction.strftime("%Y-%m-%d %H:%M")
 
-
+        past_time_starts_unix_readable = into_yesterday(past_time_starts_unix_readable)
         return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
 
     else:
@@ -405,6 +408,8 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
         startime_readble = datetime.fromtimestamp(time_correction)
 
         startime_readble = startime_readble.strftime("%Y-%m-%d %H:%M")
+        past_time_starts_unix_readable = into_yesterday(past_time_starts_unix_readable)
+
         return {'startime_from_readable' : startime_readble, 'startime_from_unix': time_correction, 'startime_to_unix': past_time_starts_unix, 'startime_to_readable': past_time_starts_unix_readable}
 
 
@@ -459,20 +464,16 @@ def recent_historion_timeline_two_for_currentpricess(interval = False, into_past
 
 
 def next_times_giving(begins="2024-04-15 15:25"):
-    print("before",begins)
 
     begins = into_the_yesterday(begins)
-    # print("after",begins)
-    # exit()
+
     begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
-    # print(begins_dt_format)
-    # exit()
+
     begins_unix = int(begins_dt_format.timestamp())
     reduced_unix = begins_unix - 5 * 60
     reduced_time = datetime.fromtimestamp(reduced_unix)
     formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M:%S")
 
-    print(formatted_date)
     return formatted_date   
 
 # To save the result data in file
@@ -551,7 +552,6 @@ def flowing_through_history(obj, current_date=False, history_starts=False):
 
 def flowing_through_history_two(obj, current_date=False, history_date=False):
 
-
     i = 0
     while True:
         time.sleep(1)  # Sleep for "Intervel" seconds before running again
@@ -564,27 +564,41 @@ def flowing_through_history_two(obj, current_date=False, history_date=False):
             params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_date)
             current_params = recent_number_of_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_date)
 
+
+            # print('pramsasansns:', current_params)
+            # print('hihiiihi')
             history = obj.getCandleData(params)
 
+            current_history = obj.getCandleData(current_params)
+            # print(current_history)
+            # exit()
+            print('cjdnfjdfj22')
+
             try:
-                current_history = obj.getCandleDataw(current_params)
+                current_history = obj.getCandleData(current_params)
+
+                # print(current_history)
+                # exit()
 
             except Exception as e:
+                print("In exeption: ")
+                print('cjdnfjdfj2')
+
                 obj=SmartConnect(api_key="yWjMIfbo")
                 #login api call
                 data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
                 # refreshToken= data['data']['refreshToken']
+                print('pramsasansns:', current_params)
+                print('object_object',obj.getCandleData(current_params))
                 current_history = obj.getCandleData(current_params)
+                print('current_history::::::', current_history)
+                # continue
 
             Historion = recent_history_forflowing(history)
-
-
             try:
                 current = current_flowing(current_history)
             except Exception as e:
                 print('the error is:', e)
-
-
 
             if not current:
                 print("this is current params:", current_params)
@@ -618,48 +632,46 @@ def stream_into_flow(connection_obj, connection_data):
 
         # time.sleep(2)  # Sleep for "Intervel" seconds before running again
         live_history_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 12, 5, False, False)
-        print("live_history_params:",live_history_params)
 
         current_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 0, 5, False, True)
-        # print('current paramsssssssssssss',current_params)
-        # exit()
-        history = obj.getCandleData(live_history_params)
-        print("historyyyyyyyyy:", history)
+
+
+
+
+
 
         # current_history = obj.getCandleData(current_params)
         try:
-            current_history = obj.getCandleData(current_params)
-            print("at issue:", current_history)
+            history = connection_obj.getCandleData(live_history_params)
+            current_history = connection_obj.getCandleData(current_params)
         except Exception as e:
-            obj=SmartConnect(api_key="yWjMIfbo")
+            print("Not got candles. And the error is:", e)
             #login api call
-            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-            current_history = obj.getCandleData(current_params)
+            history = connection_obj.getCandleData(live_history_params)
+            current_history = connection_obj.getCandleData(current_params)
 
-        print("the seee---")
 
         Historion = recent_history_forflowing(history)
-        # print(current_history)
-        # exit()
+
         current = current_flowing(current_history)
-        # print("current data:",current_flowing)
         if not current:
             print("this is current params:", current_params)
             print("this is current:", current)
 
 
         Historion.update(current)
-        # print("Total live text:",Historion)
-        # exit()
+
         flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+
         flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
 
 
         fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
         high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
 
+
         # save_tofile = flow_two(Historion)
-        # # next_fivemloop_insecondss = next_fivemloop_inseconds()
+        # next_fivemloop_insecondss = next_fivemloop_inseconds()
         # save_data(save_tofile)
         i += 1
         print("after flow"+str(i))
@@ -922,3 +934,66 @@ def best_option_fromlive(response_data, forname=False):
                 closest_value = multiplied_value
 
     return {'token': closest_key, 'price': closest_value, 'optionname': forname[closest_key], 'shareprice': closest_value/15}
+
+
+def to_buy_option(obj_connection,symbol_name, symbol_token):
+    try:
+        orderparams = {
+            "variety": "NORMAL",
+            "tradingsymbol": symbol_name,
+            "symboltoken": symbol_token,
+            "transactiontype": "BUY",
+            "exchange": "NFO",
+            "ordertype": "MARKET",
+            "producttype": "DELIVERY",
+            "duration": "DAY",
+            "squareoff": "0",
+            "stoploss": "0",
+            "quantity": "1"
+            }
+        # Method 1: Place an order and return the order ID
+        orderid = obj_connection.placeOrder(orderparams)
+        logger.info(f"PlaceOrder : {orderid}")
+        # Method 2: Place an order and return the full response
+        response = obj_connection.placeOrderFullResponse(orderparams)
+        logger.info(f"PlaceOrder : {response}")
+    except Exception as e:
+        logger.exception(f"Order placement failed: {e}")
+
+
+
+def riding_completion_price(in_price):
+    support_resistance = [55555, 55655, 55755, 55855, 55955, 56155, 56255, 56355, 56455, 56555]
+    # if in_price <
+
+
+def into_yesterday(past_time_starts_unix_readable):
+    # Convert the input time string to a datetime object
+    past_time = datetime.strptime(past_time_starts_unix_readable, "%Y-%m-%d %H:%M")
+
+    # Define the time range for the comparison
+    time_7_15 = past_time.replace(hour=7, minute=15, second=0, microsecond=0)
+    time_9_15 = past_time.replace(hour=9, minute=15, second=0, microsecond=0)
+
+    # Check if the given time falls within the specified range
+    if time_7_15 <= past_time <= time_9_15:
+        # Calculate the difference in minutes between the given time and 09:15
+        time_diff_minutes = (time_9_15 - past_time).seconds // 60
+
+        # Get yesterday's date
+        yesterday_date = (past_time - timedelta(days=1)).date()
+
+        # Define yesterday's 15:30 benchmark time
+        benchmark_time = datetime.combine(yesterday_date, datetime.min.time()).replace(hour=15, minute=30)
+
+        # Calculate the new past time by subtracting the time difference
+        new_past_time = benchmark_time - timedelta(minutes=time_diff_minutes)
+
+        return new_past_time.strftime("%Y-%m-%d %H:%M")
+    else:
+        return past_time_starts_unix_readable
+
+
+
+def testfuntion():
+    print("Hi this is from lib file.")

@@ -6,7 +6,7 @@ from SmartApi import SmartConnect #or from smartapi.smartConnect import SmartCon
 from config import *
 import pyotp, time
 from lib import *
-from live_stream import *
+# from live_stream import *
 from Symbols import *
 from Strategy import *
 from datetime import datetime
@@ -16,14 +16,12 @@ from logzero import logger
 
 # import schedule
 
-#create object of call
-
 obj=SmartConnect(api_key="yWjMIfbo")
 
 #login api call
 
 data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-refreshToken= data['data']['refreshToken']
+refreshToken = data['data']['refreshToken']
 
 
 
@@ -44,13 +42,7 @@ history_params = {
      "fromdate": "2024-04-15 09:15",
      "todate": "2024-04-15 11:25"
 }
-params_two = {
-    "exchange": "NSE",
-    "symboltoken": "99926009",
-    "interval": "FIVE_MINUTE",
-    "fromdate": "2024-05-07 11:15",
-    "todate": "2024-05-07 11:20"
-}
+live_history_params = {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-05-23 08:10', 'todate': '2024-05-23 09:10'}
 history_date = "2024-05-08 15:25:00"
 current_date = "2024-05-08 15:30:00"
 # stream_into_flow(obj)2024-03-20 12:40:00     2024-02-23 11:20
@@ -58,13 +50,15 @@ current_date = "2024-05-08 15:30:00"
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # dates = flowing_through_history_two(obj, current_date, history_date)
 # exit()
+# ss =  obj.getCandleData(live_history_params)
+# print(ss)
+# exit()
 dates = stream_into_flow(obj,data)
 
-exit()
+# exit()
 while True:
     try:
-        dates = stream_into_flow(obj)
-
+        dates = stream_into_flow(obj, data)
 
         history_date = dates['history_date']
         current_date = dates['current_date']
@@ -76,6 +70,8 @@ while True:
         # Reconnect and continue the loop
 
         obj = SmartConnect(api_key="yWjMIfbo")
+        data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+
         history_date = "2024-04-26 09:15:00"
         current_date = "2024-04-26 09:20:00"
         continue# print(obj.getCandleData(params_two))
@@ -88,7 +84,7 @@ while True:
 #Live stream into the flowing currents
 # stream_into_flow(obj)
 
-    
+
 
 
 # current_data = {'timestamp_one': '2024-04-16T11:25:00+05:30', 'current_opens': 47541.0, 'highest_price_current': 47547.05, 'lowest_price_current': 47459.7, 'current_closing': 47488.85, 'volume_current': 0, 'current_green': False, 'current_wread': True, 'a_current_opens': 47541.0, 'a_one_opening': 47541.0, 'a_one_closes': 47488.85, 'a_one_closing': 47488.85, 'a_one': 47488.85}
