@@ -1,98 +1,242 @@
-Now we are at: 2024-05-24 09:20
-Second flow has been called. now the current is: 48899.35
+Now we are at: 2024-06-03 10:45
+Second flow has been called. now the current is: 50463.5
 It's out of second flow
-Now we are at: 2024-05-24 09:25
-Second flow has been called. now the current is: 48918.0
+Now we are at: 2024-06-03 10:50
+Second flow has been called. now the current is: 50500.1
 It's out of second flow
-Now we are at: 2024-05-24 09:30
-Second flow has been called. now the current is: 48917.65
+Now we are at: 2024-06-03 10:55
+Second flow has been called. now the current is: 50515.1
 It's out of second flow
-Now we are at: 2024-05-24 09:35
-Second flow has been called. now the current is: 48814.75
+Now we are at: 2024-06-03 11:00
+Second flow has been called. now the current is: 50511.85
 It's out of second flow
-Now we are at: 2024-05-24 09:40
-Second flow has been called. now the current is: 48856.5
+Now we are at: 2024-06-03 11:05
+Second flow has been called. now the current is: 50516.2
 It's out of second flow
-Now we are at: 2024-05-24 09:45
-Second flow has been called. now the current is: 48838.1
+Now we are at: 2024-06-03 11:10
+Second flow has been called. now the current is: 50539.0
 It's out of second flow
-Now we are at: 2024-05-24 09:50
-Second flow has been called. now the current is: 48775.05
+Now we are at: 2024-06-03 11:15
+Second flow has been called. now the current is: 50648.85
 It's out of second flow
-Now we are at: 2024-05-24 09:55
-Second flow has been called. now the current is: 48784.65
+Now we are at: 2024-06-03 11:20
+Second flow has been called. now the current is: 50730.2
 It's out of second flow
-Now we are at: 2024-05-24 10:00
-Second flow has been called. now the current is: 48766.3
+Now we are at: 2024-06-03 11:25
+Second flow has been called. now the current is: 50734.2
 It's out of second flow
-Now we are at: 2024-05-24 10:05
-Second flow has been called. now the current is: 48708.4
+Now we are at: 2024-06-03 11:30
+Second flow has been called. now the current is: 50685.75
 It's out of second flow
-Now we are at: 2024-05-24 10:15
-Second flow has been called. now the current is: 48738.25
+Now we are at: 2024-06-03 11:35
+Second flow has been called. now the current is: 50695.5
 It's out of second flow
-Now we are at: 2024-05-24 10:20
-Second flow has been called. now the current is: 48809.65
+Now we are at: 2024-06-03 11:40
+Second flow has been called. now the current is: 50759.65
+flow_two -stage_one
+flow_two_three
+flow_two_three ---stage_three_starts -copied
+flow_two_three_two ---stage_three
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': []}
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 56, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 666, in stream_into_flow
+    flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
+  File "/var/www/html/myproject/example/Strategy.py", line 883, in flow_two
+    print(pickup_fromstream(connection_obj, connection_data))
+  File "/var/www/html/myproject/example/optionslib.py", line 32, in pickup_fromstream
+    ranger_options = ranger_options_tokens(obj)
+  File "/var/www/html/myproject/example/optionslib.py", line 130, in ranger_options_tokens
+    tokens_array.append(searchScriptData['data'][0]['symboltoken'])
+IndexError: list index out of range
+Now we are at: 2024-06-03 12:15
+Second flow has been called. now the current is: 50828.45
 It's out of second flow
-Now we are at: 2024-05-24 10:25
-Second flow has been called. now the current is: 48742.55
-It's out of second flowNow we are at: 2024-05-24 10:30
-Second flow has been called. now the current is: 48724.15
+Now we are at: 2024-06-03 12:20
+Second flow has been called. now the current is: 50814.75
 It's out of second flow
-Now we are at: 2024-05-24 10:35
-Second flow has been called. now the current is: 48720.45
+Now we are at: 2024-06-03 12:25
+Second flow has been called. now the current is: 50841.55
 It's out of second flow
-Now we are at: 2024-05-24 10:40
-Second flow has been called. now the current is: 48730.4
+Now we are at: 2024-06-03 12:30
+Second flow has been called. now the current is: 50875.1
 It's out of second flow
-Now we are at: 2024-05-24 10:45
-Second flow has been called. now the current is: 48738.05
+Now we are at: 2024-06-03 12:35
+Second flow has been called. now the current is: 50799.25
 It's out of second flow
-Now we are at: 2024-05-24 10:50
-Second flow has been called. now the current is: 48793.85
+Now we are at: 2024-06-03 12:40
+Second flow has been called. now the current is: 50752.75
 It's out of second flow
-Now we are at: 2024-05-24 10:55
-Second flow has been called. now the current is: 48824.0
+Now we are at: 2024-06-03 12:45
+Second flow has been called. now the current is: 50773.55
 It's out of second flow
-Now we are at: 2024-05-24 11:00
-Second flow has been called. now the current is: 48873.35
+Now we are at: 2024-06-03 12:50
+Second flow has been called. now the current is: 50849.3
+flow_two -stage_one
+flow_two_two --stage_two falsy
+Now we are at: 2024-06-03 12:55
+Second flow has been called. now the current is: 50893.85
 It's out of second flow
-Now we are at: 2024-05-24 11:05
-Second flow has been called. now the current is: 48836.95
+Now we are at: 2024-06-03 13:00
+Second flow has been called. now the current is: 50896.1
 It's out of second flow
-Now we are at: 2024-05-24 11:10
-Second flow has been called. now the current is: 48784.95
+Now we are at: 2024-06-03 13:05
+Second flow has been called. now the current is: 50906.1
 It's out of second flow
-Now we are at: 2024-05-24 11:15
-Second flow has been called. now the current is: 48852.75
+Now we are at: 2024-06-03 13:10
+Second flow has been called. now the current is: 50914.45
 It's out of second flow
-Now we are at: 2024-05-24 11:20
-Second flow has been called. now the current is: 48823.25
+Now we are at: 2024-06-03 13:15
+Second flow has been called. now the current is: 50854.4
 It's out of second flow
-Now we are at: 2024-05-24 11:25
-Second flow has been called. now the current is: 48834.45
+Now we are at: 2024-06-03 13:20
+Second flow has been called. now the current is: 50904.2
 It's out of second flow
-Now we are at: 2024-05-24 11:30
-Second flow has been called. now the current is: 48820.4
+Now we are at: 2024-06-03 13:25
+Second flow has been called. now the current is: 50886.3
 It's out of second flow
-Now we are at: 2024-05-24 11:35
-Second flow has been called. now the current is: 48816.55
+Now we are at: 2024-06-03 13:30
+Second flow has been called. now the current is: 50867.55
 It's out of second flow
-Now we are at: 2024-05-24 11:40
-Second flow has been called. now the current is: 48830.9
+Now we are at: 2024-06-03 13:35
+Second flow has been called. now the current is: 50731.4
 It's out of second flow
-Now we are at: 2024-05-24 11:45
-Second flow has been called. now the current is: 48823.1
+Now we are at: 2024-06-03 13:40
+Second flow has been called. now the current is: 50818.45
 It's out of second flow
-Now we are at: 2024-05-24 11:50
-Second flow has been called. now the current is: 48836.8
+Now we are at: 2024-06-03 13:45
+Second flow has been called. now the current is: 50882.25
+flow_two -stage_one
+flow_two_two --stage_two falsy
+Now we are at: 2024-06-03 13:50
+Second flow has been called. now the current is: 50810.55
 It's out of second flow
-Now we are at: 2024-05-24 11:55
-Second flow has been called. now the current is: 48815.65
+Now we are at: 2024-06-03 13:55
+Second flow has been called. now the current is: 50849.2
 It's out of second flow
-Now we are at: 2024-05-24 12:00
-Second flow has been called. now the current is: 48803.85
+Now we are at: 2024-06-03 14:00
+Second flow has been called. now the current is: 50854.75
 It's out of second flow
-Now we are at: 2024-05-24 12:05
-Second flow has been called. now the current is: 48848.8
+Now we are at: 2024-06-03 14:05
+Second flow has been called. now the current is: 50838.35
+It's out of second flow
+Now we are at: 2024-06-03 14:10
+Second flow has been called. now the current is: 50791.7
+It's out of second flow
+Now we are at: 2024-06-03 14:15
+Second flow has been called. now the current is: 50735.0
+It's out of second flow
+Now we are at: 2024-06-03 14:20
+Second flow has been called. now the current is: 50793.55
+It's out of second flow
+Now we are at: 2024-06-03 14:25
+Second flow has been called. now the current is: 50741.6
+It's out of second flow
+Now we are at: 2024-06-03 14:30
+Second flow has been called. now the current is: 50782.6
+It's out of second flow
+Now we are at: 2024-06-03 14:35
+Second flow has been called. now the current is: 50847.65
+flow_two -stage_one
+flow_two_five --stage_two
+flow_two_five --stage_three_starts -copied
+flow_two_five_two --stage_three
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451700CE', 'symboltoken': '35830'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451600CE', 'symboltoken': '35827'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451500CE', 'symboltoken': '35825'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451400CE', 'symboltoken': '35815'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451300CE', 'symboltoken': '35813'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451200CE', 'symboltoken': '35811'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451100CE', 'symboltoken': '35809'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451000CE', 'symboltoken': '35807'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450900CE', 'symboltoken': '35805'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450800CE', 'symboltoken': '35803'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450700CE', 'symboltoken': '35795'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450600CE', 'symboltoken': '35787'}]}
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+option_ltplist: [{'35811': 525.45}, {'35787': 797.9}, {'35830': 375.0}, {'35795': 747.6}, {'35809': 563.15}, {'35807': 604.75}, {'35827': 401.0}, {'35805': 650.0}, {'35815': 459.0}, {'35825': 430.9}, {'35803': 694.0}]
+token names: {'35830': 'BANKNIFTY05JUN2451700CE', '35827': 'BANKNIFTY05JUN2451600CE', '35825': 'BANKNIFTY05JUN2451500CE', '35815': 'BANKNIFTY05JUN2451400CE', '35813': 'BANKNIFTY05JUN2451300CE', '35811': 'BANKNIFTY05JUN2451200CE', '35809': 'BANKNIFTY05JUN2451100CE', '35807': 'BANKNIFTY05JUN2451000CE', '35805': 'BANKNIFTY05JUN2450900CE', '35803': 'BANKNIFTY05JUN2450800CE', '35795': 'BANKNIFTY05JUN2450700CE', '35787': 'BANKNIFTY05JUN2450600CE'}
+{'token': '35811', 'price': 7881.750000000001, 'optionname': 'BANKNIFTY05JUN2451200CE', 'shareprice': 525.45}
+flow_two_four --stage_three_starts -copied
+flow_two_four --stage_three_starts -copied
+flow_two_four_two --stage_three_starts_for_four - copied
+flow_two_four_two_six --stage_three
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451700CE', 'symboltoken': '35830'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451600CE', 'symboltoken': '35827'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451500CE', 'symboltoken': '35825'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451400CE', 'symboltoken': '35815'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451300CE', 'symboltoken': '35813'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451200CE', 'symboltoken': '35811'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451100CE', 'symboltoken': '35809'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451000CE', 'symboltoken': '35807'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450900CE', 'symboltoken': '35805'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450800CE', 'symboltoken': '35803'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450700CE', 'symboltoken': '35795'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450600CE', 'symboltoken': '35787'}]}
+in appending:
+option_ltplist: [{'35811': 525.45}, {'35787': 797.9}, {'35830': 375.0}, {'35795': 747.6}, {'35809': 563.15}, {'35807': 604.75}, {'35827': 401.0}, {'35805': 650.0}, {'35815': 459.0}, {'35825': 430.9}, {'35803': 694.0}, {'35813': 494.2}]
+token names: {'35830': 'BANKNIFTY05JUN2451700CE', '35827': 'BANKNIFTY05JUN2451600CE', '35825': 'BANKNIFTY05JUN2451500CE', '35815': 'BANKNIFTY05JUN2451400CE', '35813': 'BANKNIFTY05JUN2451300CE', '35811': 'BANKNIFTY05JUN2451200CE', '35809': 'BANKNIFTY05JUN2451100CE', '35807': 'BANKNIFTY05JUN2451000CE', '35805': 'BANKNIFTY05JUN2450900CE', '35803': 'BANKNIFTY05JUN2450800CE', '35795': 'BANKNIFTY05JUN2450700CE', '35787': 'BANKNIFTY05JUN2450600CE'}
+{'token': '35811', 'price': 7881.750000000001, 'optionname': 'BANKNIFTY05JUN2451200CE', 'shareprice': 525.45}
+flow_two_four --stage_three_starts -copied
+flow_two_four --stage_three_starts -copied
+flow_two_five --stage_three_starts -copied 2
+flow_two_five --stage_three_starts -copied 2
+flow_two_five_two --stage_three_starts_for_four copied
+flow_two_five_two_six  ----stage_four
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451700CE', 'symboltoken': '35830'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451600CE', 'symboltoken': '35827'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451500CE', 'symboltoken': '35825'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451400CE', 'symboltoken': '35815'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451300CE', 'symboltoken': '35813'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451200CE', 'symboltoken': '35811'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451100CE', 'symboltoken': '35809'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2451000CE', 'symboltoken': '35807'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450900CE', 'symboltoken': '35805'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450800CE', 'symboltoken': '35803'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450700CE', 'symboltoken': '35795'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY05JUN2450600CE', 'symboltoken': '35787'}]}
+{'token': '35811', 'price': 7881.750000000001, 'optionname': 'BANKNIFTY05JUN2451200CE', 'shareprice': 525.45}
+flow_two_five --stage_three_starts -copied 2
+flow_two_five --stage_three_starts -copied 2
+Now we are at: 2024-06-03 14:45
+Second flow has been called. now the current is: 50821.85
+It's out of second flow
+Now we are at: 2024-06-03 14:50
+Second flow has been called. now the current is: 50804.35
+It's out of second flow
+Now we are at: 2024-06-03 14:55
+Second flow has been called. now the current is: 50855.85
+It's out of second flow
+Now we are at: 2024-06-03 15:00
+Second flow has been called. now the current is: 50869.25
+It's out of second flow
+Now we are at: 2024-06-03 15:05
+Second flow has been called. now the current is: 50943.8
+It's out of second flow
+Now we are at: 2024-06-03 15:10
+Second flow has been called. now the current is: 50955.0
+It's out of second flow
+Now we are at: 2024-06-03 15:15
+Second flow has been called. now the current is: 51062.45
+It's out of second flow
+Now we are at: 2024-06-03 15:20
+Second flow has been called. now the current is: 51084.4
+It's out of second flow
+Now we are at: 2024-06-03 15:25
+Second flow has been called. now the current is: 51106.05
 It's out of second flow

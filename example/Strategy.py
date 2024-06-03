@@ -1,8 +1,11 @@
 import pandas as pd
 import sys
 from db import *
-# from live_stream import *
+from optionslib import *
 
+# from live_stream import *
+# pickup_fromstream('connection_obj', 'connection_data')
+# exit()
 #x1 is Least recent closing price and x5 is most recent closing price and y1 current price
 def strategy(x1, x2, x3, x4, x5, y1):
     if x1 > x2 > x3 < x4 < x1 < x5 and y1 > x1:
