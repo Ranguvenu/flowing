@@ -572,7 +572,7 @@ def flowing_through_history_two(obj, current_date=False, history_date=False):
             current_history = obj.getCandleData(current_params)
             # print(current_history)
             # exit()
-            print('cjdnfjdfj22')
+            # print('cjdnfjdfj22')
 
             try:
                 current_history = obj.getCandleData(current_params)
