@@ -1,3 +1,6 @@
+from logzero import logger
+
+
 def order_testing(obj, order_details, transaction_type="BUY"):
     try:
         orderparams = {
@@ -6,7 +9,7 @@ def order_testing(obj, order_details, transaction_type="BUY"):
             "symboltoken": order_details['token'],
             "transactiontype": transaction_type,
             "exchange": "NFO",
-            "ordertype": "LIMIT",
+            "ordertype": "MARKET",
             "producttype": "CARRYFORWARD",
             "duration": "DAY",
             "price": "0",
@@ -14,17 +17,18 @@ def order_testing(obj, order_details, transaction_type="BUY"):
             "stoploss": 0,
             "quantity": 15
             }
-        # Method 1: Place an order and return the order ID
+
         orderid = obj.placeOrder(orderparams)
+        logger.info(f"PlaceOrder : {orderid}")
         # Method 2: Place an order and return the full response
         response = obj.placeOrderFullResponse(orderparams)
+        logger.info(f"PlaceOrder : {response}")
     except Exception as e:
         print('error'+ e)
 
 
 
-
-def sell_at(current_index_at = 48555):
+def sell_at(current_index_at):
     support_resistances = [50055.05, 49918.73, 49593.87, 49257.89, 48951.64]
     next_greater = None
     second_next_greater = None

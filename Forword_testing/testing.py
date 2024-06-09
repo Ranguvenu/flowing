@@ -18,6 +18,29 @@ def sell_at(current_index_at):
 
     return next_greater
 
-# Example usage:
-current_index_at = 424
-print(sell_at(current_index_at))  # Output: 155 (since 66 is within 55 points
+
+try:
+    orderparams = {
+        "variety": "NORMAL",
+        "tradingsymbol": "BANKNIFTY12JUN2450700CE",
+        "symboltoken": "37095",
+        "transactiontype": "BUY",
+        "exchange": "NFO",
+        "ordertype": "MARKET",
+        "producttype": "CARRYFORWARD",
+        "duration": "DAY",
+        "price": "0",
+        "squareoff": 0,
+        "stoploss": 0,
+        "quantity": 45
+        }
+    # Method 1: Place an order and return the order ID
+    orderid = obj.placeOrder(orderparams)
+
+    orderid = obj.placeOrder(orderparams)
+    logger.info(f"PlaceOrder : {orderid}")
+    # Method 2: Place an order and return the full response
+    response = obj.placeOrderFullResponse(orderparams)
+    logger.info(f"PlaceOrder : {response}")
+except Exception as e:
+    logger.exception(f"Order placement failed: {e}")

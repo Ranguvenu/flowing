@@ -4,7 +4,7 @@ from SmartApi import SmartConnect
 
 from config import *
 from Flower_filter import *
-
+from orders_lib import *
 def forword_testing(connection_object, current_time, history_time):
     connection_data = connection_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 
@@ -56,20 +56,71 @@ def forword_testing(connection_object, current_time, history_time):
 
             Historion.update(current)
 
-            flowfilter(Historion, current_params['todate'], connection_data, connection_object)
-            save_tofile = flow_two(Historion, current_params['todate'], connection_data, connection_object)
+            flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
+            flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
 
-            fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
-            high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
+            fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+            high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
+
+            holdings = False
+            # if flowfilterv or flow_twov or fourth_flowv or high_fiveflowv or holdings:
+            sleep_time = next_fivemloop_inseconds()
+
+            if sleep_time != 0:
+                sell_atv = sell_at()
+                start_time = time.time()
+                while (time.time() - start_time) < sleep_time:
+                    ltp_target_checking(connection_object, sell_atv)
+                    time.sleep(5)
+            elif sleep_time <= 0:
+                sell_atv = sell_at()
+                start_time = time.time()
+                while (time.time() - start_time) < 300:
+                    ltp_target_checking(connection_object, sell_atv)
+                    time.sleep(5)
+
 
 
             i += 1
             print("after flow"+str(i))
-            time.sleep(1)  # Sleep for "Intervel" seconds before running again
-            print('saijdisdisjidrr')
+
+
+            # Place your main function logic here that runs after the sleep period.
+            print("Main loop is running.")
         except Exception as e:
             return {'history_date': history_time, 'current_date': current_time}
     return {'history_date':history_date, 'current_date':current_date}
+
+
+
+def next_fivemloop_inseconds():
+    local_time = time.localtime()
+    current_time = int(time.strftime("%M", local_time))
+    # print(time.strftime("%M", local_time))
+
+    # Sample next_time
+    next_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+
+    if current_time % 5 != 0:
+        current_time = (current_time // 5 + 1) * 5
+
+    # Split next_time into date and time components
+    date_part, time_part = next_time.split()
+
+    # Replace the minute part with current_time
+    new_time = time_part[:3] + str(current_time)
+
+    # Reconstruct the modified next_time
+    modified_next_time = date_part + ' ' + new_time
+    print("Next History time:", modified_next_time)
+    modified_next_time = datetime.strptime(modified_next_time, "%Y-%m-%d %H:%M")
+    modified_next_time = int(modified_next_time.timestamp())
+    now_the_time = time.time()
+    now_the_time = int(now_the_time - (now_the_time % 60))
+    next_loop_inseconds = modified_next_time - now_the_time
+    if next_loop_inseconds <= 0:
+        return 0
+    return next_loop_inseconds
 
 
 
@@ -221,19 +272,8 @@ def current_flowing(response_data):
 
     return formatted_data
 
-def sell_at(current_index_at):
-    support_resistances = [50055.05, 49918.73, 49593.87, 49257.89, 48951.64]
-    next_greater = None
-    second_next_greater = None
 
-    for resistance in support_resistances:
-        if resistance > current_index_at:
-            if next_greater is None:
-                next_greater = resistance
-            else:
-                second_next_greater = resistance
-                break
-    if next_greater is not None and abs(next_greater - current_index_at) <= 55:
-        return second_next_greater
 
-    return next_greater
+def ltp_target_checking(obj, sell_index_point = 48555):
+    banknifty_index = obj.ltpData(Exchange= "NSE", Symbol= "BANKNIFTY", SymbolCode= "99926009")
+    # if sell_index_point == banknifty_index

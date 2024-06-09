@@ -15,7 +15,11 @@ history_date = "2024-06-05 11:45:00"
 current_date = "2024-06-05 11:50:00"
 # dates =
 
+#------------------------------------------------------------------------------------
 
+# banknifty_index = connecting_object.ltpData("NSE", "BANKNIFTY","99926009")
+
+#-------------------------------------------------------------------------------------
 
 try:
     dates = forword_testing(connecting_object, current_date, history_date)
