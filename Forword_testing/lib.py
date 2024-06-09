@@ -5,7 +5,8 @@ from SmartApi import SmartConnect
 from config import *
 from Flower_filter import *
 
-def forword_testing(connecting_object, current_time, history_time):
+def forword_testing(connection_object, current_time, history_time):
+    connection_data = connection_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 
     i = 0
     while True:
@@ -17,32 +18,31 @@ def forword_testing(connecting_object, current_time, history_time):
 
         try:
 
-            params = recent_number_of_forwording_histories_params("NSE", "99926009", "FIVE_MINUTE", 10, 5, history_time)
+            params = recent_number_of_forwording_histories_params("NSE", "99926009", "FIVE_MINUTE", 6, 5, history_time)
             current_params = recent_number_of_forwording_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_time)
 
-            history = connecting_object.getCandleData(params)
+            history = connection_object.getCandleData(params)
 
-            current_history = connecting_object.getCandleData(current_params)
+            current_history = connection_object.getCandleData(current_params)
 
 
             try:
-                current_history = connecting_object.getCandleData(current_params)
+                current_history = connection_object.getCandleData(current_params)
             except Exception as e:
                 print("In exeption: ")
                 print('cjdnfjdfj2')
 
-                connecting_object=SmartConnect(api_key="yWjMIfbo")
-                #login api callconnecting_object
-                data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+                connection_object=SmartConnect(api_key="yWjMIfbo")
+                #login api callconnection_object
+                data = connection_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
                 # refreshToken= data['data']['refreshToken']
                 print('pramsasansns:', current_params)
-                print('object_object',connecting_object.getCandleData(current_params))
-                current_history = connecting_object.getCandleData(current_params)
+                print('object_object',connection_object.getCandleData(current_params))
+                current_history = connection_object.getCandleData(current_params)
                 print('current_history::::::', current_history)
                 # continue
 
             Historion = recent_history_forflowing(history)
-            print('hihihhii')
 
             try:
                 current = current_flowing(current_history)
@@ -55,16 +55,18 @@ def forword_testing(connecting_object, current_time, history_time):
 
 
             Historion.update(current)
-            flowfilter(Historion, current_params['todate'])
-            save_tofile = flow_two(Historion, current_params['todate'])
 
-            fourth_flow(Historion, current_params['todate'])
-            high_fiveflow(Historion, current_params['todate'])
+            flowfilter(Historion, current_params['todate'], connection_data, connection_object)
+            save_tofile = flow_two(Historion, current_params['todate'], connection_data, connection_object)
+
+            fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+            high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
 
 
             i += 1
             print("after flow"+str(i))
             time.sleep(1)  # Sleep for "Intervel" seconds before running again
+            print('saijdisdisjidrr')
         except Exception as e:
             return {'history_date': history_time, 'current_date': current_time}
     return {'history_date':history_date, 'current_date':current_date}
@@ -190,7 +192,6 @@ def recent_history_forflowing(response_data):
 
 def current_flowing(response_data):
     formatted_data = {}
-
     response_data['data'] = list(reversed(response_data['data']))
 
     i = 1
@@ -219,3 +220,20 @@ def current_flowing(response_data):
         i += 1
 
     return formatted_data
+
+def sell_at(current_index_at):
+    support_resistances = [50055.05, 49918.73, 49593.87, 49257.89, 48951.64]
+    next_greater = None
+    second_next_greater = None
+
+    for resistance in support_resistances:
+        if resistance > current_index_at:
+            if next_greater is None:
+                next_greater = resistance
+            else:
+                second_next_greater = resistance
+                break
+    if next_greater is not None and abs(next_greater - current_index_at) <= 55:
+        return second_next_greater
+
+    return next_greater

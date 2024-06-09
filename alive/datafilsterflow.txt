@@ -1,92 +1,22 @@
-This is current closing: 50463.5
-Testing at: 2024-06-03 10:45
+This is current closing: 49327.5
+Testing at: 2024-06-07 10:15
 its out of flow9stage
-This is current closing: 50500.1
-Testing at: 2024-06-03 10:50
+This is current closing: 49345.7
+Testing at: 2024-06-07 10:20
 its out of flow9stage
-This is current closing: 50515.1
-Testing at: 2024-06-03 10:55
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_six --- stage_three
-This is current closing: 50511.85
-Testing at: 2024-06-03 11:00
+This is current closing: 49434.45
+Testing at: 2024-06-07 10:25
 its out of flow9stage
-This is current closing: 50516.2
-Testing at: 2024-06-03 11:05
-its out of flow9stage
-This is current closing: 50539.0
-Testing at: 2024-06-03 11:10
-its out of flow9stage
-This is current closing: 50648.85
-Testing at: 2024-06-03 11:15
-in stage
-This is current closing: 50730.2
-Testing at: 2024-06-03 11:20
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-This is current closing: 50734.2
-Testing at: 2024-06-03 11:25
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_six Verified
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four_six stage_two_starts_stage_three copied
-This is current closing: 50685.75
-Testing at: 2024-06-03 11:30
-its out of flow9stage
-This is current closing: 50695.5
-Testing at: 2024-06-03 11:35
-its out of flow9stage
-This is current closing: 50759.65
-Testing at: 2024-06-03 11:40
-its out of flow9stage
-This is current closing: 50828.45
-Testing at: 2024-06-03 12:15
-its out of flow9stage
-This is current closing: 50814.75
-Testing at: 2024-06-03 12:20
-its out of flow9stage
-This is current closing: 50841.55
-Testing at: 2024-06-03 12:25
-its out of flow9stage
-This is current closing: 50875.1
-Testing at: 2024-06-03 12:30
-its out of flow9stage
-This is current closing: 50799.25
-Testing at: 2024-06-03 12:35
-its out of flow9stage
-This is current closing: 50752.75
-Testing at: 2024-06-03 12:40
-its out of flow9stage
-This is current closing: 50773.55
-Testing at: 2024-06-03 12:45
-its out of flow9stage
-This is current closing: 50849.3
-Testing at: 2024-06-03 12:50
-its out of flow9stage
-This is current closing: 50893.85
-Testing at: 2024-06-03 12:55
+This is current closing: 49465.0
+Testing at: 2024-06-07 10:30
 in stage
 flow_one_one
 flow_one_one copied
 flow_one_one_four --- stage_three
 flow_one_one_four --- stage_three
-flow_one_one_four_four ---- stage_four
-This is current closing: 50896.1
-Testing at: 2024-06-03 13:00
+flow_one_one_four_five ---- stage_four
+This is current closing: 49613.45
+Testing at: 2024-06-07 10:35
 in stage
 flow_one_four
 flow_one_four copied
@@ -98,8 +28,135 @@ flow_one_four_three_four ---stage_three
 flow_one_four copied two
 flow_one_four copied two
 flow_one_four copied two
-This is current closing: 50906.1
-Testing at: 2024-06-03 13:05
+This is current closing: 49580.3
+Testing at: 2024-06-07 10:40
+its out of flow9stage
+This is current closing: 49593.75
+Testing at: 2024-06-07 10:45
+its out of flow9stage
+This is current closing: 49541.9
+Testing at: 2024-06-07 10:50
+its out of flow9stage
+This is current closing: 49623.25
+Testing at: 2024-06-07 10:55
+its out of flow9stage
+This is current closing: 49596.3
+Testing at: 2024-06-07 11:00
+its out of flow9stage
+This is current closing: 49665.65
+Testing at: 2024-06-07 11:05
+its out of flow9stage
+This is current closing: 49659.15
+Testing at: 2024-06-07 11:10
+its out of flow9stage
+This is current closing: 49627.25
+Testing at: 2024-06-07 11:15
+its out of flow9stage
+This is current closing: 49609.85
+Testing at: 2024-06-07 11:20
+its out of flow9stage
+This is current closing: 49574.9
+Testing at: 2024-06-07 11:25
+its out of flow9stage
+This is current closing: 49645.7
+Testing at: 2024-06-07 11:30
+its out of flow9stage
+This is current closing: 49777.4
+Testing at: 2024-06-07 11:35
+its out of flow9stage
+This is current closing: 49776.15
+Testing at: 2024-06-07 11:40
+its out of flow9stage
+This is current closing: 49838.3
+Testing at: 2024-06-07 11:45
+its out of flow9stage
+This is current closing: 49914.4
+Testing at: 2024-06-07 11:50
+its out of flow9stage
+This is current closing: 49854.65
+Testing at: 2024-06-07 11:55
+its out of flow9stage
+This is current closing: 49854.6
+Testing at: 2024-06-07 12:00
+its out of flow9stage
+This is current closing: 49892.4
+Testing at: 2024-06-07 12:05
+its out of flow9stage
+This is current closing: 49832.0
+Testing at: 2024-06-07 12:10
+its out of flow9stage
+This is current closing: 49800.05
+Testing at: 2024-06-07 12:15
+its out of flow9stage
+This is current closing: 49824.2
+Testing at: 2024-06-07 12:20
+its out of flow9stage
+This is current closing: 49848.9
+Testing at: 2024-06-07 12:25
+its out of flow9stage
+This is current closing: 49839.95
+Testing at: 2024-06-07 12:30
+its out of flow9stage
+This is current closing: 49843.8
+Testing at: 2024-06-07 12:35
+its out of flow9stage
+This is current closing: 49865.6
+Testing at: 2024-06-07 12:40
+its out of flow9stage
+This is current closing: 49901.3
+Testing at: 2024-06-07 12:45
+its out of flow9stage
+This is current closing: 49828.45
+Testing at: 2024-06-07 12:50
+its out of flow9stage
+This is current closing: 49856.55
+Testing at: 2024-06-07 12:55
+its out of flow9stage
+This is current closing: 49806.4
+Testing at: 2024-06-07 13:00
+its out of flow9stage
+This is current closing: 49816.35
+Testing at: 2024-06-07 13:05
+its out of flow9stage
+This is current closing: 49857.9
+Testing at: 2024-06-07 13:10
+its out of flow9stage
+This is current closing: 49769.25
+Testing at: 2024-06-07 13:15
+its out of flow9stage
+This is current closing: 49729.45
+Testing at: 2024-06-07 13:20
+its out of flow9stage
+This is current closing: 49729.45
+Testing at: 2024-06-07 13:20
+its out of flow9stage
+This is current closing: 49749.65
+Testing at: 2024-06-07 13:25
+its out of flow9stage
+This is current closing: 49783.1
+Testing at: 2024-06-07 13:30
+its out of flow9stage
+This is current closing: 49821.25
+Testing at: 2024-06-07 13:35
+in stage
+flow_one_one
+flow_one_one copied
+flow_one_one_five --- stage_three It's out of first flow
+This is current closing: 49850.2
+Testing at: 2024-06-07 13:40
+in stage
+flow_one_four
+flow_one_four copied
+flow_one_four_three
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four_three stage_two_for_stage_three copied
+flow_one_four_three_six ---stage_three It's out of first flow
+flow_one_four copied two
+flow_one_four copied two
+flow_one_four copied two
+This is current closing: 49857.15
+Testing at: 2024-06-07 13:45
 in stage
 flow_one_four
 flow_one_four copied
@@ -111,138 +168,653 @@ flow_one_four copied two
 flow_one_four copied two
 flow_one_four_six stage_two_starts_stage_three copied
 flow_one_four_six_three stage_three
-This is current closing: 50914.45
-Testing at: 2024-06-03 13:10
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_six Verified
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four_six stage_two_starts_stage_three copied
-flow_one_four_six_one stage_three_started Verified
-This is current closing: 50854.4
-Testing at: 2024-06-03 13:15
+This is current closing: 49824.8
+Testing at: 2024-06-07 13:50
 its out of flow9stage
-This is current closing: 50904.2
-Testing at: 2024-06-03 13:20
+This is current closing: 49738.25
+Testing at: 2024-06-07 13:55
 its out of flow9stage
-This is current closing: 50886.3
-Testing at: 2024-06-03 13:25
+This is current closing: 49778.95
+Testing at: 2024-06-07 14:00
 its out of flow9stage
-This is current closing: 50867.55
-Testing at: 2024-06-03 13:30
+This is current closing: 49816.8
+Testing at: 2024-06-07 14:05
 its out of flow9stage
-This is current closing: 50731.4
-Testing at: 2024-06-03 13:35
+This is current closing: 49814.0
+Testing at: 2024-06-07 14:10
 its out of flow9stage
-This is current closing: 50818.45
-Testing at: 2024-06-03 13:40
+This is current closing: 49866.6
+Testing at: 2024-06-07 14:15
 its out of flow9stage
-This is current closing: 50882.25
-Testing at: 2024-06-03 13:45
+This is current closing: 49845.65
+Testing at: 2024-06-07 14:20
 its out of flow9stage
-This is current closing: 50810.55
-Testing at: 2024-06-03 13:50
+This is current closing: 49818.7
+Testing at: 2024-06-07 14:25
 its out of flow9stage
-This is current closing: 50849.2
-Testing at: 2024-06-03 13:55
+This is current closing: 49794.7
+Testing at: 2024-06-07 14:30
 its out of flow9stage
-This is current closing: 50854.75
-Testing at: 2024-06-03 14:00
+This is current closing: 49783.55
+Testing at: 2024-06-07 14:35
 its out of flow9stage
-This is current closing: 50838.35
-Testing at: 2024-06-03 14:05
+This is current closing: 49735.45
+Testing at: 2024-06-07 14:40
 its out of flow9stage
-This is current closing: 50791.7
-Testing at: 2024-06-03 14:10
+This is current closing: 49796.6
+Testing at: 2024-06-07 14:45
 its out of flow9stage
-This is current closing: 50735.0
-Testing at: 2024-06-03 14:15
+This is current closing: 49859.45
+Testing at: 2024-06-07 14:50
 its out of flow9stage
-This is current closing: 50793.55
-Testing at: 2024-06-03 14:20
+This is current closing: 49847.35
+Testing at: 2024-06-07 14:55
 its out of flow9stage
-This is current closing: 50741.6
-Testing at: 2024-06-03 14:25
+This is current closing: 49812.55
+Testing at: 2024-06-07 15:00
 its out of flow9stage
-This is current closing: 50782.6
-Testing at: 2024-06-03 14:30
+This is current closing: 49820.7
+Testing at: 2024-06-07 15:05
 its out of flow9stage
-This is current closing: 50847.65
-Testing at: 2024-06-03 14:35
+This is current closing: 49777.75
+Testing at: 2024-06-07 15:10
 its out of flow9stage
-This is current closing: 50821.85
-Testing at: 2024-06-03 14:45
+This is current closing: 49823.45
+Testing at: 2024-06-07 15:15
 its out of flow9stage
-This is current closing: 50804.35
-Testing at: 2024-06-03 14:50
+This is current closing: 49802.85
+Testing at: 2024-06-07 15:20
 its out of flow9stage
-This is current closing: 50855.85
-Testing at: 2024-06-03 14:55
+This is current closing: 49806.6
+Testing at: 2024-06-07 15:25
 its out of flow9stage
-This is current closing: 50869.25
-Testing at: 2024-06-03 15:00
-its out of flow9stage
-This is current closing: 50943.8
-Testing at: 2024-06-03 15:05
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_three --- stage_three
-flow_one_five_three --- stage_three
-This is current closing: 50955.0
-Testing at: 2024-06-03 15:10
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_two
-flow_one_four copied two
-flow_one_four_two --stage_two_for_stage_three copies
-flow_one_four_two_three --stage_three
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-This is current closing: 51062.45
-Testing at: 2024-06-03 15:15
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_six Verified
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four_six stage_two_starts_stage_three copied
-flow_one_four_six_two stage_three
-This is current closing: 51084.4
-Testing at: 2024-06-03 15:20
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_six Verified
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four_six stage_two_starts_stage_three copied
-flow_one_four_six_one stage_three_started Verified
-This is current closing: 51106.05
-Testing at: 2024-06-03 15:25
-in stage
-flow_one_four
-flow_one_four copied
-flow_one_four_six Verified
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four copied two
-flow_one_four_six stage_two_starts_stage_three copied
-flow_one_four_six_one stage_three_started Verified
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-06-07 16:10', 'todate': '2024-06-07 16:10'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+An error occurred: 'NoneType' object is not reversible
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 42, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 656, in stream_into_flow
+    current = current_flowing(current_history)
+  File "/var/www/html/myproject/example/lib.py", line 179, in current_flowing
+    response_data['data'] = list(reversed(response_data['data']))
+TypeError: 'NoneType' object is not reversible
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 46, in <module>
+    time.sleep(5)
+KeyboardInterrupt

@@ -16,6 +16,8 @@ TOKENS_WITHNAMES = None
 
 def pickup_fromstream(obj=False, data=False):
     global TOKENS_WITHNAMES
+    captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
+
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
         # login api call
@@ -104,17 +106,14 @@ def pickup_fromstream(obj=False, data=False):
 
     sws.connect()
     close_connection()
-
+    print("Resultant Option for you:", BEST_OPTION)
     return BEST_OPTION
 
 
 
 def ranger_options_tokens(obj):
     i = 11
-    closest_option = {'symbol': None, 'price': float('inf')}
-    investing_amount = 2555
     options_inrange = ranger_options(obj)
-    existing_difference = float('inf')
     token_collection = [{}]
     tokens_array = []
     token_name = {}
@@ -124,15 +123,13 @@ def ranger_options_tokens(obj):
         time.sleep(1)
         searchScriptData = obj.searchScrip("NFO", option_symbol)
         print('for name:',searchScriptData)
-        # exit()
-        # print(searchScriptData)
-        # exit()
+
         tokens_array.append(searchScriptData['data'][0]['symboltoken'])
         token_name[searchScriptData['data'][0]['symboltoken']] = searchScriptData['data'][0]['tradingsymbol']
         i -= 1
     token_collection[0]['exchangeType'] = 2
     token_collection[0]['tokens'] = tokens_array
-    # print(tokemns)
+
     return [token_collection, token_name]
 
 
@@ -163,7 +160,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "05JUN24"
+        validate = "12JUN24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type

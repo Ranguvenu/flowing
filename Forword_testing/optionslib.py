@@ -7,6 +7,7 @@ from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 from logzero import logger
 
 # Define a global variable to store the response
+# Define a global variable to store the response
 RESPONSE_DATA = None
 TOKENS = []
 OPTION_LTP = []
@@ -16,11 +17,12 @@ TOKENS_WITHNAMES = None
 
 def pickup_fromstream(obj=False, data=False):
     global TOKENS_WITHNAMES
+    captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
+
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
         # login api call
         data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-    # refreshToken = data['data']['refreshToken']
 
     AUTH_TOKEN = data['data']['jwtToken']
     API_KEY = "yWjMIfbo"
@@ -44,7 +46,7 @@ def pickup_fromstream(obj=False, data=False):
         global OPTION_LTP
         global I
         global BEST_OPTION
-
+        captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
         logger.info("Ticks: {}".format(message))
 
         RESPONSE_DATA = message
@@ -68,7 +70,7 @@ def pickup_fromstream(obj=False, data=False):
 
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
-            return best_option_fromlive(OPTION_LTP)
+            # return best_option_fromlive(OPTION_LTP)
 
     # Initialize received_tokens as an empty set
 
@@ -104,8 +106,13 @@ def pickup_fromstream(obj=False, data=False):
 
     sws.connect()
     close_connection()
-
+    print("Resultant option for you: ", BEST_OPTION)
     return BEST_OPTION
+
+
+
+
+
 
 
 
@@ -163,7 +170,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "05JUN24"
+        validate = "12JUN24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type

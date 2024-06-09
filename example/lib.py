@@ -660,6 +660,8 @@ def stream_into_flow(connection_obj, connection_data):
 
 
         Historion.update(current)
+        # print(Historion)
+        # exit()
 
         flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
 
