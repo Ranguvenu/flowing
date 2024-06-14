@@ -628,17 +628,10 @@ def stream_into_flow(connection_obj, connection_data):
     while True:
         # captured_outputs = sys.stdout = sys.stderr = open('data.txt', 'a')
 
-
-
         # time.sleep(2)  # Sleep for "Intervel" seconds before running again
         live_history_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 12, 5, False, False)
 
         current_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 0, 5, False, True)
-
-
-
-
-
 
         # current_history = obj.getCandleData(current_params)
         try:
@@ -658,10 +651,7 @@ def stream_into_flow(connection_obj, connection_data):
             print("this is current params:", current_params)
             print("this is current:", current)
 
-
         Historion.update(current)
-        # print(Historion)
-        # exit()
 
         flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
 

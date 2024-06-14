@@ -274,6 +274,8 @@ def current_flowing(response_data):
 
 
 
+
 def ltp_target_checking(obj, sell_index_point = 48555):
-    banknifty_index = obj.ltpData(Exchange= "NSE", Symbol= "BANKNIFTY", SymbolCode= "99926009")
-    # if sell_index_point == banknifty_index
+    banknifty_ltp = obj.ltpData(Exchange= "NSE", Symbol= "BANKNIFTY", SymbolCode= "99926009")
+
+    # if sell_index_point <= banknifty_ltp or (sell_index_point - banknifty_ltp) <= 15:

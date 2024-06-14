@@ -160,7 +160,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "12JUN24"
+        validate = "19JUN24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
