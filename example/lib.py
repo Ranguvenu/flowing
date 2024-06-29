@@ -3,9 +3,11 @@ import sys
 sys.path.append('/var/www/html/myproject/')
 from smartapi import SmartConnect
 from config import *
-import pyotp, time, timedelta
-import mysql.connector
 from datetime import datetime, timedelta
+import pyotp
+import time
+import pytz
+import mysql.connector
 from Strategy import *
 import smtplib
 from email.mime.text import MIMEText
@@ -13,6 +15,7 @@ from email.mime.text import MIMEText
 from Symbols import *
 from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 from logzero import logger
+from orders_lib import *
 #The Connection
 # pickup_fromstream()
 # exit()
@@ -94,7 +97,7 @@ def Db_Connection():
     return mysql.connector.connect(**db_config)
 def round_up_to_nearest_five(x):
     return 5 * ((x + 4) // 5)
-    
+
 def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
     i = 0
     while True:
@@ -104,14 +107,14 @@ def StreamLTP_two(Exchange, Symbol, SymbolCode, Intervel, connection):
         Ltp_insertion(i, Ltp)
         current_time_struct = time.localtime()
         print("Last Trading Price: ", Ltp['data']['ltp'], "@",  time.strftime("%H:%M:%S", current_time_struct))
-        
+
         # Calculate the time until the next multiple of five minutes
         current_minute = current_time_struct.tm_min
         next_iteration_minute = round_up_to_nearest_five(current_minute)
         minutes_to_sleep = (next_iteration_minute - current_minute) % 60
         if minutes_to_sleep == 0:
             minutes_to_sleep = 5
-        print(minutes_to_sleep) 
+        print(minutes_to_sleep)
         time.sleep(minutes_to_sleep * 60)  # Sleep until the next multiple of five minutes
         i += 1
 def StreamLTP_twotwo(Exchange, Symbol, SymbolCode, Intervel, connection):
@@ -123,7 +126,7 @@ def StreamLTP_twotwo(Exchange, Symbol, SymbolCode, Intervel, connection):
         Ltp_insertion(i, Ltp)
         current_time_struct = time.localtime()
         print("Last Trading Price: ", Ltp['data']['ltp'], "@",  time.strftime("%H:%M:%S", current_time_struct))
-        
+
         # Calculate the time until the next multiple of five minutes
         current_minute = current_time_struct.tm_min
         next_iteration_minute = round_up_to_nearest_five(current_minute)
@@ -166,7 +169,7 @@ def recent_history_forflowing(response_data):
         formatted_data[f'a_{spell}_closing'] = closing_price
         formatted_data[f'a_{spell}'] = closing_price
         i += 1
-        
+
 
     return formatted_data
         # Display the formatted data
@@ -202,7 +205,7 @@ def current_flowing(response_data):
         formatted_data['current_closing'] = closing_price
         formatted_data['current'] = closing_price
         i += 1
-        
+
 
     return formatted_data
         # Display the formatted data
@@ -325,7 +328,7 @@ def recent_historion_timeline_forlive(interval = False, into_past=False, current
         past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
         past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
 
-        
+
         startime_readble = time_correction.strftime("%Y-%m-%d %H:%M")
 
 
@@ -388,7 +391,7 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
         past_time_starts_unix_readable = datetime.fromtimestamp(past_time_starts_unix)
         past_time_starts_unix_readable = past_time_starts_unix_readable.strftime("%Y-%m-%d %H:%M")
 
-        
+
         startime_readble = time_correction.strftime("%Y-%m-%d %H:%M")
 
         past_time_starts_unix_readable = into_yesterday(past_time_starts_unix_readable)
@@ -418,7 +421,7 @@ def recent_historion_timeline(interval = False, into_past=False, current_time=Fa
 
 def recent_historion_timeline_two_for_currentpricess(interval = False, into_past=False):
     # Get current local time
-    
+
     local_time = time.localtime()
     current_time = time.strftime("%Y-%m-%d %H:%M", local_time)
     # current_time = datetime.strptime(current_time, "%Y-%m-%d %H:%M")
@@ -474,7 +477,7 @@ def next_times_giving(begins="2024-04-15 15:25"):
     reduced_time = datetime.fromtimestamp(reduced_unix)
     formatted_date = reduced_time.strftime("%Y-%m-%d %H:%M:%S")
 
-    return formatted_date   
+    return formatted_date
 
 # To save the result data in file
 def save_data(data):
@@ -528,7 +531,7 @@ def flowing_through_history(obj, current_date=False, history_starts=False):
 
         print("the seee---")
         # while True:
-        #     times_forhistory = 
+        #     times_forhistory =
         Historion = recent_history_forflowing(history)
 
         current = current_flowing(current_history)
@@ -653,14 +656,27 @@ def stream_into_flow(connection_obj, connection_data):
 
         Historion.update(current)
 
-        flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+        flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+        flow_twov = flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
 
-        flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
+        fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
+        high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
 
+        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+        print("variables:::::", variables)
+        for var in variables:
+            print("var of variable:", var)
+            if var is not None:
+                bounds = [51966.51, 52186.93, 52460.21, 52701.59, 52998.74, 53182.99]
 
-        fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
-        high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
+                lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+                option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
+                print("option_order_response::", option_order_response)
 
+        entered_options = get_entered_options()
+        print("entered_options: ", entered_options)
+        if entered_options:
+            fast_looping(connection_obj, entered_options, Historion['current_closing'])
 
         # save_tofile = flow_two(Historion)
         # next_fivemloop_insecondss = next_fivemloop_inseconds()
@@ -710,7 +726,7 @@ def next_fivemloop_inseconds():
 
 def into_the_yesterday(begins="2024-04-15 09:15:00"):
     begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
-    
+
     # Extract time component from begins_dt_format
     time_component = begins_dt_format.time()
 
@@ -756,7 +772,7 @@ def send_email(subject, body):
     receiver_email = 'venu.chary@moodle.com'
     smtp_username = 'venucharyrangu@gmail.com'
     smtp_password = 'dbvb zwju zuvr hgjv'
-    
+
     msg = MIMEText(body)
     msg['Subject'] = subject
     msg['From'] = sender_email
@@ -925,7 +941,7 @@ def web_stream(data):
 #                 closest_key = key
 #                 closest_value = multiplied_value
 
-#     return {'token': closest_key, 'price': closest_value, 'optionname': forname[closest_key], 'shareprice': closest_value/15}
+#     return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
 
 
 def to_buy_option(obj_connection,symbol_name, symbol_token):
@@ -1089,3 +1105,147 @@ def into_yesterday(past_time_starts_unix_readable):
 #     close_connection()
 
 #     return BEST_OPTION
+
+
+
+
+
+def find_bounds(numbers, given_number, margin):
+    lower_bound = None
+    upper_bound = None
+
+    for i in range(len(numbers) - 1):
+        if numbers[i] < given_number < numbers[i + 1]:
+            for j in range(i + 2, len(numbers)):
+                if (numbers[j] - given_number) > margin:
+                    return numbers[i], numbers[j]
+            return numbers[i], None  # In case no suitable upper_bound is found
+
+    return upper_bound
+
+
+
+def fast_looping(connection_object, entered_options):
+    conn = mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='Venu@5599',
+        database='mydb'
+    )
+    cursor = conn.cursor()
+
+    # Define the timezone for Asia/Kolkata
+    kolkata_timezone = pytz.timezone('Asia/Kolkata')
+
+    # Perform the initial task here
+    # Example initial task
+
+    # Get the current time in Asia/Kolkata timezone
+    now = datetime.now(kolkata_timezone)
+
+    # Calculate the next multiple of 5 seconds
+    next_second = (now.second // 5 + 1) * 5
+    if next_second >= 60:
+        next_second = 0
+        now += timedelta(minutes=1)
+    next_time = now.replace(second=next_second, microsecond=0)
+
+    # Wait until the next multiple of 5 seconds
+    time_to_sleep = (next_time - datetime.now(kolkata_timezone)).total_seconds()
+    time.sleep(time_to_sleep)
+
+
+    while True:
+        # Get the current time in Asia/Kolkata timezone
+        print(f"Task executed at {datetime.now(kolkata_timezone).strftime('%Y-%m-%d %H:%M:%S')}")
+        start_time = time.time()
+        #Schenarios comes here
+        try:
+            ltp = connection_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
+            print("current ltp in fast loop: ", ltp)
+        except Exception as e:
+            print('second try for LTP..')
+            ltp = connection_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
+            print(f"exiting from here while getting ltp {(e)}")
+
+        try:
+            for entered_option in entered_options:
+                print("entered option in for:", entered_option)
+                print("entered_option['symbol']:", entered_option['symbol'])
+
+                sell_index = entered_option.get('sell_index')
+                if sell_index is not None and ltp is not None:
+                    if (sell_index <= ltp) or (sell_index > ltp and (sell_index - ltp) <= 15):
+                        print('Sell the entered option(' + entered_option['symbol'] + ') please.')
+                        try:
+                            order_response = option_order_record(connection_object, entered_option, 'SELL', ltp)
+                            print("its done" + str(order_response))
+                            print("its done")
+                        except Exception as e:
+                            print(f'Please check something is missing..{e}')
+                            exit()
+                    else:
+                        print(' Else elsy...')
+                else:
+                    print(f"Sell index or ltp is None. sell_index: {sell_index}, ltp: {ltp}")
+            print('In fast loop..')
+        except Exception as e:
+            print(f"exiting from here {(e)}")
+            exit()
+        print('Hi this is after loop thats you are cheking...')
+        try:
+            end_time = time.time()
+            time_defferance = int(end_time - start_time)
+            now = datetime.now(kolkata_timezone)
+            if time_defferance > 0:
+                seconds_time = now.second - time_defferance
+            else:
+                seconds_time = now.second
+        except Exception as e:
+            print(f"Please Find me too {(e)}")
+            exit()
+
+        # Check if the current time is at a 5-minute mark
+        try:
+            if now.minute % 5 == 0 and seconds_time % 5 == 0:
+                now_without_seconds = now.replace(second=0, microsecond=0)
+                unix_timestamp_without_seconds = int(now_without_seconds.timestamp())
+                readable_now_without_seconds = now.replace(second=0, microsecond=0)
+
+                query = "SELECT COUNT(*) FROM time_storage WHERE time_in_minutes = %s;"
+                cursor.execute(query, (unix_timestamp_without_seconds,))
+                count = cursor.fetchone()[0]
+                exists = count > 0
+
+                if exists:
+                    print("Record exists, continuing loop...")
+                    continue
+                else:
+                    print("Exiting the loop and inserting record...")
+                    insert_query = "INSERT INTO time_storage (time_in_minutes, time_with_seconds, readable_time) VALUES (%s, %s, %s)"
+                    values = (unix_timestamp_without_seconds, readable_now_without_seconds, now)
+                    cursor.execute(insert_query, values)
+                    conn.commit()  # Ensure you commit the transaction
+                    break  # Exit the loop after insertion
+
+        except Exception as e:
+            print(f"Can you please find me.. {e}")
+            exit()
+        print(f"Task executed at {now.strftime('%Y-%m-%d %H:%M:%S')}")
+
+        # Add your task logic here
+
+        # Wait for the next 5-second interval
+        try:
+            next_second = (now.second // 5 + 1) * 5
+            if next_second >= 60:
+                next_second = 0
+                now += timedelta(minutes=1)
+            next_time = now.replace(second=next_second, microsecond=0)
+
+
+            time_to_sleep = (next_time - datetime.now(kolkata_timezone)).total_seconds()
+            time.sleep(time_to_sleep)
+        except Exception as e:
+            print(f"Please find me {(e)}")
+            exit()

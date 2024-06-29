@@ -1,553 +1,299 @@
-High fiving at: 2024-06-07 10:15
+High fiving at: 2024-06-25 10:35
 after flow1
-Next History time: 2024-06-07 10:25
-Next History time: 2024-06-07 10:25
-High fiving at: 2024-06-07 10:20
+Next History time: 2024-06-25 10:40
+Next History time: 2024-06-25 10:40
+High fiving at: 2024-06-25 10:40
 after flow2
-Next History time: 2024-06-07 10:25
-Next History time: 2024-06-07 10:25
-High fiving at: 2024-06-07 10:25
+Next History time: 2024-06-25 10:45
+Next History time: 2024-06-25 10:45
+High fiving at: 2024-06-25 10:45
 after flow3
-Next History time: 2024-06-07 10:30
-Next History time: 2024-06-07 10:30
-High fiving at: 2024-06-07 10:30
+Next History time: 2024-06-25 10:50
+Next History time: 2024-06-25 10:50
+High fiving at: 2024-06-25 10:50
 after flow4
-Next History time: 2024-06-07 10:35
-Next History time: 2024-06-07 10:35
-High fiving at: 2024-06-07 10:35
+Next History time: 2024-06-25 10:55
+Next History time: 2024-06-25 10:55
+High fiving at: 2024-06-25 10:55
 after flow5
-Next History time: 2024-06-07 10:40
-Next History time: 2024-06-07 10:40
-High fiving at: 2024-06-07 10:40
-after flow6
-Next History time: 2024-06-07 10:45
-Next History time: 2024-06-07 10:45
-High fiving at: 2024-06-07 10:45
-after flow7
-Next History time: 2024-06-07 10:50
-Next History time: 2024-06-07 10:50
-High fiving at: 2024-06-07 10:50
-after flow8
-Next History time: 2024-06-07 10:55
-Next History time: 2024-06-07 10:55
-High fiving at: 2024-06-07 10:55
-after flow9
-Next History time: 2024-06-07 11:0
-Next History time: 2024-06-07 11:0
-High fiving at: 2024-06-07 11:00
-after flow10
-Next History time: 2024-06-07 11:5
-Next History time: 2024-06-07 11:5
-High fiving at: 2024-06-07 11:05
-after flow11
-Next History time: 2024-06-07 11:10
-Next History time: 2024-06-07 11:10
-High fiving at: 2024-06-07 11:10
-after flow12
-Next History time: 2024-06-07 11:15
-Next History time: 2024-06-07 11:15
-High fiving at: 2024-06-07 11:15
-after flow13
-Next History time: 2024-06-07 11:20
-Next History time: 2024-06-07 11:20
-High fiving at: 2024-06-07 11:20
-after flow14
-Next History time: 2024-06-07 11:30
-Next History time: 2024-06-07 11:30
-High fiving at: 2024-06-07 11:25
-after flow15
-Next History time: 2024-06-07 11:30
-Next History time: 2024-06-07 11:30
-High fiving at: 2024-06-07 11:30
-flow_five Welcome to high five flow
-flow_five_seven -- stage_two
-after flow16
-Next History time: 2024-06-07 11:35
-Next History time: 2024-06-07 11:35
-High fiving at: 2024-06-07 11:35
-after flow17
-Next History time: 2024-06-07 11:40
-Next History time: 2024-06-07 11:40
-High fiving at: 2024-06-07 11:40
-after flow18
-Next History time: 2024-06-07 11:45
-Next History time: 2024-06-07 11:45
-High fiving at: 2024-06-07 11:45
-after flow19
-Next History time: 2024-06-07 11:50
-Next History time: 2024-06-07 11:50
-High fiving at: 2024-06-07 11:50
-after flow20
-Next History time: 2024-06-07 11:55
-Next History time: 2024-06-07 11:55
-High fiving at: 2024-06-07 11:55
-after flow21
-Next History time: 2024-06-07 12:0
-Next History time: 2024-06-07 12:0
-High fiving at: 2024-06-07 12:00
-after flow22
-Next History time: 2024-06-07 12:5
-Next History time: 2024-06-07 12:5
-High fiving at: 2024-06-07 12:05
-after flow23
-Next History time: 2024-06-07 12:10
-Next History time: 2024-06-07 12:10
-Not got candles. And the error is: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-High fiving at: 2024-06-07 12:10
-after flow1
-Next History time: 2024-06-07 12:15
-Next History time: 2024-06-07 12:15
-High fiving at: 2024-06-07 12:15
-after flow2
-Next History time: 2024-06-07 12:20
-Next History time: 2024-06-07 12:20
-High fiving at: 2024-06-07 12:20
-after flow3
-Next History time: 2024-06-07 12:25
-Next History time: 2024-06-07 12:25
-High fiving at: 2024-06-07 12:25
-after flow4
-Next History time: 2024-06-07 12:30
-Next History time: 2024-06-07 12:30
-High fiving at: 2024-06-07 12:30
-after flow5
-Next History time: 2024-06-07 12:35
-Next History time: 2024-06-07 12:35
-High fiving at: 2024-06-07 12:35
-after flow6
-Next History time: 2024-06-07 12:40
-Next History time: 2024-06-07 12:40
-High fiving at: 2024-06-07 12:40
+Next History time: 2024-06-25 11:0
+Next History time: 2024-06-25 11:0
+High fiving at: 2024-06-25 11:00
 flow_five Welcome to high five flow
 flow_five_five -- stage_two
 flow_five_five -- stage_two
 flow_five_five_one --- stage_three
 Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-High fiving at: 2024-06-07 12:45
+High fiving at: 2024-06-25 11:05
+after flow7
+Next History time: 2024-06-25 11:10
+Next History time: 2024-06-25 11:10
+High fiving at: 2024-06-25 11:10
 after flow8
-Next History time: 2024-06-07 12:50
-Next History time: 2024-06-07 12:50
-High fiving at: 2024-06-07 12:50
+Next History time: 2024-06-25 11:15
+Next History time: 2024-06-25 11:15
+High fiving at: 2024-06-25 11:15
 after flow9
-Next History time: 2024-06-07 12:55
-Next History time: 2024-06-07 12:55
-High fiving at: 2024-06-07 12:55
+Next History time: 2024-06-25 11:20
+Next History time: 2024-06-25 11:20
+High fiving at: 2024-06-25 11:20
 after flow10
-Next History time: 2024-06-07 13:0
-Next History time: 2024-06-07 13:0
-High fiving at: 2024-06-07 13:00
+Next History time: 2024-06-25 11:25
+Next History time: 2024-06-25 11:25
+High fiving at: 2024-06-25 11:25
 after flow11
-Next History time: 2024-06-07 13:5
-Next History time: 2024-06-07 13:5
-High fiving at: 2024-06-07 13:05
+Next History time: 2024-06-25 11:30
+Next History time: 2024-06-25 11:30
+High fiving at: 2024-06-25 11:30
 after flow12
-Next History time: 2024-06-07 13:10
-Next History time: 2024-06-07 13:10
-High fiving at: 2024-06-07 13:10
+Next History time: 2024-06-25 11:35
+Next History time: 2024-06-25 11:35
+High fiving at: 2024-06-25 11:35
 after flow13
-Next History time: 2024-06-07 13:15
-Next History time: 2024-06-07 13:15
-High fiving at: 2024-06-07 13:15
+Next History time: 2024-06-25 11:40
+Next History time: 2024-06-25 11:40
+High fiving at: 2024-06-25 11:40
 after flow14
-Next History time: 2024-06-07 13:20
-Next History time: 2024-06-07 13:20
-High fiving at: 2024-06-07 13:20
+Next History time: 2024-06-25 11:45
+Next History time: 2024-06-25 11:45
+High fiving at: 2024-06-25 11:45
 after flow15
-Next History time: 2024-06-07 13:25
-Next History time: 2024-06-07 13:25
+Next History time: 2024-06-25 11:50
+Next History time: 2024-06-25 11:50
+High fiving at: 2024-06-25 11:50
+after flow16
+Next History time: 2024-06-25 11:55
+Next History time: 2024-06-25 11:55
+High fiving at: 2024-06-25 11:55
+after flow17
+Next History time: 2024-06-25 12:0
+Next History time: 2024-06-25 12:0
+High fiving at: 2024-06-25 12:00
+after flow18
+Next History time: 2024-06-25 12:5
+Next History time: 2024-06-25 12:5
+High fiving at: 2024-06-25 12:05
+after flow19
+Next History time: 2024-06-25 12:10
+Next History time: 2024-06-25 12:10
+High fiving at: 2024-06-25 12:10
+after flow20
+Next History time: 2024-06-25 12:15
+Next History time: 2024-06-25 12:15
+High fiving at: 2024-06-25 12:15
+after flow21
+Next History time: 2024-06-25 12:20
+Next History time: 2024-06-25 12:20
+High fiving at: 2024-06-25 12:20
+after flow22
+Next History time: 2024-06-25 12:25
+Next History time: 2024-06-25 12:25
+High fiving at: 2024-06-25 12:25
+flow_five Welcome to high five flow
+flow_five_six -- stage_two
+flow_five_six -- stage_two
+flow_five_six_one --- stage_three
+flow_five_six_seven --- stage_three
+flow_five_six_one --- stage_three
+flow_five_six_one_seven ---- stage_four
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+High fiving at: 2024-06-25 12:30
+after flow24
+Next History time: 2024-06-25 12:35
+Next History time: 2024-06-25 12:35
+High fiving at: 2024-06-25 12:35
+after flow25
+Next History time: 2024-06-25 12:40
+Next History time: 2024-06-25 12:40
+High fiving at: 2024-06-25 12:40
+after flow26
+Next History time: 2024-06-25 12:45
+Next History time: 2024-06-25 12:45
+High fiving at: 2024-06-25 12:45
+after flow27
+Next History time: 2024-06-25 12:50
+Next History time: 2024-06-25 12:50
+High fiving at: 2024-06-25 12:50
+after flow28
+Next History time: 2024-06-25 12:55
+Next History time: 2024-06-25 12:55
+High fiving at: 2024-06-25 12:55
+after flow29
+Next History time: 2024-06-25 13:0
+Next History time: 2024-06-25 13:0
+High fiving at: 2024-06-25 13:00
+after flow30
+Next History time: 2024-06-25 13:5
+Next History time: 2024-06-25 13:5
+High fiving at: 2024-06-25 13:05
+after flow31
+Next History time: 2024-06-25 13:10
+Next History time: 2024-06-25 13:10
+High fiving at: 2024-06-25 13:10
+flow_five Welcome to high five flow
+flow_five_six -- stage_two
+flow_five_six -- stage_two
+flow_five_six_eight --- stage_three
+flow_five_six_eight --- stage_three
+flow_five_six_eight_eleven ---- stage_four
+after flow32
+Next History time: 2024-06-25 13:15
+Next History time: 2024-06-25 13:15
+High fiving at: 2024-06-25 13:15
+after flow33
+Next History time: 2024-06-25 13:20
+Next History time: 2024-06-25 13:20
+High fiving at: 2024-06-25 13:20
+after flow34
+Next History time: 2024-06-25 13:25
+Next History time: 2024-06-25 13:25
+High fiving at: 2024-06-25 13:25
+after flow35
+Next History time: 2024-06-25 13:30
+Next History time: 2024-06-25 13:30
+High fiving at: 2024-06-25 13:30
+after flow36
+Next History time: 2024-06-25 13:35
+Next History time: 2024-06-25 13:35
+High fiving at: 2024-06-25 13:35
+after flow37
+Next History time: 2024-06-25 13:40
+Next History time: 2024-06-25 13:40
+High fiving at: 2024-06-25 13:40
+after flow38
+Next History time: 2024-06-25 13:45
+Next History time: 2024-06-25 13:45
+High fiving at: 2024-06-25 13:45
+after flow39
+Next History time: 2024-06-25 13:50
+Next History time: 2024-06-25 13:50
+High fiving at: 2024-06-25 13:50
+after flow40
+Next History time: 2024-06-25 13:55
+Next History time: 2024-06-25 13:55
+High fiving at: 2024-06-25 13:55
+after flow41
+Next History time: 2024-06-25 14:0
+Next History time: 2024-06-25 14:0
+High fiving at: 2024-06-25 14:00
+after flow42
+Next History time: 2024-06-25 14:5
+Next History time: 2024-06-25 14:5
+High fiving at: 2024-06-25 14:05
+after flow43
+Next History time: 2024-06-25 14:10
+Next History time: 2024-06-25 14:10
+High fiving at: 2024-06-25 14:10
+after flow44
+Next History time: 2024-06-25 14:15
+Next History time: 2024-06-25 14:15
+High fiving at: 2024-06-25 14:15
+after flow45
+Next History time: 2024-06-25 14:20
+Next History time: 2024-06-25 14:20
+High fiving at: 2024-06-25 14:20
+after flow46
+Next History time: 2024-06-25 14:25
+Next History time: 2024-06-25 14:25
+High fiving at: 2024-06-25 14:25
+after flow47
+Next History time: 2024-06-25 14:30
+Next History time: 2024-06-25 14:30
+High fiving at: 2024-06-25 14:30
+after flow48
+Next History time: 2024-06-25 14:35
+Next History time: 2024-06-25 14:35
+High fiving at: 2024-06-25 14:35
+after flow49
+Next History time: 2024-06-25 14:40
+Next History time: 2024-06-25 14:40
+High fiving at: 2024-06-25 14:40
+after flow50
+Next History time: 2024-06-25 14:45
+Next History time: 2024-06-25 14:45
+High fiving at: 2024-06-25 14:45
+after flow51
+Next History time: 2024-06-25 14:50
+Next History time: 2024-06-25 14:50
+High fiving at: 2024-06-25 14:50
+after flow52
+Next History time: 2024-06-25 14:55
+Next History time: 2024-06-25 14:55
+High fiving at: 2024-06-25 14:55
+after flow53
+Next History time: 2024-06-25 15:0
+Next History time: 2024-06-25 15:0
+High fiving at: 2024-06-25 15:00
+after flow54
+Next History time: 2024-06-25 15:5
+Next History time: 2024-06-25 15:5
+High fiving at: 2024-06-25 15:05
+after flow55
+Next History time: 2024-06-25 15:10
+Next History time: 2024-06-25 15:10
+High fiving at: 2024-06-25 15:10
+after flow56
+Next History time: 2024-06-25 15:15
+Next History time: 2024-06-25 15:15
+High fiving at: 2024-06-25 15:15
+after flow57
+Next History time: 2024-06-25 15:20
+Next History time: 2024-06-25 15:20
+High fiving at: 2024-06-25 15:20
+after flow58
+Next History time: 2024-06-25 15:25
+Next History time: 2024-06-25 15:25
+High fiving at: 2024-06-25 15:25
+after flow59
+Next History time: 2024-06-25 15:30
+Next History time: 2024-06-25 15:30
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-06-25 15:30', 'todate': '2024-06-25 15:30'}
+this is current: {}
+High fiving at: 2024-06-26 10:45
+after flow1
+Next History time: 2024-06-26 10:55
+Next History time: 2024-06-26 10:55
+High fiving at: 2024-06-26 10:50
+after flow2
+Next History time: 2024-06-26 10:55
+Next History time: 2024-06-26 10:55
+High fiving at: 2024-06-26 10:55
+after flow3
+Next History time: 2024-06-26 11:0
+Next History time: 2024-06-26 11:0
+High fiving at: 2024-06-26 11:00
+after flow4
+Next History time: 2024-06-26 11:5
+Next History time: 2024-06-26 11:5
+High fiving at: 2024-06-26 11:05
+after flow5
+Next History time: 2024-06-26 11:10
+Next History time: 2024-06-26 11:10
+High fiving at: 2024-06-26 11:10
+after flow6
+Next History time: 2024-06-26 11:15
+Next History time: 2024-06-26 11:15
+High fiving at: 2024-06-26 11:15
+after flow7
+Next History time: 2024-06-26 11:20
+Next History time: 2024-06-26 11:20
+High fiving at: 2024-06-26 11:20
+after flow8
+Next History time: 2024-06-26 11:25
+Next History time: 2024-06-26 11:25
 Traceback (most recent call last):
-  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 227, in _request
-    data = json.loads(r.content.decode("utf8"))
-  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
-    return _default_decoder.decode(s)
-  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/var/www/html/myproject/example/Transactions.py", line 42, in <module>
+  File "/var/www/html/myproject/example/Transactions.py", line 234, in <module>
     dates = stream_into_flow(obj,data)
-  File "/var/www/html/myproject/example/lib.py", line 650, in stream_into_flow
-    history = connection_obj.getCandleData(live_history_params)
-  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 462, in getCandleData
-    getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
-  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 260, in _postRequest
-    return self._request(route, "POST", params)
-  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 230, in _request
-    raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
-SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/var/www/html/myproject/example/Transactions.py", line 48, in <module>
-    dates = stream_into_flow(obj, data)
-  File "/var/www/html/myproject/example/lib.py", line 685, in stream_into_flow
+  File "/var/www/html/myproject/example/lib.py", line 675, in stream_into_flow
     time.sleep(300)
 KeyboardInterrupt
-High fiving at: 2024-06-07 13:20
+High fiving at: 2024-06-28 12:45
 after flow1
-Next History time: 2024-06-07 13:30
-Next History time: 2024-06-07 13:30
-High fiving at: 2024-06-07 13:25
-after flow2
-Next History time: 2024-06-07 13:30
-Next History time: 2024-06-07 13:30
-High fiving at: 2024-06-07 13:30
-after flow3
-Next History time: 2024-06-07 13:35
-Next History time: 2024-06-07 13:35
-High fiving at: 2024-06-07 13:35
-after flow4
-Next History time: 2024-06-07 13:40
-Next History time: 2024-06-07 13:40
-High fiving at: 2024-06-07 13:40
-after flow5
-Next History time: 2024-06-07 13:45
-Next History time: 2024-06-07 13:45
-High fiving at: 2024-06-07 13:45
-after flow6
-Next History time: 2024-06-07 13:50
-Next History time: 2024-06-07 13:50
-High fiving at: 2024-06-07 13:50
-after flow7
-Next History time: 2024-06-07 13:55
-Next History time: 2024-06-07 13:55
-High fiving at: 2024-06-07 13:55
-after flow8
-Next History time: 2024-06-07 14:0
-Next History time: 2024-06-07 14:0
-High fiving at: 2024-06-07 14:00
-after flow9
-Next History time: 2024-06-07 14:5
-Next History time: 2024-06-07 14:5
-High fiving at: 2024-06-07 14:05
-after flow10
-Next History time: 2024-06-07 14:10
-Next History time: 2024-06-07 14:10
-High fiving at: 2024-06-07 14:10
-after flow11
-Next History time: 2024-06-07 14:15
-Next History time: 2024-06-07 14:15
-High fiving at: 2024-06-07 14:15
-after flow12
-Next History time: 2024-06-07 14:20
-Next History time: 2024-06-07 14:20
-High fiving at: 2024-06-07 14:20
-after flow13
-Next History time: 2024-06-07 14:25
-Next History time: 2024-06-07 14:25
-High fiving at: 2024-06-07 14:25
-after flow14
-Next History time: 2024-06-07 14:30
-Next History time: 2024-06-07 14:30
-High fiving at: 2024-06-07 14:30
-after flow15
-Next History time: 2024-06-07 14:35
-Next History time: 2024-06-07 14:35
-High fiving at: 2024-06-07 14:35
-after flow16
-Next History time: 2024-06-07 14:40
-Next History time: 2024-06-07 14:40
-High fiving at: 2024-06-07 14:40
-after flow17
-Next History time: 2024-06-07 14:45
-Next History time: 2024-06-07 14:45
-High fiving at: 2024-06-07 14:45
-flow_five Welcome to high five flow
-flow_five_seven -- stage_two
-after flow18
-Next History time: 2024-06-07 14:50
-Next History time: 2024-06-07 14:50
-High fiving at: 2024-06-07 14:50
-after flow19
-Next History time: 2024-06-07 14:55
-Next History time: 2024-06-07 14:55
-High fiving at: 2024-06-07 14:55
-after flow20
-Next History time: 2024-06-07 15:0
-Next History time: 2024-06-07 15:0
-High fiving at: 2024-06-07 15:00
-after flow21
-Next History time: 2024-06-07 15:5
-Next History time: 2024-06-07 15:5
-High fiving at: 2024-06-07 15:05
-after flow22
-Next History time: 2024-06-07 15:10
-Next History time: 2024-06-07 15:10
-High fiving at: 2024-06-07 15:10
-after flow23
-Next History time: 2024-06-07 15:15
-Next History time: 2024-06-07 15:15
-High fiving at: 2024-06-07 15:15
-after flow24
-Next History time: 2024-06-07 15:20
-Next History time: 2024-06-07 15:20
-High fiving at: 2024-06-07 15:20
-after flow25
-Next History time: 2024-06-07 15:25
-Next History time: 2024-06-07 15:25
-High fiving at: 2024-06-07 15:25
-after flow26
-Next History time: 2024-06-07 15:30
-Next History time: 2024-06-07 15:30
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-An error occurred: 'NoneType' object is not reversible
-Attempting to reconnect...
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-06-07 15:45', 'todate': '2024-06-07 15:45'}
-this is current: {}
+Next History time: 2024-06-28 12:55
+Next History time: 2024-06-28 12:55
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 369, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 673, in stream_into_flow
+    time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
+KeyboardInterrupt

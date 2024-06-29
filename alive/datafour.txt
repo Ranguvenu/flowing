@@ -1,159 +1,163 @@
-Now the fourth flow is at: 2024-06-07 10:15
-And the current closing is: 49327.5
-Now the fourth flow is at: 2024-06-07 10:20
-And the current closing is: 49345.7
-Now the fourth flow is at: 2024-06-07 10:25
-And the current closing is: 49434.45
-Now the fourth flow is at: 2024-06-07 10:30
-And the current closing is: 49465.0
-Now the fourth flow is at: 2024-06-07 10:35
-And the current closing is: 49613.45
-Now the fourth flow is at: 2024-06-07 10:40
-And the current closing is: 49580.3
-Now the fourth flow is at: 2024-06-07 10:45
-And the current closing is: 49593.75
-Now the fourth flow is at: 2024-06-07 10:50
-And the current closing is: 49541.9
-Now the fourth flow is at: 2024-06-07 10:55
-And the current closing is: 49623.25
-Now the fourth flow is at: 2024-06-07 11:00
-And the current closing is: 49596.3
-Now the fourth flow is at: 2024-06-07 11:05
-And the current closing is: 49665.65
-Now the fourth flow is at: 2024-06-07 11:10
-And the current closing is: 49659.15
-Now the fourth flow is at: 2024-06-07 11:15
-And the current closing is: 49627.25
-Now the fourth flow is at: 2024-06-07 11:20
-And the current closing is: 49609.85
-Now the fourth flow is at: 2024-06-07 11:25
-And the current closing is: 49574.9
-Now the fourth flow is at: 2024-06-07 11:30
-And the current closing is: 49645.7
-Now the fourth flow is at: 2024-06-07 11:35
-And the current closing is: 49777.4
+Now the fourth flow is at: 2024-06-25 10:40
+And the current closing is: 52093.8
+Now the fourth flow is at: 2024-06-25 10:45
+And the current closing is: 52159.75
+Now the fourth flow is at: 2024-06-25 10:50
+And the current closing is: 52154.35
+Now the fourth flow is at: 2024-06-25 10:55
+And the current closing is: 52149.7
+Now the fourth flow is at: 2024-06-25 11:00
+And the current closing is: 52165.65
+Now the fourth flow is at: 2024-06-25 11:05
+And the current closing is: 52132.3
+Now the fourth flow is at: 2024-06-25 11:10
+And the current closing is: 52119.7
+Now the fourth flow is at: 2024-06-25 11:15
+And the current closing is: 52031.6
+Now the fourth flow is at: 2024-06-25 11:20
+And the current closing is: 52056.5
+Now the fourth flow is at: 2024-06-25 11:25
+And the current closing is: 52029.0
+Now the fourth flow is at: 2024-06-25 11:30
+And the current closing is: 52028.3
+Now the fourth flow is at: 2024-06-25 11:35
+And the current closing is: 52040.65
+Now the fourth flow is at: 2024-06-25 11:40
+And the current closing is: 52074.15
+a_four Entered fourth flow  - stage_one
+flow_four_five -- stage_two
+flow_four_five -- stage_two
+flow_four_five_three --- stage_three
+flow_four_five_three --- stage_three
+Now the fourth flow is at: 2024-06-25 11:45
+And the current closing is: 52088.35
+Now the fourth flow is at: 2024-06-25 11:50
+And the current closing is: 52060.45
+Now the fourth flow is at: 2024-06-25 11:55
+And the current closing is: 52061.35
+Now the fourth flow is at: 2024-06-25 12:00
+And the current closing is: 52064.55
+Now the fourth flow is at: 2024-06-25 12:05
+And the current closing is: 52097.45
+Now the fourth flow is at: 2024-06-25 12:10
+And the current closing is: 52087.85
+Now the fourth flow is at: 2024-06-25 12:15
+And the current closing is: 52076.65
+Now the fourth flow is at: 2024-06-25 12:20
+And the current closing is: 52071.4
+Now the fourth flow is at: 2024-06-25 12:25
+And the current closing is: 52240.6
+Now the fourth flow is at: 2024-06-25 12:30
+And the current closing is: 52387.55
 a_four Entered fourth flow  - stage_one
 flow_four_three -- stage_two
 flow_four_three -- stage_two
-flow_four_three_three -- stage_three
-flow_four_three_three -- stage_three
-flow_four_three_three_three -- stage_four
-flow_four_three_three_five -- stage_four
-Now the fourth flow is at: 2024-06-07 11:40
-And the current closing is: 49776.15
-Now the fourth flow is at: 2024-06-07 11:45
-And the current closing is: 49838.3
-Now the fourth flow is at: 2024-06-07 11:50
-And the current closing is: 49914.4
+flow_four_three_one -- stage_three_started
+flow_four_three_one -- stage_three_started
+flow_four_three_one_eleven ---- stage_four
+Now the fourth flow is at: 2024-06-25 12:35
+And the current closing is: 52463.05
+Now the fourth flow is at: 2024-06-25 12:40
+And the current closing is: 52394.15
+Now the fourth flow is at: 2024-06-25 12:45
+And the current closing is: 52492.6
+Now the fourth flow is at: 2024-06-25 12:50
+And the current closing is: 52459.9
+Now the fourth flow is at: 2024-06-25 12:55
+And the current closing is: 52451.65
+Now the fourth flow is at: 2024-06-25 13:00
+And the current closing is: 52440.6
+Now the fourth flow is at: 2024-06-25 13:05
+And the current closing is: 52406.35
+Now the fourth flow is at: 2024-06-25 13:10
+And the current closing is: 52495.15
+Now the fourth flow is at: 2024-06-25 13:15
+And the current closing is: 52506.85
+a_four Entered fourth flow  - stage_one
+flow_four_three -- stage_two
+flow_four_three -- stage_two
+flow_four_three_one -- stage_three_started
+flow_four_three_one -- stage_three_started
+flow_four_three_one_one -- stage_four
+Now the fourth flow is at: 2024-06-25 13:20
+And the current closing is: 52574.0
+Now the fourth flow is at: 2024-06-25 13:25
+And the current closing is: 52551.15
+Now the fourth flow is at: 2024-06-25 13:30
+And the current closing is: 52553.4
+Now the fourth flow is at: 2024-06-25 13:35
+And the current closing is: 52553.2
+Now the fourth flow is at: 2024-06-25 13:40
+And the current closing is: 52603.3
+Now the fourth flow is at: 2024-06-25 13:45
+And the current closing is: 52658.85
+Now the fourth flow is at: 2024-06-25 13:50
+And the current closing is: 52612.0
+Now the fourth flow is at: 2024-06-25 13:55
+And the current closing is: 52573.35
+Now the fourth flow is at: 2024-06-25 14:00
+And the current closing is: 52579.15
+Now the fourth flow is at: 2024-06-25 14:05
+And the current closing is: 52604.85
+Now the fourth flow is at: 2024-06-25 14:10
+And the current closing is: 52609.9
+Now the fourth flow is at: 2024-06-25 14:15
+And the current closing is: 52565.8
+Now the fourth flow is at: 2024-06-25 14:20
+And the current closing is: 52522.45
+Now the fourth flow is at: 2024-06-25 14:25
+And the current closing is: 52537.05
+Now the fourth flow is at: 2024-06-25 14:30
+And the current closing is: 52560.65
+Now the fourth flow is at: 2024-06-25 14:35
+And the current closing is: 52618.3
+Now the fourth flow is at: 2024-06-25 14:40
+And the current closing is: 52616.8
+Now the fourth flow is at: 2024-06-25 14:45
+And the current closing is: 52624.6
+Now the fourth flow is at: 2024-06-25 14:50
+And the current closing is: 52559.35
+Now the fourth flow is at: 2024-06-25 14:55
+And the current closing is: 52546.4
+Now the fourth flow is at: 2024-06-25 15:00
+And the current closing is: 52600.9
+Now the fourth flow is at: 2024-06-25 15:05
+And the current closing is: 52564.9
+Now the fourth flow is at: 2024-06-25 15:10
+And the current closing is: 52627.9
+Now the fourth flow is at: 2024-06-25 15:15
+And the current closing is: 52649.05
 a_four Entered fourth flow  - stage_one
 flow_four_one -- stage_two_started
 flow_four_eight -- stage_two
 flow_four_one -- stage_two
-flow_four_one_one -- stage_three
-flow_four_one_one -- stage_three
-flow_four_one_one_one ---- stage_four
+flow_four_one_two -- stage_three
+flow_four_one_two -- stage_three
 flow_four_eight -- stage_two
-flow_four_eight_one --- stage_three_started
-flow_four_eight_one --- stage_three_started
-flow_four_eight_one_two ---- stage_four
-Now the fourth flow is at: 2024-06-07 11:55
-And the current closing is: 49854.65
-Now the fourth flow is at: 2024-06-07 12:00
-And the current closing is: 49854.6
-Now the fourth flow is at: 2024-06-07 12:05
-And the current closing is: 49892.4
-Now the fourth flow is at: 2024-06-07 12:10
-And the current closing is: 49832.0
-Now the fourth flow is at: 2024-06-07 12:15
-And the current closing is: 49800.05
-Now the fourth flow is at: 2024-06-07 12:20
-And the current closing is: 49824.2
-Now the fourth flow is at: 2024-06-07 12:25
-And the current closing is: 49848.9
-Now the fourth flow is at: 2024-06-07 12:30
-And the current closing is: 49839.95
-Now the fourth flow is at: 2024-06-07 12:35
-And the current closing is: 49843.8
-Now the fourth flow is at: 2024-06-07 12:40
-And the current closing is: 49865.6
-Now the fourth flow is at: 2024-06-07 12:45
-And the current closing is: 49901.3
+flow_four_eight_two --- stage_three
+flow_four_eight_two --- stage_three
+flow_four_eight_two_five ---- stage_four
+Now the fourth flow is at: 2024-06-25 15:20
+And the current closing is: 52700.65
+Now the fourth flow is at: 2024-06-25 15:25
+And the current closing is: 52630.15
+Now the fourth flow is at: 2024-06-26 10:45
+And the current closing is: 52513.05
 a_four Entered fourth flow  - stage_one
-flow_four_three -- stage_two
-flow_four_three -- stage_two
-flow_four_three_eight -- stage_three
-flow_four_three_eight -- stage_three
-flow_four_three_eight_one ---- stage_four
-Now the fourth flow is at: 2024-06-07 12:50
-And the current closing is: 49828.45
-Now the fourth flow is at: 2024-06-07 12:55
-And the current closing is: 49856.55
-Now the fourth flow is at: 2024-06-07 13:00
-And the current closing is: 49806.4
-Now the fourth flow is at: 2024-06-07 13:05
-And the current closing is: 49816.35
-Now the fourth flow is at: 2024-06-07 13:10
-And the current closing is: 49857.9
-Now the fourth flow is at: 2024-06-07 13:15
-And the current closing is: 49769.25
-Now the fourth flow is at: 2024-06-07 13:20
-And the current closing is: 49729.45
-Now the fourth flow is at: 2024-06-07 13:20
-And the current closing is: 49729.45
-Now the fourth flow is at: 2024-06-07 13:25
-And the current closing is: 49749.65
-Now the fourth flow is at: 2024-06-07 13:30
-And the current closing is: 49783.1
-Now the fourth flow is at: 2024-06-07 13:35
-And the current closing is: 49821.25
-Now the fourth flow is at: 2024-06-07 13:40
-And the current closing is: 49850.2
-Now the fourth flow is at: 2024-06-07 13:45
-And the current closing is: 49857.15
-Now the fourth flow is at: 2024-06-07 13:50
-And the current closing is: 49824.8
-Now the fourth flow is at: 2024-06-07 13:55
-And the current closing is: 49738.25
-Now the fourth flow is at: 2024-06-07 14:00
-And the current closing is: 49778.95
-Now the fourth flow is at: 2024-06-07 14:05
-And the current closing is: 49816.8
-Now the fourth flow is at: 2024-06-07 14:10
-And the current closing is: 49814.0
-Now the fourth flow is at: 2024-06-07 14:15
-And the current closing is: 49866.6
-Now the fourth flow is at: 2024-06-07 14:20
-And the current closing is: 49845.65
-Now the fourth flow is at: 2024-06-07 14:25
-And the current closing is: 49818.7
-Now the fourth flow is at: 2024-06-07 14:30
-And the current closing is: 49794.7
-Now the fourth flow is at: 2024-06-07 14:35
-And the current closing is: 49783.55
-Now the fourth flow is at: 2024-06-07 14:40
-And the current closing is: 49735.45
-Now the fourth flow is at: 2024-06-07 14:45
-And the current closing is: 49796.6
-Now the fourth flow is at: 2024-06-07 14:50
-And the current closing is: 49859.45
-a_four Entered fourth flow  - stage_one
-flow_four_three -- stage_two
-flow_four_three -- stage_two
-flow_four_three_three -- stage_three
-flow_four_three_three -- stage_three
-flow_four_three_three_three -- stage_four
-flow_four_three_three_five -- stage_four
-Now the fourth flow is at: 2024-06-07 14:55
-And the current closing is: 49847.35
-Now the fourth flow is at: 2024-06-07 15:00
-And the current closing is: 49812.55
-Now the fourth flow is at: 2024-06-07 15:05
-And the current closing is: 49820.7
-Now the fourth flow is at: 2024-06-07 15:10
-And the current closing is: 49777.75
-Now the fourth flow is at: 2024-06-07 15:15
-And the current closing is: 49823.45
-Now the fourth flow is at: 2024-06-07 15:20
-And the current closing is: 49802.85
-Now the fourth flow is at: 2024-06-07 15:25
-And the current closing is: 49806.6
+a_four_six -- stage_two
+Now the fourth flow is at: 2024-06-26 10:50
+And the current closing is: 52559.8
+Now the fourth flow is at: 2024-06-26 10:55
+And the current closing is: 52605.8
+Now the fourth flow is at: 2024-06-26 11:00
+And the current closing is: 52673.75
+Now the fourth flow is at: 2024-06-26 11:05
+And the current closing is: 52672.85
+Now the fourth flow is at: 2024-06-26 11:10
+And the current closing is: 52680.1
+Now the fourth flow is at: 2024-06-26 11:15
+And the current closing is: 52668.35
+Now the fourth flow is at: 2024-06-26 11:20
+And the current closing is: 52702.4
+Now the fourth flow is at: 2024-06-28 12:45
+And the current closing is: 52561.15

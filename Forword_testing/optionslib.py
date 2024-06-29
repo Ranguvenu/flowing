@@ -5,6 +5,7 @@ import pyotp, time
 from config import *
 from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 from logzero import logger
+import mysql.connector
 
 # Define a global variable to store the response
 # Define a global variable to store the response
@@ -17,7 +18,7 @@ TOKENS_WITHNAMES = None
 
 def pickup_fromstream(obj=False, data=False):
     global TOKENS_WITHNAMES
-    captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
+    # captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
 
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
@@ -46,7 +47,7 @@ def pickup_fromstream(obj=False, data=False):
         global OPTION_LTP
         global I
         global BEST_OPTION
-        captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
+        # captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
         logger.info("Ticks: {}".format(message))
 
         RESPONSE_DATA = message
@@ -121,6 +122,7 @@ def ranger_options_tokens(obj):
     closest_option = {'symbol': None, 'price': float('inf')}
     investing_amount = 2555
     options_inrange = ranger_options(obj)
+
     existing_difference = float('inf')
     token_collection = [{}]
     tokens_array = []
@@ -155,7 +157,7 @@ def best_option_fromlive(response_data, forname=False):
                 closest_key = key
                 closest_value = multiplied_value
 
-    return {'token': closest_key, 'price': closest_value, 'optionname': forname[closest_key], 'shareprice': closest_value/15}
+    return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
 
 def ranger_options(obj):
 
@@ -170,7 +172,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "12JUN24"
+        validate = "03JUL24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -192,3 +194,46 @@ def spell_integer_two(n):
         if n < 1000 ** (i + 1):
             return spell_integer_two(n // 1000 ** i) + '_' + j + '_' + spell_integer_two(n % 1000 ** i) if n % 1000 ** i else ''
     return ''
+
+
+
+def get_entered_options():
+    try:
+        db_config = {
+            'host': 'localhost',
+            'user': 'root',
+            'password': 'Venu@5599',
+            'database': 'mydb'
+        }
+        # Establish a database connection
+        connection = mysql.connector.connect(**db_config)
+        cursor = connection.cursor()
+
+        # Define the query to fetch records with status "Entered"
+        query = "SELECT * FROM order_records WHERE status = 'Entered'"
+        # Execute the query
+        cursor.execute(query)
+
+        # Fetch all the records
+        records = cursor.fetchall()
+        # Get column names from cursor.description
+        column_names = [desc[0] for desc in cursor.description]
+
+        # Convert records to a list of dictionaries
+        result = [dict(zip(column_names, record)) for record in records]
+
+        return result
+
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+    finally:
+        # Close the cursor and connection
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+# print(get_entered_options())
+

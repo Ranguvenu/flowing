@@ -1,0 +1,31 @@
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2453000CE', 'symboltoken': '59630'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452900CE', 'symboltoken': '63892'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452800CE', 'symboltoken': '59624'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452700CE', 'symboltoken': '59622'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452600CE', 'symboltoken': '59620'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452500CE', 'symboltoken': '59534'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452400CE', 'symboltoken': '57404'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452300CE', 'symboltoken': '57107'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452200CE', 'symboltoken': '57105'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452100CE', 'symboltoken': '56102'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2452000CE', 'symboltoken': '56100'}]}
+for name: {'status': True, 'message': 'SUCCESS', 'errorcode': '', 'data': [{'exchange': 'NFO', 'tradingsymbol': 'BANKNIFTY26JUN2451900CE', 'symboltoken': '56091'}]}
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+in appending:
+option_ltplist: [{'57105': 240.05}, {'59624': 59.0}, {'57404': 156.55}, {'57107': 194.85}, {'56091': 419.85}, {'63892': 46.35}, {'56100': 353.75}, {'59620': 97.25}, {'56102': 294.0}, {'59622': 75.7}, {'59534': 123.45}]
+token names: {'59630': 'BANKNIFTY26JUN2453000CE', '63892': 'BANKNIFTY26JUN2452900CE', '59624': 'BANKNIFTY26JUN2452800CE', '59622': 'BANKNIFTY26JUN2452700CE', '59620': 'BANKNIFTY26JUN2452600CE', '59534': 'BANKNIFTY26JUN2452500CE', '57404': 'BANKNIFTY26JUN2452400CE', '57107': 'BANKNIFTY26JUN2452300CE', '57105': 'BANKNIFTY26JUN2452200CE', '56102': 'BANKNIFTY26JUN2452100CE', '56100': 'BANKNIFTY26JUN2452000CE', '56091': 'BANKNIFTY26JUN2451900CE'}
+Resultant Option for you: {'token': '57105', 'price': 3600.75, 'symbol': 'BANKNIFTY26JUN2452200CE', 'shareprice': 240.05}
+Resultant option for you:  {'token': '57105', 'price': 3600.75, 'symbol': 'BANKNIFTY26JUN2452200CE', 'shareprice': 240.05}
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed
+after flow6
+Next History time: 2024-06-25 11:5
+Next History time: 2024-06-25 11:5

@@ -35,7 +35,7 @@ data = smartApi.generateSession(username, pwd, totp)
 
 if data['status'] == False:
     logger.error(data)
-    
+
 else:
     # login api call
     # logger.info(f"You Credentials: {data}")
@@ -78,7 +78,7 @@ else:
         gttCreateParams={
                 "tradingsymbol" : "SBIN-EQ",
                 "symboltoken" : "3045",
-                "exchange" : "NSE", 
+                "exchange" : "NSE",
                 "producttype" : "MARGIN",
                 "transactiontype" : "BUY",
                 "price" : 100000,
@@ -91,7 +91,6 @@ else:
         logger.info(f"The GTT rule id is: {rule_id}")
     except Exception as e:
         logger.exception(f"GTT Rule creation failed: {e}")
-        
     #gtt rule list
     try:
         status=["FORALL"] #should be a list
@@ -107,7 +106,7 @@ else:
         "exchange": "NSE",
         "symboltoken": "3045",
         "interval": "ONE_MINUTE",
-        "fromdate": "2021-02-08 09:00", 
+        "fromdate": "2021-02-08 09:00",
         "todate": "2021-02-08 09:16"
         }
         smartApi.getCandleData(historicParam)

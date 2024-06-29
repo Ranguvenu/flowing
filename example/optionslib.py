@@ -145,7 +145,7 @@ def best_option_fromlive(response_data, forname=False):
                 closest_key = key
                 closest_value = multiplied_value
 
-    return {'token': closest_key, 'price': closest_value, 'optionname': forname[closest_key], 'shareprice': closest_value/15}
+    return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
 
 def ranger_options(obj):
 
@@ -160,7 +160,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "19JUN24"
+        validate = "26JUN24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -182,3 +182,42 @@ def spell_integer_two(n):
         if n < 1000 ** (i + 1):
             return spell_integer_two(n // 1000 ** i) + '_' + j + '_' + spell_integer_two(n % 1000 ** i) if n % 1000 ** i else ''
     return ''
+
+
+
+def get_entered_options():
+    try:
+        db_config = {
+            'host': 'localhost',
+            'user': 'root',
+            'password': 'Venu@5599',
+            'database': 'mydb'
+        }
+        # Establish a database connection
+        connection = mysql.connector.connect(**db_config)
+        cursor = connection.cursor()
+
+        # Define the query to fetch records with status "Entered"
+        query = "SELECT * FROM order_records WHERE status = 'Entered'"
+        # Execute the query
+        cursor.execute(query)
+
+        # Fetch all the records
+        records = cursor.fetchall()
+        # Get column names from cursor.description
+        column_names = [desc[0] for desc in cursor.description]
+
+        # Convert records to a list of dictionaries
+        result = [dict(zip(column_names, record)) for record in records]
+
+        return result
+
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+
+    finally:
+        # Close the cursor and connection
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
