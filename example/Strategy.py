@@ -96,11 +96,23 @@ def spell_integer(n):
 
 
 def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=False):
-    if connection_data:
-        captured_output = sys.stdout = sys.stderr = open('alive/datafilsterflow.txt', 'a')
-    else:
-        captured_output = sys.stdout = sys.stderr = open('datafilsterflow.txt', 'a')
+#     if connection_data:
+#         captured_output = sys.stdout = sys.stderr = open('alive/datafilsterflow.txt', 'a')
+#     else:
+        # captured_output = sys.stdout = sys.stderr = open('datafilsterflow.txt', 'a')
 
+    # print("flow_one_three_three_two")
+    # print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing")
+    # if connection_data:
+
+    #     resultant_option = pickup_fromstream(connection_obj, connection_data)
+    #     print("Resultant option:", resultant_option)
+    #     return resultant_option
+    # if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
+    #     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmedtesting")
+    #     greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+    # else:
+    #     greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
 
     i = 1
     # print(payload)
@@ -685,10 +697,10 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
 
 
 def flow_two(payload, weareat=False, connection_data=False, connection_obj=False):
-    if connection_data:
-        captured_output = sys.stdout = sys.stderr = open('alive/dataflowtwo.txt', 'a')
-    else:
-        captured_output = sys.stdout = sys.stderr = open('dataflowtwo.txt', 'a')
+    # if connection_data:
+        # captured_output = sys.stdout = sys.stderr = open('alive/dataflowtwo.txt', 'a')
+    # else:
+        # captured_output = sys.stdout = sys.stderr = open('dataflowtwo.txt', 'a')
 
 
     print("Now we are at:", weareat)
@@ -1558,10 +1570,10 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
 
 
 def fourth_flow(payload, time, connection_data=False, connection_obj=False):
-    if connection_data:
-        captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
-    else:
-        captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
+    # if connection_data:
+        # captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
+    # else:
+        # captured_output = sys.stdout = sys.stderr = open('alive/datafour.txt', 'a')
 
     print("Now the fourth flow is at:", time)
     print("And the current closing is:", payload['current_closing'])
@@ -2311,10 +2323,10 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
 
 
 def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
-    if connection_data:
-        captured_output = sys.stdout = sys.stderr = open('alive/highfivedata.txt', 'a')
-    else:
-        captured_output = sys.stdout = sys.stderr = open('highfivedata.txt', 'a')
+    # if connection_data:
+        # captured_output = sys.stdout = sys.stderr = open('alive/highfivedata.txt', 'a')
+    # else:
+        # captured_output = sys.stdout = sys.stderr = open('highfivedata.txt', 'a')
     print("High fiving at:", time)
     if payload['current_green'] and payload['a_one_wread'] and payload['a_two_wread'] and payload['a_one_opens'] < payload['a_two_opens'] < payload['current_closing']:
         print("flow_five Welcome to high five flow")

@@ -82,7 +82,7 @@ def ranger_options_tokens(obj):
         # print(option_symbol)
         # exit()
         time.sleep(1)
-        searchScriptData = obj.searchScrip("NFO", "BANKNIFTY16JUL2453400CE")
+        searchScriptData = obj.searchScrip("NFO", option_symbol)
         print('for name:',searchScriptData)
         # exit()
         tokens_array.append(searchScriptData['data'][0]['symboltoken'])
@@ -90,6 +90,7 @@ def ranger_options_tokens(obj):
         i -= 1
     token_collection[0]['exchangeType'] = 2
     token_collection[0]['tokens'] = tokens_array
+    # print(tokemns)
     return token_name, validate
 
 def option_seeding(data, validate_value):
@@ -125,34 +126,7 @@ def option_seeding(data, validate_value):
             print("MySQL connection is closed")
 
 
-# options, validate = ranger_options_tokens(connecting_object)
+options, validate = ranger_options_tokens(connecting_object)
 
-# print(option_seeding(options, validate))
-# exit()
-
-#-------------------------------------------------------------------------------------
-forword_testing(connecting_object, current_date, history_date, connection_data)
+print(option_seeding(options, validate))
 exit()
-try:
-    dates = forword_testing(connecting_object, current_date, history_date, connection_data)
-    history_date = dates['history_date']
-    current_date = dates['current_date']
-    forword_testing(connecting_object, current_date, history_date, connection_data)
-except Exception as e:
-    while True:
-        print('Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-        time.sleep(5)
-        try:
-            dates = forword_testing(connecting_object, current_date, history_date, connection_data)
-
-        except Exception as e:
-            time.sleep(5)
-            print(f"An error occurred: {e}")
-            print("Attempting to reconnect...")
-            # Reconnect and continue the loop
-
-            obj = SmartConnect(api_key="yWjMIfbo")
-            data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-
-            continue
-

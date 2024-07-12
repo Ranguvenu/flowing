@@ -24,10 +24,11 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             current_params = recent_number_of_forwording_histories_params("NSE", "99926009", "FIVE_MINUTE", 0, 5, current_time)
 
             history = connection_object.getCandleData(params)
-            current_history = connection_object.getCandleData(current_params)
+            # current_history = connection_object.getCandleData(current_params)
 
             try:
                 current_history = connection_object.getCandleData(current_params)
+
             except Exception as e:
                 print("In exeption: ")
                 print('cjdnfjdfj2')
@@ -58,13 +59,20 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             Historion.update(current)
 
             flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
+            print("This is the best option: ",flowfilterv)
+            exit()
+
+            if '2024-07-01 09:35' == current_params['todate']:
+                print('fdfdfdfffffffffffffffffffff', flowfilterv)
             flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
 
             fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+
             high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
             variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+
             print("variables:::::", variables)
             for var in variables:
                 print("var of variable:", var)
@@ -86,11 +94,11 @@ def forword_testing(connection_object, current_time, history_time, connection_da
                     # elif var < 0:
                     #     if -var in index_targets:
                     #         index_targets.remove(-var)
-            entered_options = get_entered_options()
-            print("entered_options: ", entered_options)
+            # entered_options = get_entered_options()
+            # print("entered_options: ", entered_options)
             # exit()
-            if entered_options:
-                fast_looping(connection_object, entered_options, Historion['current_closing'])
+            # if entered_options:
+            #     fast_looping(connection_object, entered_options, Historion['current_closing'])
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

@@ -631,7 +631,7 @@ def stream_into_flow(connection_obj, connection_data):
     while True:
         # captured_outputs = sys.stdout = sys.stderr = open('data.txt', 'a')
 
-        # time.sleep(2)  # Sleep for "Intervel" seconds before running again
+        time.sleep(2)  # Sleep for "Intervel" seconds before running again
         live_history_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 12, 5, False, False)
 
         current_params = recent_number_of_histories_params_forlive("NSE", "99926009", "FIVE_MINUTE", 0, 5, False, True)
@@ -657,6 +657,8 @@ def stream_into_flow(connection_obj, connection_data):
         Historion.update(current)
 
         flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+        # print("This is resultant:", flowfilterv)
+        # exit()
         flow_twov = flow_two(Historion, current_params['fromdate'], connection_data, connection_obj)
 
         fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
@@ -667,16 +669,17 @@ def stream_into_flow(connection_obj, connection_data):
         for var in variables:
             print("var of variable:", var)
             if var is not None:
-                bounds = [51966.51, 52186.93, 52460.21, 52701.59, 52998.74, 53182.99]
-
+                bounds = [51966.51, 52186.93, 52460.21, 52701.59, 52998.74, 53182.99, 53450]
                 lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+
                 option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
                 print("option_order_response::", option_order_response)
 
         entered_options = get_entered_options()
         print("entered_options: ", entered_options)
         if entered_options:
-            fast_looping(connection_obj, entered_options, Historion['current_closing'])
+            fast_looping(connection_obj, entered_options)
+            time.sleep(next_fivemloop_inseconds())
 
         # save_tofile = flow_two(Historion)
         # next_fivemloop_insecondss = next_fivemloop_inseconds()
@@ -685,44 +688,35 @@ def stream_into_flow(connection_obj, connection_data):
         print("after flow"+str(i))
 
         # time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
-        if next_fivemloop_inseconds() != 0:
-            time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
-        elif next_fivemloop_inseconds() <= 0:
-            time.sleep(300)
-
-
-
+        if entered_options == []:
+            if next_fivemloop_inseconds() != 0:
+                print('Wait for: ', next_fivemloop_inseconds())
+                time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
+            elif next_fivemloop_inseconds() <= 0:
+                print("For nex 5 minutes")
+                time.sleep(300)
 
 def next_fivemloop_inseconds():
-    local_time = time.localtime()
-    current_time = int(time.strftime("%M", local_time))
-    # print(time.strftime("%M", local_time))
-    # exit()
-    # Sample next_time
-    next_time = time.strftime("%Y-%m-%d %H:%M", local_time)
+    # Get the current time
+    now = datetime.now()
 
-    if current_time % 5 != 0:
-        current_time = (current_time // 5 + 1) * 5
+    # Calculate the next multiple of 5 minutes
+    if now.minute % 5 != 0:
+        next_minute = (now.minute // 5 + 1) * 5
+    else:
+        next_minute = now.minute
 
-    # Split next_time into date and time components
-    date_part, time_part = next_time.split()
+    # Handle the case where next_minute is 60
+    if next_minute == 60:
+        next_minute = 0
+        next_time = now.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+    else:
+        next_time = now.replace(minute=next_minute, second=0, microsecond=0)
 
-    # Replace the minute part with current_time
-    new_time = time_part[:3] + str(current_time)
+    # Calculate the time difference in seconds
+    next_loop_inseconds = (next_time - now).total_seconds()
 
-    # Reconstruct the modified next_time
-    modified_next_time = date_part + ' ' + new_time
-    print("Next History time:", modified_next_time)
-    modified_next_time = datetime.strptime(modified_next_time, "%Y-%m-%d %H:%M")
-    modified_next_time = int(modified_next_time.timestamp())
-    now_the_time = time.time()
-    now_the_time = int(now_the_time - (now_the_time % 60))
-    next_loop_inseconds = modified_next_time - now_the_time
-    if next_loop_inseconds <= 0:
-        return 0
-    return next_loop_inseconds
-
-
+    return int(next_loop_inseconds)
 
 def into_the_yesterday(begins="2024-04-15 09:15:00"):
     begins_dt_format = datetime.strptime(begins, "%Y-%m-%d %H:%M:%S")
@@ -1154,12 +1148,12 @@ def fast_looping(connection_object, entered_options):
     time_to_sleep = (next_time - datetime.now(kolkata_timezone)).total_seconds()
     time.sleep(time_to_sleep)
 
-
     while True:
         # Get the current time in Asia/Kolkata timezone
         print(f"Task executed at {datetime.now(kolkata_timezone).strftime('%Y-%m-%d %H:%M:%S')}")
         start_time = time.time()
-        #Schenarios comes here
+
+        # Scenarios come here
         try:
             ltp = connection_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
             print("current ltp in fast loop: ", ltp)
@@ -1192,7 +1186,7 @@ def fast_looping(connection_object, entered_options):
         except Exception as e:
             print(f"exiting from here {(e)}")
             exit()
-        print('Hi this is after loop thats you are cheking...')
+        print('Hi this is after loop thats you are checking...')
         try:
             end_time = time.time()
             time_defferance = int(end_time - start_time)
@@ -1205,9 +1199,9 @@ def fast_looping(connection_object, entered_options):
             print(f"Please Find me too {(e)}")
             exit()
 
-        # Check if the current time is at a 5-minute mark
+        # Check if the current time is 5 seconds before a 5-minute mark
         try:
-            if now.minute % 5 == 0 and seconds_time % 5 == 0:
+            if (now.minute % 5 == 4 and now.second >= 55) or (now.minute % 5 == 0 and now.second < 5):
                 now_without_seconds = now.replace(second=0, microsecond=0)
                 unix_timestamp_without_seconds = int(now_without_seconds.timestamp())
                 readable_now_without_seconds = now.replace(second=0, microsecond=0)
@@ -1242,7 +1236,6 @@ def fast_looping(connection_object, entered_options):
                 next_second = 0
                 now += timedelta(minutes=1)
             next_time = now.replace(second=next_second, microsecond=0)
-
 
             time_to_sleep = (next_time - datetime.now(kolkata_timezone)).total_seconds()
             time.sleep(time_to_sleep)

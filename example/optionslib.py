@@ -5,6 +5,7 @@ import pyotp, time
 from config import *
 from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 from logzero import logger
+import mysql.connector
 
 # Define a global variable to store the response
 RESPONSE_DATA = None
@@ -16,7 +17,11 @@ TOKENS_WITHNAMES = None
 
 def pickup_fromstream(obj=False, data=False):
     global TOKENS_WITHNAMES
-    captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
+    global I
+
+
+
+    # captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
 
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
@@ -31,15 +36,21 @@ def pickup_fromstream(obj=False, data=False):
     correlation_id = "abc123"
     action = 1
     mode = 1
-    ranger_options = ranger_options_tokens(obj)
-    TOKENS_WITHNAMES = ranger_options[1]
-    token_collection = ranger_options[0]
+    # ranger_options = ranger_options_tokens(obj)
+    # TOKENS_WITHNAMES = ranger_options[1]
+    # token_collection = ranger_options[0]
+
+    TOKENS_WITHNAMES, token_list = get_valid_options()
+    token_collection = [{
+        "exchangeType": 2,
+        "tokens": token_list
+    }]
 
     # retry_strategy = 0 for simple retry mechanism
     sws = SmartWebSocketV2(AUTH_TOKEN, API_KEY, CLIENT_CODE, FEED_TOKEN, max_retry_attempt=0, retry_strategy=0, retry_delay=10, retry_duration=30)
 
     # Initialize TOKENS and OPTION_LTP outside the function
-
+    I = 0
     def on_data(wsapp, message):
         global RESPONSE_DATA
         global TOKENS
@@ -48,6 +59,7 @@ def pickup_fromstream(obj=False, data=False):
         global BEST_OPTION
 
         logger.info("Ticks: {}".format(message))
+
 
         RESPONSE_DATA = message
 
@@ -58,11 +70,10 @@ def pickup_fromstream(obj=False, data=False):
             TOKENS.append(token)
             OPTION_LTP.append({token: last_traded_price / 100})
             I += 1
-            if I >= 11:
-                print('option_ltplist:', OPTION_LTP)
+            if I >= 49:
                 close_connection()
                 # print("best option", best_option_fromlive(OPTION_LTP))
-                print('token names:', TOKENS_WITHNAMES)
+
                 BEST_OPTION = best_option_fromlive(OPTION_LTP, TOKENS_WITHNAMES)
         elif (RESPONSE_DATA['token'] == 41615):
             # If token repeats, close the connection
@@ -71,6 +82,8 @@ def pickup_fromstream(obj=False, data=False):
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
             return best_option_fromlive(OPTION_LTP)
+
+
 
     # Initialize received_tokens as an empty set
 
@@ -110,6 +123,44 @@ def pickup_fromstream(obj=False, data=False):
     return BEST_OPTION
 
 
+def get_valid_options():
+    # Replace with your MySQL database connection details
+    db_config = {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'Venu@5599',
+        'database': 'mydb'
+    }
+
+    try:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor()
+
+        # Prepare SQL query to retrieve data
+        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
+        validate_value = '16JUL24'
+        cursor.execute(sql_select, (validate_value,))
+
+        # Fetch all rows
+        rows = cursor.fetchall()
+
+        # Create dictionary and list
+        result_dict = {token: symbol for token, symbol in rows}
+        token_list = [token for token, _ in rows]
+
+        return result_dict, token_list
+
+    except mysql.connector.Error as error:
+        print("Error retrieving data from MySQL table:", error)
+        return {}, []
+
+    finally:
+        if (conn.is_connected()):
+            cursor.close()
+            conn.close()
+            print("MySQL connection is closed")
+
+
 
 def ranger_options_tokens(obj):
     i = 11
@@ -135,24 +186,28 @@ def ranger_options_tokens(obj):
 
 def best_option_fromlive(response_data, forname=False):
     closest_key = None
-    closest_value = float('inf')
-    target_value = 2500
+    closest_value = None
+    closest_shareprice = None
+
+    target_value = 2700
 
     for item in response_data:
         for key, value in item.items():
             multiplied_value = value * 15
-            if (multiplied_value <= target_value and (target_value - multiplied_value) < target_value - closest_value) or closest_key is None:
-                closest_key = key
-                closest_value = multiplied_value
-
-    return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
-
+            if multiplied_value <= target_value:
+                if closest_value is None or multiplied_value > closest_value:
+                    closest_key = key
+                    closest_value = multiplied_value
+                    closest_shareprice = value
+    if closest_key is not None:
+        return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
+    else:
+        return None
 def ranger_options(obj):
 
     banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
     rounded_ltp = banknifty_ltp['data']['ltp'] % 100
     rounded_ltp = round(banknifty_ltp['data']['ltp'] - rounded_ltp)
-
 
     i = 0
     range_starts = rounded_ltp - 200
@@ -160,7 +215,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "26JUN24"
+        validate = "16JUL24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -182,7 +237,6 @@ def spell_integer_two(n):
         if n < 1000 ** (i + 1):
             return spell_integer_two(n // 1000 ** i) + '_' + j + '_' + spell_integer_two(n % 1000 ** i) if n % 1000 ** i else ''
     return ''
-
 
 
 def get_entered_options():

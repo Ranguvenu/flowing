@@ -442,9 +442,279 @@ def find_upper_bound(numbers, given_number, margin):
 
     return None
 
-upper_bound = find_upper_bound(numbers, given_number, margin)
-print(upper_bound)
+# upper_bound = find_upper_bound(numbers, given_number, margin)
+# print(upper_bound)
 # if upper_bound is not None:
 #     print(f"The upper bound for {given_number} with a margin of {margin} is {upper_bound}.")
 # else:
 #     print(f"There is no upper bound for {given_number} in the list with the given margin.")
+
+
+
+def best_option_fromlive(response_data, forname=False):
+    closest_key = None
+    closest_value = None
+
+    target_value = 2500
+
+    for item in response_data:
+        for key, value in item.items():
+            multiplied_value = value * 15
+            if (multiplied_value <= target_value) and closest_value is None:
+                closest_key = key
+                closest_value = multiplied_value
+            elif closest_value is not None and (multiplied_value < closest_value):
+                closest_key = key
+                closest_value = multiplied_value
+    return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
+
+
+token_and_symbolname = {'53778': 'BANKNIFTY03JUL2453200CE', '53776': 'BANKNIFTY03JUL2453100CE', '53774': 'BANKNIFTY03JUL2453000CE', '53772': 'BANKNIFTY03JUL2452900CE', '53770': 'BANKNIFTY03JUL2452800CE', '53768': 'BANKNIFTY03JUL2452700CE', '53766': 'BANKNIFTY03JUL2452600CE', '53764': 'BANKNIFTY03JUL2452500CE', '53762': 'BANKNIFTY03JUL2452400CE', '53760': 'BANKNIFTY03JUL2452300CE', '53758': 'BANKNIFTY03JUL2452200CE', '53756': 'BANKNIFTY03JUL2452100CE'}
+token_and_price = [{'53770': 224.0}, {'53760': 440.0}, {'53774': 172.15}, {'53764': 340.85}, {'53772': 194.15}, {'53762': 392.85}, {'53778': 129.85}, {'53756': 567.3}, {'53768': 260.0}, {'53776': 147.95}, {'53766': 300.0}]
+
+# test = best_option_fromlive(token_and_price, token_and_symbolname)
+
+
+def spell_integer_two(n):
+    if n < 20:
+        return ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'][n]
+    if n < 100:
+        return ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'][n//10-2] + ('_' + spell_integer_two(n%10) if n % 10 else '')
+    if n < 1000:
+        return spell_integer_two(n//100) + '_hundred_' + spell_integer_two(n%100) if n % 100 else ''
+    for i, j in enumerate(('thousand', 'million', 'billion', 'trillion'), 1):
+        if n < 1000 ** (i + 1):
+            return spell_integer_two(n // 1000 ** i) + '_' + j + '_' + spell_integer_two(n % 1000 ** i) if n % 1000 ** i else ''
+    return ''
+
+# print(test)
+
+def ranger_options(obj):
+
+    banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
+    rounded_ltp = banknifty_ltp['data']['ltp'] % 100
+    rounded_ltp = round(banknifty_ltp['data']['ltp'] - rounded_ltp)
+
+
+    i = 0
+    range_starts = rounded_ltp - 200
+    options_inrange = {}
+
+    while i <= 11:
+        symbol_name = "BANKNIFTY"
+        validate = "03JUL24"
+        type = 'CE'
+
+        options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
+        range_starts += 100
+        i += 1
+    options_inrange['current_ltp'] = banknifty_ltp['data']['ltp']
+    return options_inrange
+
+
+
+import mysql.connector
+
+# Replace with your MySQL database connection details
+
+# Data from the JSON structure
+data = {
+    "35164": "BANKNIFTY03JUL2454900CE",
+    "35792": "BANKNIFTY03JUL2454800CE",
+    "35681": "BANKNIFTY03JUL2454700CE",
+    "35661": "BANKNIFTY03JUL2454600CE",
+    "53798": "BANKNIFTY03JUL2454500CE",
+    "35578": "BANKNIFTY03JUL2454400CE",
+    "35457": "BANKNIFTY03JUL2454300CE",
+    "35453": "BANKNIFTY03JUL2454200CE",
+    "35450": "BANKNIFTY03JUL2454100CE",
+    "53796": "BANKNIFTY03JUL2454000CE",
+    "35393": "BANKNIFTY03JUL2453900CE",
+    "53794": "BANKNIFTY03JUL2453800CE",
+    "53792": "BANKNIFTY03JUL2453700CE",
+    "53790": "BANKNIFTY03JUL2453600CE",
+    "53788": "BANKNIFTY03JUL2453500CE",
+    "53785": "BANKNIFTY03JUL2453400CE",
+    "53782": "BANKNIFTY03JUL2453300CE",
+    "53778": "BANKNIFTY03JUL2453200CE",
+    "53776": "BANKNIFTY03JUL2453100CE",
+    "53774": "BANKNIFTY03JUL2453000CE",
+    "53772": "BANKNIFTY03JUL2452900CE",
+    "53770": "BANKNIFTY03JUL2452800CE",
+    "53768": "BANKNIFTY03JUL2452700CE",
+    "53766": "BANKNIFTY03JUL2452600CE",
+    "53764": "BANKNIFTY03JUL2452500CE",
+    "53762": "BANKNIFTY03JUL2452400CE",
+    "53760": "BANKNIFTY03JUL2452300CE",
+    "53758": "BANKNIFTY03JUL2452200CE",
+    "53756": "BANKNIFTY03JUL2452100CE",
+    "53754": "BANKNIFTY03JUL2452000CE",
+    "53752": "BANKNIFTY03JUL2451900CE",
+    "53750": "BANKNIFTY03JUL2451800CE",
+    "53748": "BANKNIFTY03JUL2451700CE",
+    "53746": "BANKNIFTY03JUL2451600CE",
+    "53744": "BANKNIFTY03JUL2451500CE",
+    "53742": "BANKNIFTY03JUL2451400CE",
+    "53740": "BANKNIFTY03JUL2451300CE",
+    "53736": "BANKNIFTY03JUL2451200CE",
+    "53732": "BANKNIFTY03JUL2451100CE",
+    "53728": "BANKNIFTY03JUL2451000CE",
+    "53726": "BANKNIFTY03JUL2450900CE",
+    "53722": "BANKNIFTY03JUL2450800CE",
+    "53720": "BANKNIFTY03JUL2450700CE",
+    "53718": "BANKNIFTY03JUL2450600CE",
+    "53716": "BANKNIFTY03JUL2450500CE",
+    "53714": "BANKNIFTY03JUL2450400CE",
+    "53712": "BANKNIFTY03JUL2450300CE",
+    "53710": "BANKNIFTY03JUL2450200CE",
+    "53708": "BANKNIFTY03JUL2450100CE",
+    "53705": "BANKNIFTY03JUL2450000CE",
+    "53702": "BANKNIFTY03JUL2449900CE",
+    "53700": "BANKNIFTY03JUL2449800CE"
+}
+
+# Additional value to be inserted in all rows
+validate_value = '16JUL24'
+
+def option_seeding(data, validate_value):
+    db_config = {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'Venu@5599',
+        'database': 'mydb'
+    }
+    # Connect to MySQL
+    try:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor()
+
+        # Prepare SQL query
+        sql = "INSERT INTO inrange_options (symbol, token, validate) VALUES (%s, %s, %s)"
+
+        # Iterate through data and execute the query
+        for token, symbol in data.items():
+            cursor.execute(sql, (symbol, token, validate_value))
+
+        # Commit changes
+        conn.commit()
+        print(cursor.rowcount, "record(s) inserted successfully into inrange_options")
+
+    except mysql.connector.Error as error:
+        print("Error inserting data into MySQL table:", error)
+
+    finally:
+        if (conn.is_connected()):
+            cursor.close()
+            conn.close()
+            print("MySQL connection is closed")
+
+def get_valid_options():
+    db_config = {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'Venu@5599',
+        'database': 'mydb'
+    }
+    try:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor()
+
+        # Prepare SQL query
+        sql = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
+        validate_value = '03JUL24'
+        cursor.execute(sql, (validate_value,))
+
+        # Fetch all rows
+        rows = cursor.fetchall()
+
+        # Convert rows to dictionary format
+        result_dict = {token: symbol for token, symbol in rows}
+
+        # Print or use the result dictionary
+        print("Result Dictionary:")
+        print(result_dict)
+
+    except mysql.connector.Error as error:
+        print("Error retrieving data from MySQL table:", error)
+
+    finally:
+        if (conn.is_connected()):
+            cursor.close()
+            conn.close()
+            print("MySQL connection is closed")
+
+
+
+import mysql.connector
+
+def get_valid_options():
+    # Replace with your MySQL database connection details
+    db_config = {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'Venu@5599',
+        'database': 'mydb'
+    }
+
+    try:
+        conn = mysql.connector.connect(**db_config)
+        cursor = conn.cursor()
+
+        # Prepare SQL query to retrieve data
+        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
+        validate_value = '03JUL24'
+        cursor.execute(sql_select, (validate_value,))
+
+        # Fetch all rows
+        rows = cursor.fetchall()
+
+        # Create dictionary and list
+        result_dict = {token: symbol for token, symbol in rows}
+        token_list = [token for token, _ in rows]
+
+        return result_dict, token_list
+
+    except mysql.connector.Error as error:
+        print("Error retrieving data from MySQL table:", error)
+        return {}, []
+
+    finally:
+        if (conn.is_connected()):
+            cursor.close()
+            conn.close()
+            print("MySQL connection is closed")
+
+# # Example usage:
+# result_dict, token_list = valid_options()
+# print("Result Dictionary:")
+# print(result_dict)
+# print("Token List:")
+# print(token_list)
+
+import smtplib
+
+from email.mime.text import MIMEText
+
+def send_email(subject, body):
+
+    # Email configuration
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587  # Gmail's TLS port
+    sender_email = 'venucharyrangu@gmail.com'
+    receiver_email = 'venu.chary@moodle.com'
+    smtp_username = 'venucharyrangu@gmail.com'
+    smtp_password = 'dbvb zwju zuvr hgjv'
+
+    msg = MIMEText(body)
+    msg['Subject'] = subject
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+
+    server = smtplib.SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.sendmail(sender_email, receiver_email, msg.as_string())
+    server.quit()
+
+
+print(send_email('HIHIII', 'hihiihiihi'))

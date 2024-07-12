@@ -1,24 +1,29 @@
 from lib import *
 import time
 
+option_ltplist = [{'37053': 55.3}, {'37297': 15.45}, {'37012': 321.0}, {'36882': 964.0}, {'36804': 2200.0}, {'36806': 2025.35}, {'37059': 46.0}, {'36884': 876.1}, {'37017': 272.1}, {'36963': 639.95}, {'36920': 716.7}]
+token_names = {'39607': 'BANKNIFTY16JUL2454900CE', '39603': 'BANKNIFTY16JUL2454800CE', '38473': 'BANKNIFTY16JUL2454700CE', '38470': 'BANKNIFTY16JUL2454600CE', '38036': 'BANKNIFTY16JUL2454500CE', '38017': 'BANKNIFTY16JUL2454400CE', '37984': 'BANKNIFTY16JUL2454300CE', '37967': 'BANKNIFTY16JUL2454200CE', '37862': 'BANKNIFTY16JUL2454100CE', '37858': 'BANKNIFTY16JUL2454000CE', '37297': 'BANKNIFTY16JUL2453900CE', '37274': 'BANKNIFTY16JUL2453800CE', '37087': 'BANKNIFTY16JUL2453700CE', '37081': 'BANKNIFTY16JUL2453600CE', '37064': 'BANKNIFTY16JUL2453500CE', '37059': 'BANKNIFTY16JUL2453400CE', '37053': 'BANKNIFTY16JUL2453300CE', '37044': 'BANKNIFTY16JUL2453200CE', '37042': 'BANKNIFTY16JUL2453100CE', '37040': 'BANKNIFTY16JUL2453000CE', '37038': 'BANKNIFTY16JUL2452900CE', '37032': 'BANKNIFTY16JUL2452800CE', '37030': 'BANKNIFTY16JUL2452700CE', '37027': 'BANKNIFTY16JUL2452600CE', '37017': 'BANKNIFTY16JUL2452500CE', '37012': 'BANKNIFTY16JUL2452400CE', '36995': 'BANKNIFTY16JUL2452300CE', '36990': 'BANKNIFTY16JUL2452200CE', '36985': 'BANKNIFTY16JUL2452100CE', '36970': 'BANKNIFTY16JUL2452000CE', '36963': 'BANKNIFTY16JUL2451900CE', '36920': 'BANKNIFTY16JUL2451800CE', '36906': 'BANKNIFTY16JUL2451700CE', '36884': 'BANKNIFTY16JUL2451600CE', '36882': 'BANKNIFTY16JUL2451500CE', '36863': 'BANKNIFTY16JUL2451400CE', '36857': 'BANKNIFTY16JUL2451300CE', '36852': 'BANKNIFTY16JUL2451200CE', '36838': 'BANKNIFTY16JUL2451100CE', '36836': 'BANKNIFTY16JUL2451000CE', '36832': 'BANKNIFTY16JUL2450900CE', '36830': 'BANKNIFTY16JUL2450800CE', '36826': 'BANKNIFTY16JUL2450700CE', '36824': 'BANKNIFTY16JUL2450600CE', '36820': 'BANKNIFTY16JUL2450500CE', '36818': 'BANKNIFTY16JUL2450400CE', '36806': 'BANKNIFTY16JUL2450300CE', '36804': 'BANKNIFTY16JUL2450200CE', '36796': 'BANKNIFTY16JUL2450100CE', '36792': 'BANKNIFTY16JUL2450000CE', '36790': 'BANKNIFTY16JUL2449900CE', '36788': 'BANKNIFTY16JUL2449800CE'}
 
-def main_loop():
-    while True:
-        sleep_time = next_fivemloop_inseconds()
+def best_option_fromlive(response_data, forname=False):
+    closest_key = None
+    closest_value = None
+    closest_shareprice = None
 
-        if sleep_time != 0:
-            start_time = time.time()
-            while (time.time() - start_time) < sleep_time:
-                ltp_target_checking()
-                time.sleep(5)
-        elif sleep_time <= 0:
-            start_time = time.time()
-            while (time.time() - start_time) < 300:
-                ltp_target_checking()
-                time.sleep(5)
+    target_value = 2700
 
-        # Place your main function logic here that runs after the sleep period.
-        print("Main loop is running.")
+    for item in response_data:
+        for key, value in item.items():
+            multiplied_value = value * 15
+            if multiplied_value <= target_value:
+                if closest_value is None or multiplied_value > closest_value:
+                    closest_key = key
+                    closest_value = multiplied_value
+                    closest_shareprice = value
+    if closest_key is not None:
+        return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
+    else:
+        return None
 
-if __name__ == "__main__":
-    main_loop()
+hi = best_option_fromlive(option_ltplist, token_names)
+
+print(hi)
