@@ -16,14 +16,19 @@ I = 0
 BEST_OPTION = None
 TOKENS_WITHNAMES = None
 
-def pickup_fromstream(obj=False, data=False):
+def pickup_fromstream(obj=False, data=False, type  = "CE"):
     global TOKENS_WITHNAMES
-    # captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
+    global I
+
+
+
+    # captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
 
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
         # login api call
         data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+    # refreshToken = data['data']['refreshToken']
 
     AUTH_TOKEN = data['data']['jwtToken']
     API_KEY = "yWjMIfbo"
@@ -33,9 +38,10 @@ def pickup_fromstream(obj=False, data=False):
     action = 1
     mode = 1
     # ranger_options = ranger_options_tokens(obj)
-    # TOKENS_WITHNAMESss = ranger_options[1]
-    # token_collectionss = ranger_options[0]
-    TOKENS_WITHNAMES, token_list = get_valid_options()
+    # TOKENS_WITHNAMES = ranger_options[1]
+    # token_collection = ranger_options[0]
+
+    TOKENS_WITHNAMES, token_list = get_valid_options(type)
     token_collection = [{
         "exchangeType": 2,
         "tokens": token_list
@@ -45,15 +51,16 @@ def pickup_fromstream(obj=False, data=False):
     sws = SmartWebSocketV2(AUTH_TOKEN, API_KEY, CLIENT_CODE, FEED_TOKEN, max_retry_attempt=0, retry_strategy=0, retry_delay=10, retry_duration=30)
 
     # Initialize TOKENS and OPTION_LTP outside the function
-
+    I = 0
     def on_data(wsapp, message):
         global RESPONSE_DATA
         global TOKENS
         global OPTION_LTP
         global I
         global BEST_OPTION
-        # captured_output = sys.stdout = sys.stderr = open('forword_records/entries.txt', 'a')
+
         logger.info("Ticks: {}".format(message))
+
 
         RESPONSE_DATA = message
 
@@ -76,7 +83,7 @@ def pickup_fromstream(obj=False, data=False):
 
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
-            # return best_option_fromlive(OPTION_LTP)
+            return best_option_fromlive(OPTION_LTP)
 
     # Initialize received_tokens as an empty set
 
@@ -117,7 +124,9 @@ def pickup_fromstream(obj=False, data=False):
 
 
 
-def get_valid_options():
+import mysql.connector
+
+def get_valid_options(option_type="CE"):
     # Replace with your MySQL database connection details
     db_config = {
         'host': 'localhost',
@@ -131,9 +140,9 @@ def get_valid_options():
         cursor = conn.cursor()
 
         # Prepare SQL query to retrieve data
-        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
-        validate_value = '16JUL24'
-        cursor.execute(sql_select, (validate_value,))
+        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
+        validate_value = '24JUL24'
+        cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
         rows = cursor.fetchall()
@@ -146,26 +155,17 @@ def get_valid_options():
 
     except mysql.connector.Error as error:
         print("Error retrieving data from MySQL table:", error)
-        exit()
         return {}, []
 
     finally:
-        if (conn.is_connected()):
+        if conn.is_connected():
             cursor.close()
             conn.close()
             print("MySQL connection is closed")
 
-
-
-
-
 def ranger_options_tokens(obj):
     i = 11
-    closest_option = {'symbol': None, 'price': float('inf')}
-    investing_amount = 2555
     options_inrange = ranger_options(obj)
-
-    existing_difference = float('inf')
     token_collection = [{}]
     tokens_array = []
     token_name = {}
@@ -175,15 +175,13 @@ def ranger_options_tokens(obj):
         time.sleep(1)
         searchScriptData = obj.searchScrip("NFO", option_symbol)
         print('for name:',searchScriptData)
-        # exit()
-        # print(searchScriptData)
-        # exit()
+
         tokens_array.append(searchScriptData['data'][0]['symboltoken'])
         token_name[searchScriptData['data'][0]['symboltoken']] = searchScriptData['data'][0]['tradingsymbol']
         i -= 1
     token_collection[0]['exchangeType'] = 2
     token_collection[0]['tokens'] = tokens_array
-    # print(tokemns)
+
     return [token_collection, token_name]
 
 
@@ -206,8 +204,8 @@ def best_option_fromlive(response_data, forname=False):
         return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
     else:
         return None
+def ranger_options(obj, type = 'CE'):
 
-def ranger_options(obj):
     banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
     rounded_ltp = banknifty_ltp['data']['ltp'] % 100
     rounded_ltp = round(banknifty_ltp['data']['ltp'] - rounded_ltp)
@@ -218,8 +216,8 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "16JUL24"
-        type = 'CE'
+        validate = "24JUL24"
+
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
         range_starts += 100
@@ -279,7 +277,3 @@ def get_entered_options():
             cursor.close()
         if connection:
             connection.close()
-
-
-# print(get_entered_options())
-

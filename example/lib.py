@@ -16,6 +16,7 @@ from Symbols import *
 from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 from logzero import logger
 from orders_lib import *
+from bear import *
 #The Connection
 # pickup_fromstream()
 # exit()
@@ -664,7 +665,12 @@ def stream_into_flow(connection_obj, connection_data):
         fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_obj)
         high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_obj)
 
-        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+
+        bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_obj)
+        bear_twov = bear_two(Historion, current_params['todate'], connection_data, connection_obj)
+        bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_obj)
+
+        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv, bear_onev, bear_twov, bear_threev]
         print("variables:::::", variables)
         for var in variables:
             print("var of variable:", var)
@@ -679,7 +685,9 @@ def stream_into_flow(connection_obj, connection_data):
         print("entered_options: ", entered_options)
         if entered_options:
             fast_looping(connection_obj, entered_options)
-            time.sleep(next_fivemloop_inseconds())
+            next_loop_in = next_fivemloop_inseconds()
+            timer(next_loop_in)
+            # time.sleep(next_loop_in)
 
         # save_tofile = flow_two(Historion)
         # next_fivemloop_insecondss = next_fivemloop_inseconds()
@@ -689,12 +697,16 @@ def stream_into_flow(connection_obj, connection_data):
 
         # time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
         if entered_options == []:
-            if next_fivemloop_inseconds() != 0:
-                print('Wait for: ', next_fivemloop_inseconds())
-                time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
+            if next_fivemloop_inseconds() >= 0:
+                next_loop_in = next_fivemloop_inseconds()
+                print('Wait for: ', next_loop_in)
+                timer(next_loop_in)
+                # time.sleep(next_loop_in)  # Sleep for "Intervel" seconds before running again
             elif next_fivemloop_inseconds() <= 0:
                 print("For nex 5 minutes")
-                time.sleep(300)
+                next_loop_in = next_fivemloop_inseconds() + 300
+                timer(next_loop_in)
+                # time.sleep(next_loop_in)
 
 def next_fivemloop_inseconds():
     # Get the current time
@@ -1242,3 +1254,10 @@ def fast_looping(connection_object, entered_options):
         except Exception as e:
             print(f"Please find me {(e)}")
             exit()
+
+
+def timer(seconds):
+    for remaining in range(seconds, 0, -1):
+        print(f"Time left: {remaining} seconds", end='\r')
+        time.sleep(1)
+    print("Time's up!")

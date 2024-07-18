@@ -13,8 +13,8 @@ from lib import *
 
 connecting_object = SmartConnect(api_key="yWjMIfbo")
 # data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-history_date = "2024-07-01 10:50:00"
-current_date = "2024-07-01 10:55:00"
+history_date = "2024-07-15 12:05:00"
+current_date = "2024-07-15 12:10:00"
 # dates =
 connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 #------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(
 
 # orderparams = {
 #     "variety": "NORMAL",
-#     "tradingsymbol": "BANKNIFTY03JUL2453700CE",
+#     "tradingsymbol": "BANKNIFTY24JUL2453700CE",
 #     "symboltoken": 53792,
 #     "transactiontype": "SELL",
 #     "exchange": "NFO",
@@ -44,7 +44,7 @@ connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(
 
 # ltp = connecting_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
 
-def ranger_options(obj):
+def ranger_options(obj, type = 'CE'):
 
     banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
     rounded_ltp = banknifty_ltp['data']['ltp'] % 100
@@ -57,8 +57,8 @@ def ranger_options(obj):
 
     while i <= 51:
         symbol_name = "BANKNIFTY"
-        validate = "16JUL24"
-        type = 'CE'
+        validate = "24JUL24"
+
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
         range_starts += 100
@@ -82,7 +82,7 @@ def ranger_options_tokens(obj):
         # print(option_symbol)
         # exit()
         time.sleep(1)
-        searchScriptData = obj.searchScrip("NFO", "BANKNIFTY16JUL2453400CE")
+        searchScriptData = obj.searchScrip("NFO", option_symbol)
         print('for name:',searchScriptData)
         # exit()
         tokens_array.append(searchScriptData['data'][0]['symboltoken'])

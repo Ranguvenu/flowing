@@ -7,6 +7,7 @@ import mysql.connector
 # Additional imports from your specific modules
 from config import *
 from Flower_filter import *
+from bear import *
 from orders_lib import *
 
 
@@ -58,20 +59,25 @@ def forword_testing(connection_object, current_time, history_time, connection_da
 
             Historion.update(current)
 
-            flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
-            print("This is the best option: ",flowfilterv)
-            exit()
+            # print("This is the best option: ",flowfilterv)
+            # exit()
 
-            if '2024-07-01 09:35' == current_params['todate']:
-                print('fdfdfdfffffffffffffffffffff', flowfilterv)
-            flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
+            # if '2024-07-01 09:35' == current_params['todate']:
+            #     print('fdfdfdfffffffffffffffffffff', flowfilterv)
+            #Bulls
+            # flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
 
-            fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+            # flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
+            # fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+            # high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
 
-            high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
+            #Bears
+            bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_object)
+            bear_twov = bear_two(Historion, current_params['todate'], connection_data, connection_object)
+            bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_object)
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+            variables = [bear_onev, bear_twov, bear_threev]
 
             print("variables:::::", variables)
             for var in variables:

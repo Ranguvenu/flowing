@@ -99,18 +99,17 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
         # captured_output = sys.stdout = sys.stderr = open('forword_records/datafilsterflow.txt', 'a')
     # else:
         # captured_output = sys.stdout = sys.stderr = open('datafilsterflow.txt', 'a')
-    print("flow_one_three_three_two")
-    print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing")
-    if connection_data:
-        resultant_option = pickup_fromstream(connection_obj, connection_data)
-        print("Resultant option:", resultant_option)
-        return resultant_option
-        exit()
-    if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
-        print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmedtesting")
-        greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
-    else:
-        greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
+    # print("flow_one_three_three_two")
+    # print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing")
+    # if connection_data:
+    #     resultant_option = pickup_fromstream(connection_obj, connection_data)
+    #     print("Resultant option:", resultant_option)
+    #     return resultant_option
+    # if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
+    #     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmedtesting")
+    #     greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+    # else:
+    #     greenery_recording(payload['current_closing'], timeofcalling, False, 'one')
 
 
     i = 1

@@ -219,7 +219,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
             if payload['a_four_wread'] and payload['a_four_opens'] < payload['a_one_closing']:
                 print("flow_one_one_three --- stage_three")
 
-                # if a_five_wread and a_five_opens > 
+                # if a_five_wread and a_five_opens >
         #---------------------------------------------------------------------------
 
              #flow_one_four    --stage_two

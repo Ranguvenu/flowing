@@ -15,7 +15,7 @@ I = 0
 BEST_OPTION = None
 TOKENS_WITHNAMES = None
 
-def pickup_fromstream(obj=False, data=False):
+def pickup_fromstream(obj=False, data=False, type  = "CE"):
     global TOKENS_WITHNAMES
     global I
 
@@ -40,7 +40,7 @@ def pickup_fromstream(obj=False, data=False):
     # TOKENS_WITHNAMES = ranger_options[1]
     # token_collection = ranger_options[0]
 
-    TOKENS_WITHNAMES, token_list = get_valid_options()
+    TOKENS_WITHNAMES, token_list = get_valid_options(type)
     token_collection = [{
         "exchangeType": 2,
         "tokens": token_list
@@ -123,7 +123,10 @@ def pickup_fromstream(obj=False, data=False):
     return BEST_OPTION
 
 
-def get_valid_options():
+
+import mysql.connector
+
+def get_valid_options(option_type="CE"):
     # Replace with your MySQL database connection details
     db_config = {
         'host': 'localhost',
@@ -137,9 +140,9 @@ def get_valid_options():
         cursor = conn.cursor()
 
         # Prepare SQL query to retrieve data
-        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
-        validate_value = '16JUL24'
-        cursor.execute(sql_select, (validate_value,))
+        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
+        validate_value = '24JUL24'
+        cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
         rows = cursor.fetchall()
@@ -203,7 +206,7 @@ def best_option_fromlive(response_data, forname=False):
         return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
     else:
         return None
-def ranger_options(obj):
+def ranger_options(obj, type = 'CE'):
 
     banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
     rounded_ltp = banknifty_ltp['data']['ltp'] % 100
@@ -215,8 +218,8 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "16JUL24"
-        type = 'CE'
+        validate = "24JUL24"
+
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
         range_starts += 100

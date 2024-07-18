@@ -1,61 +1,95 @@
-This is current closing: 52093.8
-Testing at: 2024-06-25 10:40
+This is current closing: 52545.1
+Testing at: 2024-07-01 11:55
 its out of flow9stage
-This is current closing: 52159.75
-Testing at: 2024-06-25 10:45
+This is current closing: 52545.1
+Testing at: 2024-07-01 11:55
 its out of flow9stage
-This is current closing: 52154.35
-Testing at: 2024-06-25 10:50
+This is current closing: 53074.4
+Testing at: 2024-07-03 10:10
 its out of flow9stage
-This is current closing: 52149.7
-Testing at: 2024-06-25 10:55
+This is current closing: 53065.4
+Testing at: 2024-07-03 10:15
 its out of flow9stage
-This is current closing: 52165.65
-Testing at: 2024-06-25 11:00
+This is current closing: 53050.95
+Testing at: 2024-07-03 10:20
 its out of flow9stage
-This is current closing: 52132.3
-Testing at: 2024-06-25 11:05
+This is current closing: 53211.75
+Testing at: 2024-07-03 10:25
 its out of flow9stage
-This is current closing: 52119.7
-Testing at: 2024-06-25 11:10
+This is current closing: 53151.75
+Testing at: 2024-07-03 10:30
 its out of flow9stage
-This is current closing: 52031.6
-Testing at: 2024-06-25 11:15
+This is current closing: 53136.1
+Testing at: 2024-07-03 10:35
 its out of flow9stage
-This is current closing: 52056.5
-Testing at: 2024-06-25 11:20
+This is current closing: 53158.75
+Testing at: 2024-07-03 10:40
 its out of flow9stage
-This is current closing: 52029.0
-Testing at: 2024-06-25 11:25
+This is current closing: 53115.85
+Testing at: 2024-07-03 10:45
 its out of flow9stage
-This is current closing: 52028.3
-Testing at: 2024-06-25 11:30
+This is current closing: 53117.6
+Testing at: 2024-07-03 10:50
 its out of flow9stage
-This is current closing: 52040.65
-Testing at: 2024-06-25 11:35
+This is current closing: 53142.0
+Testing at: 2024-07-03 10:55
 its out of flow9stage
-This is current closing: 52074.15
-Testing at: 2024-06-25 11:40
+This is current closing: 53102.75
+Testing at: 2024-07-03 11:00
 its out of flow9stage
-This is current closing: 52088.35
-Testing at: 2024-06-25 11:45
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_four --- stage_three
-flow_one_five_four --- stage_three
-flow_one_five_four_two --- stage_four
-This is current closing: 52060.45
-Testing at: 2024-06-25 11:50
+This is current closing: 53080.65
+Testing at: 2024-07-03 11:05
 its out of flow9stage
-This is current closing: 52061.35
-Testing at: 2024-06-25 11:55
+This is current closing: 53046.9
+Testing at: 2024-07-03 11:10
 its out of flow9stage
-This is current closing: 52064.55
-Testing at: 2024-06-25 12:00
+This is current closing: 53066.5
+Testing at: 2024-07-03 11:15
 its out of flow9stage
-This is current closing: 52097.45
-Testing at: 2024-06-25 12:05
+This is current closing: 53027.25
+Testing at: 2024-07-03 11:20
+its out of flow9stage
+This is current closing: 53045.4
+Testing at: 2024-07-03 11:25
+its out of flow9stage
+This is current closing: 53083.25
+Testing at: 2024-07-03 11:30
+its out of flow9stage
+This is current closing: 53076.55
+Testing at: 2024-07-03 11:35
+its out of flow9stage
+This is current closing: 53083.25
+Testing at: 2024-07-03 11:40
+its out of flow9stage
+This is current closing: 53099.3
+Testing at: 2024-07-03 11:45
+its out of flow9stage
+This is current closing: 53099.3
+Testing at: 2024-07-03 11:45
+its out of flow9stage
+This is current closing: 53109.0
+Testing at: 2024-07-03 12:45
+its out of flow9stage
+This is current closing: 53116.45
+Testing at: 2024-07-03 12:50
+its out of flow9stage
+This is current closing: 53109.55
+Testing at: 2024-07-03 12:55
+its out of flow9stage
+This is current closing: 53106.85
+Testing at: 2024-07-03 13:00
+its out of flow9stage
+This is current closing: 53068.9
+Testing at: 2024-07-03 13:05
+its out of flow9stage
+This is current closing: 53084.15
+Testing at: 2024-07-03 13:10
+its out of flow9stage
+This is current closing: 53098.85
+Testing at: 2024-07-03 13:15
+its out of flow9stage
+This is current closing: 53109.35
+Testing at: 2024-07-03 13:20
 in stage
 flow_one_three
 flow_one_three ------copied
@@ -63,238 +97,399 @@ flow_one_three_four
 flow_one_three copied
 flow_one_three copied
 flow_one_three_four copied
-flow_one_three_four_one stage_four_started
-Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed
-Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed
+flow_one_three_four_six stage_four
 flow_one_three copied
 flow_one_three_four copied for_stage_four
-flow_one_three_four_three stage_four
-This is current closing: 52087.85
-Testing at: 2024-06-25 12:10
-its out of flow9stage
-This is current closing: 52076.65
-Testing at: 2024-06-25 12:15
-its out of flow9stage
-This is current closing: 52071.4
-Testing at: 2024-06-25 12:20
-its out of flow9stage
-This is current closing: 52240.6
-Testing at: 2024-06-25 12:25
-its out of flow9stage
-This is current closing: 52387.55
-Testing at: 2024-06-25 12:30
-its out of flow9stage
-This is current closing: 52463.05
-Testing at: 2024-06-25 12:35
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_three --- stage_three
-flow_one_five_three --- stage_three
-flow_one_five_three_eight --- stage_four
-This is current closing: 52394.15
-Testing at: 2024-06-25 12:40
-its out of flow9stage
-This is current closing: 52492.6
-Testing at: 2024-06-25 12:45
-its out of flow9stage
-This is current closing: 52459.9
-Testing at: 2024-06-25 12:50
-its out of flow9stage
-This is current closing: 52451.65
-Testing at: 2024-06-25 12:55
-its out of flow9stage
-This is current closing: 52440.6
-Testing at: 2024-06-25 13:00
-its out of flow9stage
-This is current closing: 52406.35
-Testing at: 2024-06-25 13:05
-its out of flow9stage
-This is current closing: 52495.15
-Testing at: 2024-06-25 13:10
-its out of flow9stage
-This is current closing: 52506.85
-Testing at: 2024-06-25 13:15
-its out of flow9stage
-This is current closing: 52574.0
-Testing at: 2024-06-25 13:20
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_three --- stage_three
-flow_one_five_three --- stage_three
-flow_one_five_three_eight --- stage_four
-This is current closing: 52551.15
-Testing at: 2024-06-25 13:25
-its out of flow9stage
-This is current closing: 52553.4
-Testing at: 2024-06-25 13:30
-its out of flow9stage
-This is current closing: 52553.2
-Testing at: 2024-06-25 13:35
-its out of flow9stage
-This is current closing: 52603.3
-Testing at: 2024-06-25 13:40
-its out of flow9stage
-This is current closing: 52658.85
-Testing at: 2024-06-25 13:45
-in stage
-flow_one_one
-flow_one_one copied
-flow_one_one_three --- stage_three
-flow_one_one_three --- stage_three
-This is current closing: 52612.0
-Testing at: 2024-06-25 13:50
-its out of flow9stage
-This is current closing: 52573.35
-Testing at: 2024-06-25 13:55
-its out of flow9stage
-This is current closing: 52579.15
-Testing at: 2024-06-25 14:00
-its out of flow9stage
-This is current closing: 52604.85
-Testing at: 2024-06-25 14:05
-its out of flow9stage
-This is current closing: 52609.9
-Testing at: 2024-06-25 14:10
-in stage
-flow_one_three
-flow_one_three ------copied
-flow_one_three_two
-flow_one_three copied
-flow_one_three copied
-flow_one_three copied
-This is current closing: 52565.8
-Testing at: 2024-06-25 14:15
-its out of flow9stage
-This is current closing: 52522.45
-Testing at: 2024-06-25 14:20
-its out of flow9stage
-This is current closing: 52537.05
-Testing at: 2024-06-25 14:25
-its out of flow9stage
-This is current closing: 52560.65
-Testing at: 2024-06-25 14:30
-its out of flow9stage
-This is current closing: 52618.3
-Testing at: 2024-06-25 14:35
-in stage
-flow_one_three
-flow_one_three ------copied
-flow_one_three_five
-flow_one_three_five
-flow_one_three copied
-flow_one_three copied
-flow_one_three copied
-This is current closing: 52616.8
-Testing at: 2024-06-25 14:40
-its out of flow9stage
-This is current closing: 52624.6
-Testing at: 2024-06-25 14:45
-its out of flow9stage
-This is current closing: 52559.35
-Testing at: 2024-06-25 14:50
-its out of flow9stage
-This is current closing: 52546.4
-Testing at: 2024-06-25 14:55
-its out of flow9stage
-This is current closing: 52600.9
-Testing at: 2024-06-25 15:00
-its out of flow9stage
-This is current closing: 52564.9
-Testing at: 2024-06-25 15:05
-its out of flow9stage
-This is current closing: 52627.9
-Testing at: 2024-06-25 15:10
-its out of flow9stage
-This is current closing: 52649.05
-Testing at: 2024-06-25 15:15
-its out of flow9stage
-This is current closing: 52700.65
-Testing at: 2024-06-25 15:20
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_two --- stage_three
-flow_one_five_two --- stage_three
-This is current closing: 52630.15
-Testing at: 2024-06-25 15:25
-its out of flow9stage
-An error occurred: 'current_closing'
-Attempting to reconnect...
-Traceback (most recent call last):
-  File "/var/www/html/myproject/example/Transactions.py", line 234, in <module>
-    dates = stream_into_flow(obj,data)
-  File "/var/www/html/myproject/example/lib.py", line 656, in stream_into_flow
-    flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
-  File "/var/www/html/myproject/example/Strategy.py", line 108, in flowfilter
-    print("This is current closing:",payload['current_closing'])
-KeyError: 'current_closing'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/var/www/html/myproject/example/Transactions.py", line 240, in <module>
-    dates = stream_into_flow(obj, data)
-  File "/var/www/html/myproject/example/lib.py", line 656, in stream_into_flow
-    flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
-  File "/var/www/html/myproject/example/Strategy.py", line 108, in flowfilter
-    print("This is current closing:",payload['current_closing'])
-KeyError: 'current_closing'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/var/www/html/myproject/example/Transactions.py", line 251, in <module>
-    send_email('Flow update', "Please check the flow.. Connection might interupted.")
-  File "/var/www/html/myproject/example/lib.py", line 767, in send_email
-    server.login(smtp_username, smtp_password)
-  File "/usr/lib/python3.8/smtplib.py", line 743, in login
-    raise last_exception
-  File "/usr/lib/python3.8/smtplib.py", line 732, in login
-    (code, resp) = self.auth(
-  File "/usr/lib/python3.8/smtplib.py", line 655, in auth
-    raise SMTPAuthenticationError(code, resp)
-smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1f9eb3d43f6sm77197285ad.182 - gsmtp')
-Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-06-25 15:30', 'todate': '2024-06-25 15:30'}
-this is current: {}
-This is current closing: 52513.05
-Testing at: 2024-06-26 10:45
-its out of flow9stage
-This is current closing: 52559.8
-Testing at: 2024-06-26 10:50
-in stage
-flow_one_five
-flow_one_five
-flow_one_five_five --- stage_three
-flow_one_five_five --- stage_three
-flow_one_five_five_six ---- stage_four
-This is current closing: 52605.8
-Testing at: 2024-06-26 10:55
-in stage
-This is current closing: 52673.75
-Testing at: 2024-06-26 11:00
+flow_one_three_four_five stage_four
+This is current closing: 53114.35
+Testing at: 2024-07-03 13:25
 in stage
 flow_one_four
 flow_one_four copied
+flow_one_four_four
 flow_one_four copied two
 flow_one_four copied two
 flow_one_four copied two
+flow_one_four_four stage_two_for_stage_three copied
 flow_one_four copied two
 flow_one_four copied two
-This is current closing: 52672.85
-Testing at: 2024-06-26 11:05
+This is current closing: 53069.7
+Testing at: 2024-07-03 14:55
 its out of flow9stage
-This is current closing: 52680.1
-Testing at: 2024-06-26 11:10
+This is current closing: 53103.85
+Testing at: 2024-07-03 15:05
 its out of flow9stage
-This is current closing: 52668.35
-Testing at: 2024-06-26 11:15
+This is current closing: 53110.0
+Testing at: 2024-07-03 15:10
+in stage
+flow_one_three
+flow_one_three ------copied
+flow_one_three_five
+flow_one_three_five
+flow_one_three copied
+flow_one_three copied
+flow_one_three copied
+This is current closing: 53106.15
+Testing at: 2024-07-03 15:15
 its out of flow9stage
-This is current closing: 52702.4
-Testing at: 2024-06-26 11:20
+This is current closing: 53078.8
+Testing at: 2024-07-03 15:20
 its out of flow9stage
-This is current closing: 52561.15
-Testing at: 2024-06-28 12:45
+This is current closing: 53042.15
+Testing at: 2024-07-03 15:25
 its out of flow9stage
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 36, in <module>
+    dates = stream_into_flow(obj,data)
+  File "/var/www/html/myproject/example/lib.py", line 659, in stream_into_flow
+    flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+  File "/var/www/html/myproject/example/Strategy.py", line 108, in flowfilter
+    print("This is current closing:",payload['current_closing'])
+KeyError: 'current_closing'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 42, in <module>
+    dates = stream_into_flow(obj, data)
+  File "/var/www/html/myproject/example/lib.py", line 659, in stream_into_flow
+    flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_obj)
+  File "/var/www/html/myproject/example/Strategy.py", line 108, in flowfilter
+    print("This is current closing:",payload['current_closing'])
+KeyError: 'current_closing'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1099, in _validate_conn
+    conn.connect()
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connection.py", line 616, in connect
+    self.sock = sock = self._new_conn()
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7fad0e8effa0>, 'Connection to apiconnect.angelbroking.com timed out. (connect timeout=7)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelbroking.com', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fad0e8effa0>, 'Connection to apiconnect.angelbroking.com timed out. (connect timeout=7)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/myproject/example/Transactions.py", line 51, in <module>
+    data = obj.generateSession('V280771', 4562, pyotp.TOTP(token).now())
+  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 268, in generateSession
+    loginResultObject=self._postRequest("api.login",params)
+  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 260, in _postRequest
+    return self._request(route, "POST", params)
+  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 219, in _request
+    raise e
+  File "/var/www/html/myproject/SmartApi/smartConnect.py", line 207, in _request
+    r = requests.request(method,
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/var/www/html/myproject/venv/lib/python3.8/site-packages/requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelbroking.com', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fad0e8effa0>, 'Connection to apiconnect.angelbroking.com timed out. (connect timeout=7)'))
+Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-07-03 15:30', 'todate': '2024-07-03 15:30'}
+this is current: {}
+This is current closing: 53042.15
+Testing at: 2024-07-04 09:10
+its out of flow9stage
+This is current closing: 53042.15
+Testing at: 2024-07-04 09:15
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53123.35
+Testing at: 2024-07-04 09:20
+its out of flow9stage
+This is current closing: 53147.3
+Testing at: 2024-07-04 09:25
+its out of flow9stage
+This is current closing: 53165.05
+Testing at: 2024-07-04 09:30
+in stage
+flow_one_two
+This is current closing: 53097.45
+Testing at: 2024-07-04 09:35
+its out of flow9stage
+This is current closing: 53097.45
+Testing at: 2024-07-04 09:35
+its out of flow9stage
+This is current closing: 53190.85
+Testing at: 2024-07-04 09:40
+its out of flow9stage
+This is current closing: 53180.3
+Testing at: 2024-07-04 09:45
+its out of flow9stage
+This is current closing: 53163.7
+Testing at: 2024-07-04 09:50
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53204.6
+Testing at: 2024-07-04 09:55
+its out of flow9stage
+This is current closing: 53182.7
+Testing at: 2024-07-04 10:00
+its out of flow9stage
+This is current closing: 53182.7
+Testing at: 2024-07-04 10:00
+its out of flow9stage
+This is current closing: 53205.85
+Testing at: 2024-07-04 10:05
+its out of flow9stage
+This is current closing: 53180.05
+Testing at: 2024-07-04 10:10
+its out of flow9stage
+This is current closing: 53154.35
+Testing at: 2024-07-04 10:15
+its out of flow9stage
+This is current closing: 53054.4
+Testing at: 2024-07-04 10:20
+its out of flow9stage
+This is current closing: 53066.75
+Testing at: 2024-07-04 10:25
+its out of flow9stage
+This is current closing: 52954.3
+Testing at: 2024-07-04 10:30
+its out of flow9stage
+This is current closing: 52898.05
+Testing at: 2024-07-04 10:35
+its out of flow9stage
+This is current closing: 52911.9
+Testing at: 2024-07-04 10:40
+its out of flow9stage
+This is current closing: 52879.85
+Testing at: 2024-07-04 10:45
+its out of flow9stage
+This is current closing: 52868.95
+Testing at: 2024-07-04 10:50
+its out of flow9stage
+This is current closing: 52860.3
+Testing at: 2024-07-04 10:55
+its out of flow9stage
+flow_one_three_three_two
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing
+flow_one_three_three_two
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing
+flow_one_three_three_two
+Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing
