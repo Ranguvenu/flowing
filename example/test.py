@@ -24,4 +24,61 @@ def next_fivemloop_inseconds():
     return int(next_loop_inseconds)
 
 # Example usage
-print(next_fivemloop_inseconds())
+# print(next_fivemloop_inseconds())
+import time
+
+def timer(seconds):
+    while seconds > 0:
+        print(f"Time left: {seconds:.1f} seconds", end='\r')
+        time.sleep(0.1)
+        seconds -= 0.1
+    print("Time's up!                             ")
+
+
+# print(timer(5.55555555555555555555555))
+# exit()
+from mysql.connector import Error
+from logzero import logger
+import mysql.connector
+
+update_data = ('240719100534771', 52284.8, 15, 15, 'Achieved', '48730', 'SELL', 'BANKNIFTY24JUL2451500PE', 'CE')
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'Venu@5599',
+    'database': 'mydb'
+}
+
+try:
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+
+    # Update query
+    update_query = """
+    UPDATE order_records
+    SET sell_orderid = %s, nse_index = %s, bought_at = %s, lot_price = %s, status = %s, token = %s, type = %s
+    WHERE symbol = %s AND sell_orderid IS NULL AND option_type = %s
+    """
+
+    # Log the query and data
+    logger.info(f"Executing query: {update_query}")
+    logger.info(f"With data: {update_data}")
+
+    # Execute the update query
+    cursor.execute(update_query, update_data)
+
+    # Commit the changes
+    conn.commit()
+
+    logger.info("Update successful")
+
+except Error as e:
+    logger.error(f"Error: {e}")
+    if conn.is_connected():
+        conn.rollback()
+
+finally:
+    if cursor:
+        cursor.close()
+    if conn:
+        conn.close()

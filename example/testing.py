@@ -63,4 +63,7 @@ def next_fivemloop_inseconds():
     return int(next_loop_inseconds)
 
 
-print(next_fivemloop_inseconds())
+# print(next_fivemloop_inseconds())
+
+
+bounds = [51884.68, 52229.11, 52589.62, 53023.84]

@@ -669,13 +669,23 @@ def stream_into_flow(connection_obj, connection_data):
         bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_obj)
         bear_twov = bear_two(Historion, current_params['todate'], connection_data, connection_obj)
         bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_obj)
-
-        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv, bear_onev, bear_twov, bear_threev]
+        bears = [bear_onev, bear_twov, bear_threev]
+        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
         print("variables:::::", variables)
+
+        for bear in bears:
+            print("var of variable:", bear)
+            if bear is not None:
+                bounds = [51884.68, 52229.11, 52589.62, 53023.84]
+                lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+
+                option_order_response = option_order_record(connection_obj, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
+                print("option_order_response::", option_order_response)
+
         for var in variables:
             print("var of variable:", var)
             if var is not None:
-                bounds = [51966.51, 52186.93, 52460.21, 52701.59, 52998.74, 53182.99, 53450]
+                bounds = [51884.68, 52229.11, 52589.62, 53023.84]
                 lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
 
                 option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
@@ -706,7 +716,6 @@ def stream_into_flow(connection_obj, connection_data):
                 print("For nex 5 minutes")
                 next_loop_in = next_fivemloop_inseconds() + 300
                 timer(next_loop_in)
-                # time.sleep(next_loop_in)
 
 def next_fivemloop_inseconds():
     # Get the current time
@@ -1158,7 +1167,10 @@ def fast_looping(connection_object, entered_options):
 
     # Wait until the next multiple of 5 seconds
     time_to_sleep = (next_time - datetime.now(kolkata_timezone)).total_seconds()
-    time.sleep(time_to_sleep)
+
+    float_timer(time_to_sleep)
+
+    # time.sleep(time_to_sleep)
 
     while True:
         # Get the current time in Asia/Kolkata timezone
@@ -1181,8 +1193,8 @@ def fast_looping(connection_object, entered_options):
 
                 sell_index = entered_option.get('sell_index')
                 if sell_index is not None and ltp is not None:
-                    if (sell_index <= ltp) or (sell_index > ltp and (sell_index - ltp) <= 15):
-                        print('Sell the entered option(' + entered_option['symbol'] + ') please.')
+                    if ((sell_index <= ltp) or (sell_index > ltp and (sell_index - ltp) <= 15)) and entered_option['option_type'] == "CE":
+
                         try:
                             order_response = option_order_record(connection_object, entered_option, 'SELL', ltp)
                             print("its done" + str(order_response))
@@ -1190,7 +1202,21 @@ def fast_looping(connection_object, entered_options):
                         except Exception as e:
                             print(f'Please check something is missing..{e}')
                             exit()
+                    elif ((sell_index >= ltp) or (sell_index < ltp and (sell_index - ltp) >= 15)) and entered_option['option_type'] == "PE":
+                        print('Sell the entered option(' + entered_option['symbol'] + ') please.')
+                        # print('Sell the entered option(' + entered_option['symbol'] + ') please.')
+                        # print("Test SELL INDEX: ", sell_index)
+                        # print("Test LTP:", ltp)
+                        # exit()
+                        try:
+                            order_response = option_order_record(connection_object, entered_option, 'SELL', ltp, None,  "PE")
+                            print("its done" + str(order_response))
+                            print("its done")
+                        except Exception as e:
+                            print(f'Please check something is missing..{e}')
+                            exit()
                     else:
+
                         print(' Else elsy...')
                 else:
                     print(f"Sell index or ltp is None. sell_index: {sell_index}, ltp: {ltp}")
@@ -1261,3 +1287,10 @@ def timer(seconds):
         print(f"Time left: {remaining} seconds", end='\r')
         time.sleep(1)
     print("Time's up!")
+
+def float_timer(seconds):
+    while seconds > 0:
+        print(f"Time left: {seconds:.1f} seconds", end='\r')
+        time.sleep(0.1)
+        seconds -= 0.1
+    print("Time's up!                             ")
