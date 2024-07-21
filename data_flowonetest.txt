@@ -1,0 +1,91 @@
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-25 15:30
+its out of flow9stage
+This is current closing: 48497.3
+Testing at: 2024-04-25 15:25
+its out of flow9stage
+This is current closing: 48457.7
+Testing at: 2024-04-25 15:20
+its out of flow9stage
+This is current closing: 48449.0
+Testing at: 2024-04-25 15:15
+its out of flow9stage
+This is current closing: 48482.8
+Testing at: 2024-04-25 15:10
+its out of flow9stage
+This is current closing: 48495.35
+Testing at: 2024-04-25 15:05
+its out of flow9stage
+This is current closing: 48471.7
+Testing at: 2024-04-26 09:15
+its out of flow9stage
+An error occurred: 'current_closing'
+Attempting to reconnect...
+inttitiuti: 2024-04-26 09:15:00
+chnaged ormat: 2024-04-25 15:35:00
+nd its type: <class 'str'>
+2024-04-25 15:30:00
+inttitiuti: 2024-04-26 09:20:00
+chnaged ormat: 2024-04-26 09:20:00
+nd its type: <class 'str'>
+2024-04-26 09:15:00
+params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-25 14:40', 'todate': '2024-04-25 15:30'}
+params2: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+historyyyyyyyyy: {'success': False, 'message': 'Invalid Token', 'errorCode': 'AG8001', 'data': ''}
+the seee---
+
+response_data: 
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+this is current: {}
+current history at: 2024-04-26 09:15
+An error occurred: 'current_closing'
+Attempting to reconnect...
+inttitiuti: 2024-04-26 09:15:00
+chnaged ormat: 2024-04-25 15:35:00
+nd its type: <class 'str'>
+2024-04-25 15:30:00
+inttitiuti: 2024-04-26 09:20:00
+chnaged ormat: 2024-04-26 09:20:00
+nd its type: <class 'str'>
+2024-04-26 09:15:00
+params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-25 14:40', 'todate': '2024-04-25 15:30'}
+params2: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+historyyyyyyyyy: {'success': False, 'message': 'Invalid Token', 'errorCode': 'AG8001', 'data': ''}
+the seee---
+
+response_data: 
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+this is current: {}
+current history at: 2024-04-26 09:15
+An error occurred: 'current_closing'
+Attempting to reconnect...
+inttitiuti: 2024-04-26 09:15:00
+chnaged ormat: 2024-04-25 15:35:00
+nd its type: <class 'str'>
+2024-04-25 15:30:00
+inttitiuti: 2024-04-26 09:20:00
+chnaged ormat: 2024-04-26 09:20:00
+nd its type: <class 'str'>
+2024-04-26 09:15:00
+params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-25 14:40', 'todate': '2024-04-25 15:30'}
+params2: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+historyyyyyyyyy: {'success': False, 'message': 'Invalid Token', 'errorCode': 'AG8001', 'data': ''}
+the seee---
+
+response_data: 
+this is current params: {'exchange': 'NSE', 'symboltoken': '99926009', 'interval': 'FIVE_MINUTE', 'fromdate': '2024-04-26 09:15', 'todate': '2024-04-26 09:15'}
+this is current: {}
+current history at: 2024-04-26 09:15
+An error occurred: 'current_closing'
+Attempting to reconnect...
+Traceback (most recent call last):
+  File "c:\Users\rvgcr\myproject\example\Transactions.py", line 47, in <module>
+    dates = flowing_through_history_two(obj, current_date, history_date)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\rvgcr\myproject\example\lib.py", line 562, in flowing_through_history_two
+    time.sleep(2)  # Sleep for "Intervel" seconds before running again
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
