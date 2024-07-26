@@ -141,7 +141,7 @@ def get_valid_options(option_type="CE"):
 
         # Prepare SQL query to retrieve data
         sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
-        validate_value = '24JUL24'
+        validate_value = '31JUL24'
         cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
@@ -216,7 +216,7 @@ def ranger_options(obj, type = 'CE'):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "24JUL24"
+        validate = "31JUL24"
 
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type

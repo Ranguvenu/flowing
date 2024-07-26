@@ -9,6 +9,14 @@ def bear_one(payload, timeofcalling, connection_data=False, connection_obj=False
     print("This is current closing:",payload['current_closing'])
     print("Testing at:", timeofcalling)
 
+    # print("bear_three_three_two_two")
+    # print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    # if connection_data:
+    #     resultant_option = pickup_fromstream(connection_obj, connection_data, "PE")
+    #     greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
+    #     print("Resultant option:", resultant_option)
+    #     return resultant_option
+
 
     if payload['current_wread'] and payload['a_one_wread'] and payload['a_two_green'] and payload['a_two_opens'] > payload['a_one_closing']:
         print("bear_one")

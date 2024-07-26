@@ -667,25 +667,27 @@ def stream_into_flow(connection_obj, connection_data):
 
 
         bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_obj)
+        # print("bear_onev:", bear_onev)
+        # exit()
         bear_twov = bear_two(Historion, current_params['todate'], connection_data, connection_obj)
         bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_obj)
         bears = [bear_onev, bear_twov, bear_threev]
         variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
-        print("variables:::::", variables)
-
+        print("Variables:::::", variables)
+        print("Bears:::::", bears)
         for bear in bears:
-            print("var of variable:", bear)
             if bear is not None:
-                bounds = [51884.68, 52229.11, 52589.62, 53023.84]
+                print("bear of variable:", bear)
+                bounds = [50595.88, 508331.11, 51033.42, 51349.26, 51769.07, 52066.61]
                 lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
 
                 option_order_response = option_order_record(connection_obj, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
                 print("option_order_response::", option_order_response)
 
         for var in variables:
-            print("var of variable:", var)
             if var is not None:
-                bounds = [51884.68, 52229.11, 52589.62, 53023.84]
+                print("var of variable:", var)
+                bounds = [50595.88, 508331.11, 51033.42, 51349.26, 51769.07, 52066.61]
                 lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
 
                 option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
@@ -1197,6 +1199,7 @@ def fast_looping(connection_object, entered_options):
 
                         try:
                             order_response = option_order_record(connection_object, entered_option, 'SELL', ltp)
+                            entered_options = get_entered_options()
                             print("its done" + str(order_response))
                             print("its done")
                         except Exception as e:
@@ -1210,6 +1213,7 @@ def fast_looping(connection_object, entered_options):
                         # exit()
                         try:
                             order_response = option_order_record(connection_object, entered_option, 'SELL', ltp, None,  "PE")
+                            entered_options = get_entered_options()
                             print("its done" + str(order_response))
                             print("its done")
                         except Exception as e:

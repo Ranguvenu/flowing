@@ -71,6 +71,7 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
             OPTION_LTP.append({token: last_traded_price / 100})
             I += 1
             if I >= 49:
+                I = 0
                 close_connection()
                 # print("best option", best_option_fromlive(OPTION_LTP))
 
@@ -78,7 +79,7 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
         elif (RESPONSE_DATA['token'] == 41615):
             # If token repeats, close the connection
             print("in appending:elseing")
-
+            I = 0
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
             return best_option_fromlive(OPTION_LTP)
@@ -118,6 +119,7 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
     sws.on_control_message = on_control_message
 
     sws.connect()
+    I = 0
     close_connection()
     print("Resultant Option for you:", BEST_OPTION)
     return BEST_OPTION
@@ -126,7 +128,9 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
 
 import mysql.connector
 
-def get_valid_options(option_type="CE"):
+def get_valid_options(option_type= False):
+    if option_type == False:
+        option_type = "CE"
     # Replace with your MySQL database connection details
     db_config = {
         'host': 'localhost',
@@ -141,7 +145,7 @@ def get_valid_options(option_type="CE"):
 
         # Prepare SQL query to retrieve data
         sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
-        validate_value = '24JUL24'
+        validate_value = '31JUL24'
         cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
@@ -218,7 +222,7 @@ def ranger_options(obj, type = 'CE'):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "24JUL24"
+        validate = "31JUL24"
 
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
