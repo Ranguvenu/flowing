@@ -16,7 +16,7 @@ def greenery_recording(ltp, time, confirmation=False, flow_type=False):
     try:
         dbconnection = mysql.connector.connect(**db_config)
         cursor = dbconnection.cursor()
-        insert_query = "INSERT INTO greenery_second (datetime, day, confirmation, flow_type, ltp, unix_time) VALUES (%s, %s, %s, %s, %s, %s)"
+        insert_query = "INSERT INTO r_greenery_second (datetime, day, confirmation, flow_type, ltp, unix_time) VALUES (%s, %s, %s, %s, %s, %s)"
         data_to_insert = [time, day, confirmation, flow_type, ltp, timeto_inix]
         cursor.execute(insert_query, data_to_insert)
         dbconnection.commit()

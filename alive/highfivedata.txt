@@ -298,24 +298,24 @@ Traceback (most recent call last):
     time.sleep(next_fivemloop_inseconds())  # Sleep for "Intervel" seconds before running again
 KeyboardInterrupt
 High fiving at: 2024-07-01 11:45
-variables::::: [{'token': '53785', 'price': 1365.0, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 91.0}, None, None, None]
-var of variable: {'token': '53785', 'price': 1365.0, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 91.0}
+variables::::: [{'token': '53785', 'price': 1365.0, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 91.0}, None, None, None]
+var of variable: {'token': '53785', 'price': 1365.0, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 91.0}
 option_order_response:: None
 var of variable: None
 var of variable: None
 var of variable: None
 Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 High fiving at: 2024-07-01 11:45
-variables::::: [{'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 85.1}, None, None, None]
-var of variable: {'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 85.1}
+variables::::: [{'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 85.1}, None, None, None]
+var of variable: {'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 85.1}
 option_order_response:: None
 var of variable: None
 var of variable: None
 var of variable: None
 Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 High fiving at: 2024-07-01 11:45
-variables::::: [{'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 85.1}, None, None, None]
-var of variable: {'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY24JUL2453400CE', 'shareprice': 85.1}
+variables::::: [{'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 85.1}, None, None, None]
+var of variable: {'token': '53785', 'price': 1276.5, 'symbol': 'BANKNIFTY31JUL2453400CE', 'shareprice': 85.1}
 option_order_response:: None
 var of variable: None
 var of variable: None
@@ -390,7 +390,7 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 70, 'symbol': 'BANKNIFTY24JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100526930', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}, {'id': 71, 'symbol': 'BANKNIFTY24JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100527772', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 70, 'symbol': 'BANKNIFTY31JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100526930', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}, {'id': 71, 'symbol': 'BANKNIFTY31JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100527772', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}]
 Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 High fiving at: 2024-07-01 11:55
 variables::::: [None, None, None, None]
@@ -398,7 +398,7 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 70, 'symbol': 'BANKNIFTY24JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100526930', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}, {'id': 71, 'symbol': 'BANKNIFTY24JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100527772', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 70, 'symbol': 'BANKNIFTY31JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100526930', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}, {'id': 71, 'symbol': 'BANKNIFTY31JUL2453400CE', 'bought_at': 15, 'sell_index': 52999, 'lot_price': 15, 'nse_index': '52580.0', 'orderid': '240701100527772', 'status': 'Entered', 'token': '53785', 'type': 'BUY', 'sell_orderid': None}]
 An error occurred: fast_looping() takes 2 positional arguments but 3 were given
 Attempting to reconnect...
 Traceback (most recent call last):
@@ -626,22 +626,22 @@ after flow19
 Next History time: 2024-07-03 11:45
 Next History time: 2024-07-03 11:45
 High fiving at: 2024-07-03 11:45
-variables::::: [None, {'token': '53794', 'price': 113.25, 'symbol': 'BANKNIFTY24JUL2453800CE', 'shareprice': 7.55}, None, None]
+variables::::: [None, {'token': '53794', 'price': 113.25, 'symbol': 'BANKNIFTY31JUL2453800CE', 'shareprice': 7.55}, None, None]
 var of variable: None
-var of variable: {'token': '53794', 'price': 113.25, 'symbol': 'BANKNIFTY24JUL2453800CE', 'shareprice': 7.55}
+var of variable: {'token': '53794', 'price': 113.25, 'symbol': 'BANKNIFTY31JUL2453800CE', 'shareprice': 7.55}
 option_order_response:: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}]
 Power nap++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 High fiving at: 2024-07-03 11:45
-variables::::: [None, {'token': '53796', 'price': 61.49999999999999, 'symbol': 'BANKNIFTY24JUL2454000CE', 'shareprice': 4.1}, None, None]
+variables::::: [None, {'token': '53796', 'price': 61.49999999999999, 'symbol': 'BANKNIFTY31JUL2454000CE', 'shareprice': 4.1}, None, None]
 var of variable: None
-var of variable: {'token': '53796', 'price': 61.49999999999999, 'symbol': 'BANKNIFTY24JUL2454000CE', 'shareprice': 4.1}
+var of variable: {'token': '53796', 'price': 61.49999999999999, 'symbol': 'BANKNIFTY31JUL2454000CE', 'shareprice': 4.1}
 option_order_response:: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 An error occurred: fast_looping() takes 2 positional arguments but 3 were given
 Attempting to reconnect...
 Traceback (most recent call last):
@@ -680,14 +680,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 12:50:05
 current ltp in fast loop:  53107.45
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53107.45
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53107.45
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -701,14 +701,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 12:55:10
 current ltp in fast loop:  53112.85
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53112.85
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53112.85
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -722,14 +722,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:00:15
 current ltp in fast loop:  53100.4
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53100.4
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53100.4
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -743,14 +743,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:05:20
 current ltp in fast loop:  53098.5
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53098.5
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53098.5
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -764,14 +764,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:10:25
 current ltp in fast loop:  53069.3
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53069.3
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53069.3
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -785,14 +785,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:15:30
 current ltp in fast loop:  53082.85
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53082.85
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53082.85
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -806,14 +806,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:20:35
 current ltp in fast loop:  53108.55
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53108.55
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53108.55
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -827,14 +827,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:25:40
 current ltp in fast loop:  53102.15
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53102.15
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53102.15
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -848,14 +848,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 13:30:45
 current ltp in fast loop:  53127.1
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53127.1
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53127.1
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1185,91 +1185,91 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:04:25
 current ltp in fast loop:  53075.9
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53075.9
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53075.9
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:25
 Task executed at 2024-07-03 15:04:30
 current ltp in fast loop:  53081.25
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53081.25
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53081.25
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:30
 Task executed at 2024-07-03 15:04:35
 current ltp in fast loop:  53080.05
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53080.05
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53080.05
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:35
 Task executed at 2024-07-03 15:04:40
 current ltp in fast loop:  53095.2
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53095.2
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53095.2
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:40
 Task executed at 2024-07-03 15:04:45
 current ltp in fast loop:  53089.85
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53089.85
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53089.85
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:45
 Task executed at 2024-07-03 15:04:50
 current ltp in fast loop:  53094.3
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53094.3
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53094.3
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:50
 Task executed at 2024-07-03 15:04:55
 current ltp in fast loop:  53091.85
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53091.85
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53091.85
 In fast loop..
 Hi this is after loop thats you are cheking...
 Task executed at 2024-07-03 15:04:55
 Task executed at 2024-07-03 15:05:00
 current ltp in fast loop:  53089.7
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53089.7
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53089.7
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1283,14 +1283,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:10:05
 current ltp in fast loop:  53102.0
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53102.0
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53102.0
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1304,14 +1304,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:15:10
 current ltp in fast loop:  53114.0
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53114.0
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53114.0
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1325,14 +1325,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:20:15
 current ltp in fast loop:  53111.25
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53111.25
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53111.25
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1346,14 +1346,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:25:20
 current ltp in fast loop:  53120.05
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53120.05
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53120.05
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -1367,14 +1367,14 @@ var of variable: None
 var of variable: None
 var of variable: None
 var of variable: None
-entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
+entered_options:  [{'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}, {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}]
 Task executed at 2024-07-03 15:30:25
 current ltp in fast loop:  53036.35
-entered option in for: {'id': 74, 'symbol': 'BANKNIFTY24JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2453800CE
+entered option in for: {'id': 74, 'symbol': 'BANKNIFTY31JUL2453800CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631177', 'status': 'Entered', 'token': '53794', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2453800CE
 Sell index or ltp is None. sell_index: None, ltp: 53036.35
-entered option in for: {'id': 75, 'symbol': 'BANKNIFTY24JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
-entered_option['symbol']: BANKNIFTY24JUL2454000CE
+entered option in for: {'id': 75, 'symbol': 'BANKNIFTY31JUL2454000CE', 'bought_at': 15, 'sell_index': None, 'lot_price': 15, 'nse_index': '53099.3', 'orderid': '240703100631932', 'status': 'Entered', 'token': '53796', 'type': 'BUY', 'sell_orderid': None}
+entered_option['symbol']: BANKNIFTY31JUL2454000CE
 Sell index or ltp is None. sell_index: None, ltp: 53036.35
 In fast loop..
 Hi this is after loop thats you are cheking...
@@ -2010,10 +2010,10 @@ Traceback (most recent call last):
     elif next_fivemloop_inseconds() <= 0:
 KeyboardInterrupt
 High fiving at: 2024-07-04 11:00
-variables::::: [{'token': '55252', 'price': 1799.25, 'symbol': 'BANKNIFTY24JUL2453700CE', 'shareprice': 119.95}, None, None, None]
-var of variable: {'token': '55252', 'price': 1799.25, 'symbol': 'BANKNIFTY24JUL2453700CE', 'shareprice': 119.95}
+variables::::: [{'token': '55252', 'price': 1799.25, 'symbol': 'BANKNIFTY31JUL2453700CE', 'shareprice': 119.95}, None, None, None]
+var of variable: {'token': '55252', 'price': 1799.25, 'symbol': 'BANKNIFTY31JUL2453700CE', 'shareprice': 119.95}
 53182.99
 High fiving at: 2024-07-04 11:00
-variables::::: [{'token': '55252', 'price': 1788.75, 'symbol': 'BANKNIFTY24JUL2453700CE', 'shareprice': 119.25}, None, None, None]
-var of variable: {'token': '55252', 'price': 1788.75, 'symbol': 'BANKNIFTY24JUL2453700CE', 'shareprice': 119.25}
+variables::::: [{'token': '55252', 'price': 1788.75, 'symbol': 'BANKNIFTY31JUL2453700CE', 'shareprice': 119.25}, None, None, None]
+var of variable: {'token': '55252', 'price': 1788.75, 'symbol': 'BANKNIFTY31JUL2453700CE', 'shareprice': 119.25}
 Hihiiihi 53182.99

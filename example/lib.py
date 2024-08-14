@@ -23,7 +23,7 @@ from bear import *
 def StreamLTP(Exchange, Symbol, SymbolCode, Intervel, connection):
 
     # Example: Execute a SELECT query
-    # cursor.execute("SELECT * FROM ltp_data")
+    # cursor.execute("SELECT * FROM r_ltp_data")
     # result = cursor.fetchall()
 
     # Example: Insert data into the table
@@ -68,7 +68,7 @@ def Ltp_insertion(i, Ltp):
     }
     dbconnection = mysql.connector.connect(**db_config)
     cursor = dbconnection.cursor()
-    insert_query = "INSERT INTO streamed_data (symbol, price, Exchange) VALUES (%s, %s, %s)"
+    insert_query = "INSERT INTO r_streamed_data (symbol, price, Exchange) VALUES (%s, %s, %s)"
     # print(Ltp)
     # exit()
     data_to_insert = [Ltp['data']['tradingsymbol'], Ltp['data']['ltp'], Ltp['data']['exchange']]
@@ -140,78 +140,81 @@ def StreamLTP_twotwo(Exchange, Symbol, SymbolCode, Intervel, connection):
 
 
 def recent_history_forflowing(response_data):
-    formatted_data = {}
+    try:
+        formatted_data = {}
 
-    response_data['data'] = list(reversed(response_data['data']))
+        response_data['data'] = list(reversed(response_data['data']))
 
-    i = 1
-    for item in response_data['data']:
+        i = 1
+        for item in response_data['data']:
 
-        timestamp = item[0]
-        opening_price = item[1]
-        highest_price = item[2]
-        lowest_price = item[3]
-        closing_price = item[4]
-        volume = item[5]  # Assuming this is the volume
-        spell = spell_integer(i)
+            timestamp = item[0]
+            opening_price = item[1]
+            highest_price = item[2]
+            lowest_price = item[3]
+            closing_price = item[4]
+            volume = item[5]  # Assuming this is the volume
+            spell = spell_integer(i)
 
-        formatted_data[f'timestamp_{spell}'] = timestamp
-        formatted_data[f'opening_price_{spell}'] = opening_price
-        formatted_data[f'highest_price_{spell}'] = highest_price
-        formatted_data[f'lowest_price_{spell}'] = lowest_price
-        formatted_data[f'closing_price_{spell}'] = closing_price
-        formatted_data[f'volume_{spell}'] = volume
-        formatted_data[f'a_{spell}_green'] = True if closing_price > opening_price else False
-        formatted_data[f'a_{spell}_wread'] = True if closing_price < opening_price else False
-        formatted_data[f'a_{spell}_opens'] = opening_price
-        formatted_data[f'a_{spell}_open'] = opening_price
-        formatted_data[f'a_{spell}_opening'] = opening_price
-        formatted_data[f'a_{spell}_closes'] = closing_price
-        formatted_data[f'a_{spell}_closing'] = closing_price
-        formatted_data[f'a_{spell}'] = closing_price
-        i += 1
+            formatted_data[f'timestamp_{spell}'] = timestamp
+            formatted_data[f'opening_price_{spell}'] = opening_price
+            formatted_data[f'highest_price_{spell}'] = highest_price
+            formatted_data[f'lowest_price_{spell}'] = lowest_price
+            formatted_data[f'closing_price_{spell}'] = closing_price
+            formatted_data[f'volume_{spell}'] = volume
+            formatted_data[f'a_{spell}_green'] = True if closing_price > opening_price else False
+            formatted_data[f'a_{spell}_wread'] = True if closing_price < opening_price else False
+            formatted_data[f'a_{spell}_opens'] = opening_price
+            formatted_data[f'a_{spell}_open'] = opening_price
+            formatted_data[f'a_{spell}_opening'] = opening_price
+            formatted_data[f'a_{spell}_closes'] = closing_price
+            formatted_data[f'a_{spell}_closing'] = closing_price
+            formatted_data[f'a_{spell}'] = closing_price
+            i += 1
 
 
-    return formatted_data
+        return formatted_data
+    except Exception as e:
+        print("Error with (Recent)formating for flowing")
         # Display the formatted data
         # for data_point in formatted_data:
         #     print(data_point)
 
 def current_flowing(response_data):
-    formatted_data = {}
+    try:
+        formatted_data = {}
 
-    response_data['data'] = list(reversed(response_data['data']))
+        response_data['data'] = list(reversed(response_data['data']))
 
-    i = 1
-    for item in response_data['data']:
+        i = 1
+        for item in response_data['data']:
 
-        timestamp = item[0]
-        opening_price = item[1]
-        highest_price = item[2]
-        lowest_price = item[3]
-        closing_price = item[4]
-        volume = item[5]  # Assuming this is the volume
+            timestamp = item[0]
+            opening_price = item[1]
+            highest_price = item[2]
+            lowest_price = item[3]
+            closing_price = item[4]
+            volume = item[5]  # Assuming this is the volume
 
-        formatted_data['timestamp_current'] = timestamp
-        formatted_data['opening_price_current'] = opening_price
-        formatted_data['highest_price_current'] = highest_price
-        formatted_data['lowest_price_current'] = lowest_price
-        formatted_data['closing_price_current'] = closing_price
-        formatted_data['volume_current'] = volume
-        formatted_data['current_green'] = True if closing_price > opening_price else False
-        formatted_data['current_wread'] = True if closing_price < opening_price else False
-        formatted_data['current_opens'] = opening_price
-        formatted_data['current_opening'] = opening_price
-        formatted_data['current_closes'] = closing_price
-        formatted_data['current_closing'] = closing_price
-        formatted_data['current'] = closing_price
-        i += 1
+            formatted_data['timestamp_current'] = timestamp
+            formatted_data['opening_price_current'] = opening_price
+            formatted_data['highest_price_current'] = highest_price
+            formatted_data['lowest_price_current'] = lowest_price
+            formatted_data['closing_price_current'] = closing_price
+            formatted_data['volume_current'] = volume
+            formatted_data['current_green'] = True if closing_price > opening_price else False
+            formatted_data['current_wread'] = True if closing_price < opening_price else False
+            formatted_data['current_opens'] = opening_price
+            formatted_data['current_opening'] = opening_price
+            formatted_data['current_closes'] = closing_price
+            formatted_data['current_closing'] = closing_price
+            formatted_data['current'] = closing_price
+            i += 1
 
+        return formatted_data
 
-    return formatted_data
-        # Display the formatted data
-        # for data_point in formatted_data:
-        #     print(data_point)
+    except Exception as e:
+        print("Error with formating the current data for flowing:", e)
 
 
 
@@ -254,28 +257,32 @@ def recent_number_of_histories_params(exchange, symboltoken, interval, histories
     return history_params
 
 def recent_number_of_histories_params_forlive(exchange, symboltoken, interval, histories_count, candle_timeframe, history_date=False, live_history = False):
-    local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
-    # history_date = False
-    into_past = candle_timeframe * histories_count*60
-    times = recent_historion_timeline(candle_timeframe, into_past, history_date, live_history)
-    # print(times)
-    # exit()
-    # print(times)
-    # exit()
-    # if live_history:
-    #     print(times)
-    #     exit()
+    try:
+        local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+        # history_date = False
+        into_past = candle_timeframe * histories_count*60
+        times = recent_historion_timeline(candle_timeframe, into_past, history_date, live_history)
+        # print(times)
+        # exit()
+        # print(times)
+        # exit()
+        # if live_history:
+        #     print(times)
+        #     exit()
 
-    history_params = {
-        "exchange": f"{exchange}",
-        "symboltoken": f"{symboltoken}",
-        "interval": f"{interval}",
-        # "fromdate": "2024-04-15 11:15",
-        "fromdate": times['startime_to_readable'],
-        "todate":times['startime_from_readable']
-        # "todate": "2024-04-15 11:25"
-    }
-    return history_params
+        history_params = {
+            "exchange": f"{exchange}",
+            "symboltoken": f"{symboltoken}",
+            "interval": f"{interval}",
+            # "fromdate": "2024-04-15 11:15",
+            "fromdate": times['startime_to_readable'],
+            "todate":times['startime_from_readable']
+            # "todate": "2024-04-15 11:25"
+        }
+        return history_params
+    except Exception as e:
+        print("Error with history params: ", e)
+
 def recent_number_of_histories_params_two(exchange, symboltoken, interval, histories_count, candle_timeframe):
     local_time = datetime.now().strftime("%Y-%m-%d %H:%M")
 
@@ -649,7 +656,6 @@ def stream_into_flow(connection_obj, connection_data):
 
 
         Historion = recent_history_forflowing(history)
-
         current = current_flowing(current_history)
         if not current:
             print("this is current params:", current_params)
@@ -667,14 +673,14 @@ def stream_into_flow(connection_obj, connection_data):
 
 
         bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_obj)
-        # print("bear_onev:", bear_onev)
-        # exit()
         bear_twov = bear_two(Historion, current_params['todate'], connection_data, connection_obj)
         bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_obj)
         bears = [bear_onev, bear_twov, bear_threev]
-        variables = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
-        print("Variables:::::", variables)
+        bulls = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+        bulls = [item for item in bulls if item is not None]
+        print("Bulls:::::", bulls)
         print("Bears:::::", bears)
+        bears = [item for item in bears if item is not None]
         for bear in bears:
             if bear is not None:
                 print("bear of variable:", bear)
@@ -684,7 +690,7 @@ def stream_into_flow(connection_obj, connection_data):
                 option_order_response = option_order_record(connection_obj, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
                 print("option_order_response::", option_order_response)
 
-        for var in variables:
+        for var in bulls:
             if var is not None:
                 print("var of variable:", var)
                 bounds = [50595.88, 508331.11, 51033.42, 51349.26, 51769.07, 52066.61]
@@ -1128,17 +1134,20 @@ def into_yesterday(past_time_starts_unix_readable):
 
 
 def find_bounds(numbers, given_number, margin):
-    lower_bound = None
-    upper_bound = None
+    try:
+        lower_bound = None
+        upper_bound = None
 
-    for i in range(len(numbers) - 1):
-        if numbers[i] < given_number < numbers[i + 1]:
-            for j in range(i + 2, len(numbers)):
-                if (numbers[j] - given_number) > margin:
-                    return numbers[i], numbers[j]
-            return numbers[i], None  # In case no suitable upper_bound is found
+        for i in range(len(numbers) - 1):
+            if numbers[i] < given_number < numbers[i + 1]:
+                for j in range(i + 2, len(numbers)):
+                    if (numbers[j] - given_number) > margin:
+                        return numbers[i], numbers[j]
+                return numbers[i], None  # In case no suitable upper_bound is found
 
-    return upper_bound
+        return upper_bound
+    except Exception as e:
+        print(f"Error with finding bounds: ", e)
 
 
 
@@ -1248,7 +1257,7 @@ def fast_looping(connection_object, entered_options):
                 unix_timestamp_without_seconds = int(now_without_seconds.timestamp())
                 readable_now_without_seconds = now.replace(second=0, microsecond=0)
 
-                query = "SELECT COUNT(*) FROM time_storage WHERE time_in_minutes = %s;"
+                query = "SELECT COUNT(*) FROM r_time_storage WHERE time_in_minutes = %s;"
                 cursor.execute(query, (unix_timestamp_without_seconds,))
                 count = cursor.fetchone()[0]
                 exists = count > 0
@@ -1258,7 +1267,7 @@ def fast_looping(connection_object, entered_options):
                     continue
                 else:
                     print("Exiting the loop and inserting record...")
-                    insert_query = "INSERT INTO time_storage (time_in_minutes, time_with_seconds, readable_time) VALUES (%s, %s, %s)"
+                    insert_query = "INSERT INTO r_time_storage (time_in_minutes, time_with_seconds, readable_time) VALUES (%s, %s, %s)"
                     values = (unix_timestamp_without_seconds, readable_now_without_seconds, now)
                     cursor.execute(insert_query, values)
                     conn.commit()  # Ensure you commit the transaction

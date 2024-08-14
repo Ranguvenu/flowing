@@ -105,7 +105,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
     # print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>testing")
     # if connection_data:
 
-    #     resultant_option = pickup_fromstream(connection_obj, connection_data)
+    #     resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
     #     print("Resultant option:", resultant_option)
     #     return resultant_option
     # if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -384,7 +384,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                     print("flow_one_three_three_one")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -398,7 +398,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                     print("flow_one_three_three_two")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -425,7 +425,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                         print("flow_one_three_four_one")
                         print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                         if connection_data:
-                            resultant_option = pickup_fromstream(connection_obj, connection_data)
+                            resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                             print("Resultant option:", resultant_option)
                             return resultant_option
                         if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -440,7 +440,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                         print("flow_one_three_four_two")
                         print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                         if connection_data:
-                            resultant_option = pickup_fromstream(connection_obj, connection_data)
+                            resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                             print("Resultant option:", resultant_option)
                             return resultant_option
                         if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -453,7 +453,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                         print("flow_one_three_four_three")
                         print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                         if connection_data:
-                            resultant_option = pickup_fromstream(connection_obj, connection_data)
+                            resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                             print("Resultant option:", resultant_option)
                             return resultant_option
                         if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -607,7 +607,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
                         print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
                         greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     else:
@@ -621,7 +621,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                         print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Confirmed")
                         greenery_recording(payload['current_closing'], timeofcalling, True, 'one')
                         if connection_data:
-                            resultant_option = pickup_fromstream(connection_obj, connection_data)
+                            resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                             print("Resultant option:", resultant_option)
                             return resultant_option
 
@@ -632,7 +632,7 @@ def flowfilter(payload, timeofcalling, connection_data=False, connection_obj=Fal
                     print("flow_one_three_four_three stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -798,7 +798,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_three_one --- stage_four_started")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -812,7 +812,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_three_two --- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -826,7 +826,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_three_three --- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -847,7 +847,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_three_seven --- stage_four Verified")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -869,7 +869,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_five_one ---- stage_four_started")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -883,7 +883,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_one_five_two ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -911,7 +911,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_three_one ---stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -926,7 +926,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_three_two ---stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -947,7 +947,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_three_six ---stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -989,7 +989,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_four_one --stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -1004,7 +1004,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_four_two --stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -1029,7 +1029,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_five_one --stage_three_starts")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -1044,7 +1044,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                 print("flow_two_five_two --stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -1103,7 +1103,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_three_one_seven ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1221,7 +1221,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_two ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1232,7 +1232,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_three ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1243,7 +1243,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_four ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1254,7 +1254,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_five ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1265,7 +1265,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_six ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1276,7 +1276,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_one_seven ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']):
@@ -1296,7 +1296,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_one ---stage_three_started")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                 # flow_two_four_two_two --stage_three
@@ -1304,7 +1304,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_two --stage_three")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1317,7 +1317,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_four --stage_three")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1326,7 +1326,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_five --stage_three")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1335,7 +1335,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_six --stage_three")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1344,7 +1344,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_four_two_seven --stage_three")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1456,7 +1456,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_one  ----stage_four_started")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1465,7 +1465,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_two  ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1474,7 +1474,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_three  ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1483,7 +1483,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_four  ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1492,7 +1492,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_five  ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1501,7 +1501,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_six  ----stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
 
@@ -1510,7 +1510,7 @@ def flow_two(payload, weareat=False, connection_data=False, connection_obj=False
                     print("flow_two_five_two_seven  ----stage_four It's our second flow")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        print('Resultant option for you: ', pickup_fromstream(connection_obj, connection_data))
+                        print('Resultant option for you: ', pickup_fromstream(connection_obj, connection_data, "CE"))
 
 
         if payload['a_three_green'] and payload['a_three_opens'] < payload['a_two_closing']:
@@ -1879,7 +1879,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1898,7 +1898,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_five ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1911,7 +1911,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_six ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1924,7 +1924,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_seven ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1937,7 +1937,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_eight ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1950,7 +1950,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_three_nine ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1967,7 +1967,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_four_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1981,7 +1981,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_four_two ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -1995,7 +1995,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_four_three ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2009,7 +2009,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_four_four ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2033,7 +2033,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_five_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2047,7 +2047,7 @@ def fourth_flow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_four_five_five_two --- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2354,13 +2354,13 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
             if payload['a_four_green'] and payload['a_four_opens'] > payload['a_one_closing']:
                 print("flow_five_three_one -- stage_three_started")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
 
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2373,7 +2373,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_three_two -- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2386,7 +2386,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_three_three -- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2400,7 +2400,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_three_four -- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2423,7 +2423,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_five_one --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
 
@@ -2438,7 +2438,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_five_two -- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2461,7 +2461,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_one --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2474,7 +2474,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_two --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2487,7 +2487,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_three --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2500,7 +2500,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_four --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2513,7 +2513,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_five --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2526,7 +2526,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                 print("flow_five_one_six --- stage_three")
                 print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                 if connection_data:
-                    resultant_option = pickup_fromstream(connection_obj, connection_data)
+                    resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                     print("Resultant option:", resultant_option)
                     return resultant_option
                 if (payload['highest_price_one'] < payload['a_two_opens']):
@@ -2574,7 +2574,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2587,7 +2587,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_two ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2600,7 +2600,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_three ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2613,7 +2613,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_four ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2626,7 +2626,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_five ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2639,7 +2639,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_six ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2652,7 +2652,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_seven ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2669,7 +2669,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_one_ten ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2687,7 +2687,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2706,7 +2706,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_five ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2719,7 +2719,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_six ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2732,7 +2732,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_seven ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2745,7 +2745,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_eight ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2758,7 +2758,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_three_nine ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2775,7 +2775,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_five_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2794,7 +2794,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_five_five ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2807,7 +2807,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_five_six ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2820,7 +2820,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_five_seven ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2838,7 +2838,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_seven_one ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):
@@ -2857,7 +2857,7 @@ def high_fiveflow(payload, time, connection_data=False, connection_obj=False):
                     print("flow_five_six_seven_five ---- stage_four")
                     print("Greening from here>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
                     if connection_data:
-                        resultant_option = pickup_fromstream(connection_obj, connection_data)
+                        resultant_option = pickup_fromstream(connection_obj, connection_data, "CE")
                         print("Resultant option:", resultant_option)
                         return resultant_option
                     if (payload['highest_price_one'] < payload['a_three_opens']) or (payload['highest_price_two'] < payload['a_three_opens']):

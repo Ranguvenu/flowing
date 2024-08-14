@@ -271,10 +271,10 @@ kolkata_timezone = pytz.timezone('Asia/Kolkata')
 
 # print("\nCurrent time in Kolkata (without seconds):", now_without_seconds)
 # print("Unix timestamp in Kolkata (without seconds):", unix_timestamp_without_seconds)
-test = {'id': 15, 'symbol': 'BANKNIFTY31JUL2453700CE', 'bought_at': 15, 'sell_index': 52615, 'lot_price': 15, 'nse_index': '51782.75', 'orderid': '240622000000399', 'status': 'Entered', 'symboltoken': '53792', 'type': 'BUY', 'sell_orderid': None}
+test = {'id': 15, 'symbol': 'BANKNIFTY14AUG2453700CE', 'bought_at': 15, 'sell_index': 52615, 'lot_price': 15, 'nse_index': '51782.75', 'orderid': '240622000000399', 'status': 'Entered', 'symboltoken': '53792', 'type': 'BUY', 'sell_orderid': None}
 # print(test['symbol'])
 
-{'id': 15, 'symbol': 'BANKNIFTY31JUL2453700CE', 'bought_at': 15, 'sell_index': 52615, 'lot_price': 15, 'nse_index': '51782.75', 'orderid': '240622000000399', 'status': 'Entered', 'symboltoken': '53792', 'type': 'BUY', 'sell_orderid': None}
+{'id': 15, 'symbol': 'BANKNIFTY14AUG2453700CE', 'bought_at': 15, 'sell_index': 52615, 'lot_price': 15, 'nse_index': '51782.75', 'orderid': '240622000000399', 'status': 'Entered', 'symboltoken': '53792', 'type': 'BUY', 'sell_orderid': None}
 
         # orderparams = {
         #     "variety": "NORMAL",
@@ -295,10 +295,10 @@ def option_order_record(obj, order_details={}, transaction_type="BUY", current_i
     # print(order_details)
     # exit()
     order_details = {
-        'symbol' : "BANKNIFTY31JUL2452800CE",
+        'symbol' : "BANKNIFTY14AUG2452800CE",
         'token' : 53770
     }
-    # order_details['symbol'] = "BANKNIFTY31JUL2452800CE"
+    # order_details['symbol'] = "BANKNIFTY14AUG2452800CE"
     # order_details['token'] = 53770
     try:
         orderparams = {
@@ -469,7 +469,7 @@ def best_option_fromlive(response_data, forname=False):
     return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_value/15}
 
 
-token_and_symbolname = {'53778': 'BANKNIFTY31JUL2453200CE', '53776': 'BANKNIFTY31JUL2453100CE', '53774': 'BANKNIFTY31JUL2453000CE', '53772': 'BANKNIFTY31JUL2452900CE', '53770': 'BANKNIFTY31JUL2452800CE', '53768': 'BANKNIFTY31JUL2452700CE', '53766': 'BANKNIFTY31JUL2452600CE', '53764': 'BANKNIFTY31JUL2452500CE', '53762': 'BANKNIFTY31JUL2452400CE', '53760': 'BANKNIFTY31JUL2452300CE', '53758': 'BANKNIFTY31JUL2452200CE', '53756': 'BANKNIFTY31JUL2452100CE'}
+token_and_symbolname = {'53778': 'BANKNIFTY14AUG2453200CE', '53776': 'BANKNIFTY14AUG2453100CE', '53774': 'BANKNIFTY14AUG2453000CE', '53772': 'BANKNIFTY14AUG2452900CE', '53770': 'BANKNIFTY14AUG2452800CE', '53768': 'BANKNIFTY14AUG2452700CE', '53766': 'BANKNIFTY14AUG2452600CE', '53764': 'BANKNIFTY14AUG2452500CE', '53762': 'BANKNIFTY14AUG2452400CE', '53760': 'BANKNIFTY14AUG2452300CE', '53758': 'BANKNIFTY14AUG2452200CE', '53756': 'BANKNIFTY14AUG2452100CE'}
 token_and_price = [{'53770': 224.0}, {'53760': 440.0}, {'53774': 172.15}, {'53764': 340.85}, {'53772': 194.15}, {'53762': 392.85}, {'53778': 129.85}, {'53756': 567.3}, {'53768': 260.0}, {'53776': 147.95}, {'53766': 300.0}]
 
 # test = best_option_fromlive(token_and_price, token_and_symbolname)
@@ -502,7 +502,7 @@ def ranger_options(obj):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "31JUL24"
+        validate = "14AUG24"
         type = 'CE'
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -519,62 +519,62 @@ import mysql.connector
 
 # Data from the JSON structure
 data = {
-    "35164": "BANKNIFTY31JUL2454900CE",
-    "35792": "BANKNIFTY31JUL2454800CE",
-    "35681": "BANKNIFTY31JUL2454700CE",
-    "35661": "BANKNIFTY31JUL2454600CE",
-    "53798": "BANKNIFTY31JUL2454500CE",
-    "35578": "BANKNIFTY31JUL2454400CE",
-    "35457": "BANKNIFTY31JUL2454300CE",
-    "35453": "BANKNIFTY31JUL2454200CE",
-    "35450": "BANKNIFTY31JUL2454100CE",
-    "53796": "BANKNIFTY31JUL2454000CE",
-    "35393": "BANKNIFTY31JUL2453900CE",
-    "53794": "BANKNIFTY31JUL2453800CE",
-    "53792": "BANKNIFTY31JUL2453700CE",
-    "53790": "BANKNIFTY31JUL2453600CE",
-    "53788": "BANKNIFTY31JUL2453500CE",
-    "53785": "BANKNIFTY31JUL2453400CE",
-    "53782": "BANKNIFTY31JUL2453300CE",
-    "53778": "BANKNIFTY31JUL2453200CE",
-    "53776": "BANKNIFTY31JUL2453100CE",
-    "53774": "BANKNIFTY31JUL2453000CE",
-    "53772": "BANKNIFTY31JUL2452900CE",
-    "53770": "BANKNIFTY31JUL2452800CE",
-    "53768": "BANKNIFTY31JUL2452700CE",
-    "53766": "BANKNIFTY31JUL2452600CE",
-    "53764": "BANKNIFTY31JUL2452500CE",
-    "53762": "BANKNIFTY31JUL2452400CE",
-    "53760": "BANKNIFTY31JUL2452300CE",
-    "53758": "BANKNIFTY31JUL2452200CE",
-    "53756": "BANKNIFTY31JUL2452100CE",
-    "53754": "BANKNIFTY31JUL2452000CE",
-    "53752": "BANKNIFTY31JUL2451900CE",
-    "53750": "BANKNIFTY31JUL2451800CE",
-    "53748": "BANKNIFTY31JUL2451700CE",
-    "53746": "BANKNIFTY31JUL2451600CE",
-    "53744": "BANKNIFTY31JUL2451500CE",
-    "53742": "BANKNIFTY31JUL2451400CE",
-    "53740": "BANKNIFTY31JUL2451300CE",
-    "53736": "BANKNIFTY31JUL2451200CE",
-    "53732": "BANKNIFTY31JUL2451100CE",
-    "53728": "BANKNIFTY31JUL2451000CE",
-    "53726": "BANKNIFTY31JUL2450900CE",
-    "53722": "BANKNIFTY31JUL2450800CE",
-    "53720": "BANKNIFTY31JUL2450700CE",
-    "53718": "BANKNIFTY31JUL2450600CE",
-    "53716": "BANKNIFTY31JUL2450500CE",
-    "53714": "BANKNIFTY31JUL2450400CE",
-    "53712": "BANKNIFTY31JUL2450300CE",
-    "53710": "BANKNIFTY31JUL2450200CE",
-    "53708": "BANKNIFTY31JUL2450100CE",
-    "53705": "BANKNIFTY31JUL2450000CE",
-    "53702": "BANKNIFTY31JUL2449900CE",
-    "53700": "BANKNIFTY31JUL2449800CE"
+    "35164": "BANKNIFTY14AUG2454900CE",
+    "35792": "BANKNIFTY14AUG2454800CE",
+    "35681": "BANKNIFTY14AUG2454700CE",
+    "35661": "BANKNIFTY14AUG2454600CE",
+    "53798": "BANKNIFTY14AUG2454500CE",
+    "35578": "BANKNIFTY14AUG2454400CE",
+    "35457": "BANKNIFTY14AUG2454300CE",
+    "35453": "BANKNIFTY14AUG2454200CE",
+    "35450": "BANKNIFTY14AUG2454100CE",
+    "53796": "BANKNIFTY14AUG2454000CE",
+    "35393": "BANKNIFTY14AUG2453900CE",
+    "53794": "BANKNIFTY14AUG2453800CE",
+    "53792": "BANKNIFTY14AUG2453700CE",
+    "53790": "BANKNIFTY14AUG2453600CE",
+    "53788": "BANKNIFTY14AUG2453500CE",
+    "53785": "BANKNIFTY14AUG2453400CE",
+    "53782": "BANKNIFTY14AUG2453300CE",
+    "53778": "BANKNIFTY14AUG2453200CE",
+    "53776": "BANKNIFTY14AUG2453100CE",
+    "53774": "BANKNIFTY14AUG2453000CE",
+    "53772": "BANKNIFTY14AUG2452900CE",
+    "53770": "BANKNIFTY14AUG2452800CE",
+    "53768": "BANKNIFTY14AUG2452700CE",
+    "53766": "BANKNIFTY14AUG2452600CE",
+    "53764": "BANKNIFTY14AUG2452500CE",
+    "53762": "BANKNIFTY14AUG2452400CE",
+    "53760": "BANKNIFTY14AUG2452300CE",
+    "53758": "BANKNIFTY14AUG2452200CE",
+    "53756": "BANKNIFTY14AUG2452100CE",
+    "53754": "BANKNIFTY14AUG2452000CE",
+    "53752": "BANKNIFTY14AUG2451900CE",
+    "53750": "BANKNIFTY14AUG2451800CE",
+    "53748": "BANKNIFTY14AUG2451700CE",
+    "53746": "BANKNIFTY14AUG2451600CE",
+    "53744": "BANKNIFTY14AUG2451500CE",
+    "53742": "BANKNIFTY14AUG2451400CE",
+    "53740": "BANKNIFTY14AUG2451300CE",
+    "53736": "BANKNIFTY14AUG2451200CE",
+    "53732": "BANKNIFTY14AUG2451100CE",
+    "53728": "BANKNIFTY14AUG2451000CE",
+    "53726": "BANKNIFTY14AUG2450900CE",
+    "53722": "BANKNIFTY14AUG2450800CE",
+    "53720": "BANKNIFTY14AUG2450700CE",
+    "53718": "BANKNIFTY14AUG2450600CE",
+    "53716": "BANKNIFTY14AUG2450500CE",
+    "53714": "BANKNIFTY14AUG2450400CE",
+    "53712": "BANKNIFTY14AUG2450300CE",
+    "53710": "BANKNIFTY14AUG2450200CE",
+    "53708": "BANKNIFTY14AUG2450100CE",
+    "53705": "BANKNIFTY14AUG2450000CE",
+    "53702": "BANKNIFTY14AUG2449900CE",
+    "53700": "BANKNIFTY14AUG2449800CE"
 }
 
 # Additional value to be inserted in all rows
-validate_value = '31JUL24'
+validate_value = '14AUG24'
 
 def option_seeding(data, validate_value):
     db_config = {
@@ -621,7 +621,7 @@ def get_valid_options():
 
         # Prepare SQL query
         sql = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
-        validate_value = '31JUL24'
+        validate_value = '14AUG24'
         cursor.execute(sql, (validate_value,))
 
         # Fetch all rows
@@ -662,7 +662,7 @@ def get_valid_options():
 
         # Prepare SQL query to retrieve data
         sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s"
-        validate_value = '31JUL24'
+        validate_value = '14AUG24'
         cursor.execute(sql_select, (validate_value,))
 
         # Fetch all rows

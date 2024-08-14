@@ -25,7 +25,7 @@ connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(
 
 # orderparams = {
 #     "variety": "NORMAL",
-#     "tradingsymbol": "BANKNIFTY31JUL2453700CE",
+#     "tradingsymbol": "BANKNIFTY14AUG2453700CE",
 #     "symboltoken": 53792,
 #     "transactiontype": "SELL",
 #     "exchange": "NFO",
@@ -57,7 +57,7 @@ def ranger_options(obj, type= "CE"):
 
     while i <= 51:
         symbol_name = "BANKNIFTY"
-        validate = "31JUL24"
+        validate = "14AUG24"
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
         range_starts += 100
@@ -106,7 +106,7 @@ def option_seeding(data, validate_value, type="CE"):
         cursor = conn.cursor()
 
         # Prepare SQL query with the type column
-        sql = "INSERT INTO inrange_options (symbol, token, validate, type) VALUES (%s, %s, %s, %s)"
+        sql = "INSERT INTO r_inrange_options (symbol, token, validate, type) VALUES (%s, %s, %s, %s)"
 
         # Iterate through data and execute the query
         for token, symbol in data.items():
@@ -114,7 +114,7 @@ def option_seeding(data, validate_value, type="CE"):
 
         # Commit changes
         conn.commit()
-        print(cursor.rowcount, "record(s) inserted successfully into inrange_options")
+        print(cursor.rowcount, "record(s) inserted successfully into r_inrange_options")
 
     except mysql.connector.Error as error:
         print("Error inserting data into MySQL table:", error)
@@ -125,7 +125,7 @@ def option_seeding(data, validate_value, type="CE"):
             conn.close()
             print("MySQL connection is closed")
 
-options, validate = ranger_options_tokens(connecting_object, "CE")
+options, validate = ranger_options_tokens(connecting_object, "PE")
 
-print(option_seeding(options, validate, "CE"))
+print(option_seeding(options, validate, "PE"))
 exit()

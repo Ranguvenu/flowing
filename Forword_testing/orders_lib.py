@@ -1,6 +1,8 @@
 from mysql.connector import Error
 from logzero import logger
 import mysql.connector
+from SmartApi import SmartConnect
+from SmartApi.smartWebSocketV2 import SmartWebSocketV2
 
 
 def option_order(obj, order_details, transaction_type="BUY"):
@@ -49,9 +51,7 @@ def sell_at(current_index_at = 48555):
 # order_detailss = {}
 # order_detailss['symbol'] = "BANKNIFTY26JUN2452000CE"
 # order_detailss['token'] = "56100"
-def option_order_record(obj, order_details, transaction_type="BUY", current_index=51150, sell_index=15):
-    # print(order_details)
-    # exit()
+def option_order_record(obj, order_details, transaction_type="BUY", current_index=51150, sell_index=15, option_type="CE"):
     try:
         orderparams = {
             "variety": "NORMAL",
@@ -67,16 +67,12 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
             "stoploss": 0,
             "quantity": 15
         }
-        orderid = obj.placeOrder(orderparams)
 
         # Method 2: Place an order and return the full response
         response = obj.placeOrderFullResponse(orderparams)
-
         logger.info(f"PlaceOrder : {response['data']['script']}")
         if transaction_type == "SELL":
-
             # Update records with reference "symbol"
-
             db_config = {
                 'host': 'localhost',
                 'user': 'root',
@@ -86,15 +82,17 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
 
             update_data = (
                 response['data']['orderid'],
-                sell_index,  # Assuming sell_at is a defined function
                 current_index,
                 15,  # bought_at
                 15,  # lot_price
                 'Achieved',
                 order_details['token'],
                 transaction_type,
-                order_details['symbol']
+                order_details['symbol'],
+                option_type
             )
+            # print(update_data)
+            # exit()
 
             try:
                 conn = mysql.connector.connect(**db_config)
@@ -103,12 +101,10 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
                 # Update query
                 update_query = """
                 UPDATE order_records
-                SET sell_orderid = %s, sell_index = %s, nse_index = %s, bought_at = %s, lot_price = %s, status = %s, token = %s, type = %s
-                WHERE symbol = %s AND sell_orderid IS NULL
+                SET sell_orderid = %s, nse_index = %s, bought_at = %s, lot_price = %s, status = %s, token = %s, type = %s
+                WHERE symbol = %s AND sell_orderid IS NULL AND option_type = %s
                 """
 
-                # Example update_data, make sure this matches your actual data
-                # update_data should be a tuple with the values in the correct order
                 # Execute the update query
                 cursor.execute(update_query, update_data)
 
@@ -118,6 +114,9 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
             except Exception as e:
                 logger.error(f"Error: {e}")
                 print('error:', e)
+            finally:
+                cursor.close()
+                conn.close()
         else:
             db_config = {
                 'host': 'localhost',
@@ -135,22 +134,28 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
                 15,  # lot_price
                 'Entered',
                 order_details['token'],
-                transaction_type
+                transaction_type,
+                option_type
             )
 
-            # Insert the data into the database
-            conn = mysql.connector.connect(**db_config)
-            cursor = conn.cursor()
-            insert_query = """
-            INSERT INTO order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """
-            cursor.execute(insert_query, insert_data)
-            conn.commit()
-            cursor.close()
-            conn.close()
-        # return response
+            try:
+                conn = mysql.connector.connect(**db_config)
+                cursor = conn.cursor()
+                insert_query = """
+                INSERT INTO order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type, option_type)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """
+                cursor.execute(insert_query, insert_data)
+                conn.commit()
+            except Exception as e:
+                logger.error(f"Error: {e}")
+                print('error:', e)
+            finally:
+                cursor.close()
+                conn.close()
     except Exception as e:
+        print("orderparams::", orderparams)
         logger.error(f"Error: {e}")
-        print('error:', e)
+        print('error::', e)
+        exit()
 

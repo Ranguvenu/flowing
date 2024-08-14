@@ -16,13 +16,10 @@ I = 0
 BEST_OPTION = None
 TOKENS_WITHNAMES = None
 
-def pickup_fromstream(obj=False, data=False, type  = "CE"):
+def pickup_fromstream(obj=False, data=False, type = False):
     global TOKENS_WITHNAMES
     global I
-
-
-
-    # captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
+    print()
 
     if obj == False or data == False:
         obj = SmartConnect(api_key="yWjMIfbo")
@@ -71,9 +68,12 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
             TOKENS.append(token)
             OPTION_LTP.append({token: last_traded_price / 100})
             I += 1
+
+            print("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII::", I)
             if I >= 49:
                 print('option_ltplist:', OPTION_LTP)
                 close_connection()
+                TOKENS = []
                 # print("best option", best_option_fromlive(OPTION_LTP))
                 print('token names:', TOKENS_WITHNAMES)
                 BEST_OPTION = best_option_fromlive(OPTION_LTP, TOKENS_WITHNAMES)
@@ -84,6 +84,11 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
             return best_option_fromlive(OPTION_LTP)
+        else:
+            print("RESPONSE_DATA::", RESPONSE_DATA)
+            print("TOKENS::", TOKENS)
+            print("Check it. Looks like out of the loop:")
+            exit()
 
     # Initialize received_tokens as an empty set
 
@@ -141,7 +146,7 @@ def get_valid_options(option_type="CE"):
 
         # Prepare SQL query to retrieve data
         sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
-        validate_value = '31JUL24'
+        validate_value = '14AUG24'
         cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
@@ -216,7 +221,7 @@ def ranger_options(obj, type = 'CE'):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "31JUL24"
+        validate = "14AUG24"
 
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type

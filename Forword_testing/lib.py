@@ -51,8 +51,6 @@ def forword_testing(connection_object, current_time, history_time, connection_da
                 print('the error is:')
                 print(f"Error while selling: {e}")
                 exit()
-
-
             if not current:
                 print("this is current params:", current_params)
                 print("this is current:", current)
@@ -77,23 +75,19 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_object)
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            variables = [bear_onev, bear_twov, bear_threev]
+            bears = [bear_onev, bear_twov, bear_threev]
+            bears = [item for item in bears if item is not None]
 
-            print("variables:::::", variables)
-            for var in variables:
-                print("var of variable:", var)
-                if var is not None:
-                    # print("IF Not none:", var)
-                    # exit()
-                    bounds = [51966.51, 52186.93, 52460.21, 52701.59, 52998.74, 53182.99]
+            print("bears:::::", bears)
+            for bear in bears:
+                print("var of Bear:", bear)
 
-                    lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
-                    # print(upper_bound)
-                    # print(Historion['current_closing'])
-                    # exit()
-                    option_order_response = option_order_record(connection_object, var, "BUY", Historion['current_closing'], upper_bound)
+                if bear is not None:
+                    bounds = [49700.51, 49800.93, 49900.21, 50000.59, 50100.74, 50200.99]
+                    lower_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+
+                    option_order_response = option_order_record(connection_object, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
                     print("option_order_response::", option_order_response)
-                    # exit()
                     # if var > 0:
                     #     if var not in index_targets:
                     #         index_targets.append(var)
@@ -107,7 +101,8 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             #     fast_looping(connection_object, entered_options, Historion['current_closing'])
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+            # print('Checking:')
+            # exit()
             # holdings = False
             # if flowfilterv or flow_twov or fourth_flowv or high_fiveflowv or holdings:
             # sleep_time = next_fivemloop_inseconds()
@@ -508,14 +503,16 @@ def fast_looping(connection_object, entered_options, ltp=None):
             exit()
 
 def find_bounds(numbers, given_number, margin):
-    lower_bound = None
-    upper_bound = None
+    try:
+        lower_bound = None
+        upper_bound = None
 
-    for i in range(len(numbers) - 1):
-        if numbers[i] < given_number < numbers[i + 1]:
-            for j in range(i + 2, len(numbers)):
-                if (numbers[j] - given_number) > margin:
-                    return numbers[i], numbers[j]
-            return numbers[i], None  # In case no suitable upper_bound is found
-
-    return upper_bound
+        for i in range(len(numbers) - 1):
+            if numbers[i] < given_number < numbers[i + 1]:
+                for j in range(i + 2, len(numbers)):
+                    if (numbers[j] - given_number) > margin:
+                        return numbers[i], numbers[j]
+                return numbers[i], None  # In case no suitable upper_bound is found
+        return upper_bound
+    except Exception as e:
+        print(f"Error with finding bounds: ", e)

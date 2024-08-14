@@ -104,7 +104,7 @@ def sell_at(current_index_at):
 
 #                 # Update query
 #                 update_query = """
-#                 UPDATE order_records
+#                 UPDATE r_order_records
 #                 SET sell_orderid = %s, sell_index = %s, nse_index = %s, bought_at = %s, lot_price = %s, status = %s, token = %s, type = %s
 #                 WHERE symbol = %s AND sell_orderid IS NULL AND option_type = %s
 #                 """
@@ -146,7 +146,7 @@ def sell_at(current_index_at):
 #                 conn = mysql.connector.connect(**db_config)
 #                 cursor = conn.cursor()
 #                 insert_query = """
-#                 INSERT INTO order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type, option_type)
+#                 INSERT INTO r_order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type, option_type)
 #                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 #                 """
 #                 cursor.execute(insert_query, insert_data)
@@ -214,7 +214,7 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
 
                 # Update query
                 update_query = """
-                UPDATE order_records
+                UPDATE r_order_records
                 SET sell_orderid = %s, nse_index = %s, bought_at = %s, lot_price = %s, status = %s, token = %s, type = %s
                 WHERE symbol = %s AND sell_orderid IS NULL AND option_type = %s
                 """
@@ -256,7 +256,7 @@ def option_order_record(obj, order_details, transaction_type="BUY", current_inde
                 conn = mysql.connector.connect(**db_config)
                 cursor = conn.cursor()
                 insert_query = """
-                INSERT INTO order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type, option_type)
+                INSERT INTO r_order_records (symbol, orderid, sell_index, nse_index, bought_at, lot_price, status, token, type, option_type)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 """
                 cursor.execute(insert_query, insert_data)

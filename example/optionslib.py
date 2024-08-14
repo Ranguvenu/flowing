@@ -19,8 +19,6 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
     global TOKENS_WITHNAMES
     global I
 
-
-
     # captured_output = sys.stdout = sys.stderr = open('alive/entries.txt', 'a')
 
     if obj == False or data == False:
@@ -73,6 +71,7 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
             if I >= 49:
                 I = 0
                 close_connection()
+                TOKENS = []
                 # print("best option", best_option_fromlive(OPTION_LTP))
 
                 BEST_OPTION = best_option_fromlive(OPTION_LTP, TOKENS_WITHNAMES)
@@ -83,7 +82,9 @@ def pickup_fromstream(obj=False, data=False, type  = "CE"):
             close_connection()
             print("best option", best_option_fromlive(OPTION_LTP))
             return best_option_fromlive(OPTION_LTP)
-
+        else:
+            print("Please check, Got out of the stream loop::")
+            exit()
 
 
     # Initialize received_tokens as an empty set
@@ -144,8 +145,8 @@ def get_valid_options(option_type= False):
         cursor = conn.cursor()
 
         # Prepare SQL query to retrieve data
-        sql_select = "SELECT token, symbol FROM inrange_options WHERE validate = %s AND type = %s"
-        validate_value = '31JUL24'
+        sql_select = "SELECT token, symbol FROM r_inrange_options WHERE validate = %s AND type = %s"
+        validate_value = '14AUG24'
         cursor.execute(sql_select, (validate_value, option_type))
 
         # Fetch all rows
@@ -192,24 +193,28 @@ def ranger_options_tokens(obj):
 
 
 def best_option_fromlive(response_data, forname=False):
-    closest_key = None
-    closest_value = None
-    closest_shareprice = None
+    try:
+        closest_key = None
+        closest_value = None
+        closest_shareprice = None
 
-    target_value = 2700
+        target_value = 2700
 
-    for item in response_data:
-        for key, value in item.items():
-            multiplied_value = value * 15
-            if multiplied_value <= target_value:
-                if closest_value is None or multiplied_value > closest_value:
-                    closest_key = key
-                    closest_value = multiplied_value
-                    closest_shareprice = value
-    if closest_key is not None:
-        return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
-    else:
-        return None
+        for item in response_data:
+            for key, value in item.items():
+                multiplied_value = value * 15
+                if multiplied_value <= target_value:
+                    if closest_value is None or multiplied_value > closest_value:
+                        closest_key = key
+                        closest_value = multiplied_value
+                        closest_shareprice = value
+        if closest_key is not None:
+            return {'token': closest_key, 'price': closest_value, 'symbol': forname[closest_key], 'shareprice': closest_shareprice}
+        else:
+            return None
+    except Exception as e:
+        print("Error with finding best option: ", e)
+
 def ranger_options(obj, type = 'CE'):
 
     banknifty_ltp = obj.ltpData("NSE", "BANKNIFTY", 99926009)
@@ -222,7 +227,7 @@ def ranger_options(obj, type = 'CE'):
 
     while i <= 11:
         symbol_name = "BANKNIFTY"
-        validate = "31JUL24"
+        validate = "14AUG24"
 
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -259,7 +264,7 @@ def get_entered_options():
         cursor = connection.cursor()
 
         # Define the query to fetch records with status "Entered"
-        query = "SELECT * FROM order_records WHERE status = 'Entered'"
+        query = "SELECT * FROM r_order_records WHERE status = 'Entered'"
         # Execute the query
         cursor.execute(query)
 
