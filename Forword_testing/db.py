@@ -5,6 +5,7 @@ from datetime import datetime
 def greenery_recording(ltp, time, confirmation=False, flow_type=False, strategy_address=False):
     timeto_inix = datetime.strptime(time, "%Y-%m-%d %H:%M")
     day = timeto_inix.strftime("%A")  # Get the day from the datetime
+
     db_config = {
         'host': 'localhost',
         'user': 'root',

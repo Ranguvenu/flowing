@@ -10,8 +10,8 @@ from lib import *
 
 connecting_object = SmartConnect(api_key="yWjMIfbo")
 # data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
-history_date = "2024-08-07 09:30:00"
-current_date = "2024-08-07 09:35:00"
+history_date = "2024-08-21 14:30:00"
+current_date = "2024-08-21 14:35:00"
 # dates =
 connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(token).now())
 #------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(
 
 # orderparams = {
 #     "variety": "NORMAL",
-#     "tradingsymbol": "BANKNIFTY14AUG2453700CE",
+#     "tradingsymbol": "BANKNIFTY28AUG2453700CE",
 #     "symboltoken": 53792,
 #     "transactiontype": "SELL",
 #     "exchange": "NFO",
@@ -55,7 +55,7 @@ def ranger_options(obj, type = 'CE'):
 
     while i <= 51:
         symbol_name = "BANKNIFTY"
-        validate = "14AUG24"
+        validate = "28AUG24"
 
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
@@ -128,7 +128,7 @@ def option_seeding(data, validate_value):
 # exit()
 
 
-# params = {'variety': 'NORMAL', 'tradingsymbol': 'BANKNIFTY14AUG2450100PE', 'symboltoken': '54944', 'transactiontype': 'BUY', 'exchange': 'NFO', 'ordertype': 'MARKET', 'producttype': 'CARRYFORWARD', 'duration': 'DAY', 'price': '0', 'squareoff': 0, 'stoploss': 0, 'quantity': 15}
+# params = {'variety': 'NORMAL', 'tradingsymbol': 'BANKNIFTY28AUG2450100PE', 'symboltoken': '54944', 'transactiontype': 'BUY', 'exchange': 'NFO', 'ordertype': 'MARKET', 'producttype': 'CARRYFORWARD', 'duration': 'DAY', 'price': '0', 'squareoff': 0, 'stoploss': 0, 'quantity': 15}
 # resp = connecting_object.placeOrderFullResponse(params)
 # print(resp)
 # exit()

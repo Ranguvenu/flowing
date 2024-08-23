@@ -25,7 +25,7 @@ connection_data = connecting_object.generateSession('V280771', 4562, pyotp.TOTP(
 
 # orderparams = {
 #     "variety": "NORMAL",
-#     "tradingsymbol": "BANKNIFTY14AUG2453700CE",
+#     "tradingsymbol": "BANKNIFTY28AUG2453700CE",
 #     "symboltoken": 53792,
 #     "transactiontype": "SELL",
 #     "exchange": "NFO",
@@ -57,7 +57,7 @@ def ranger_options(obj, type= "CE"):
 
     while i <= 51:
         symbol_name = "BANKNIFTY"
-        validate = "14AUG24"
+        validate = "28AUG24"
 
         options_inrange["option_" + spell_integer_two(i)] = symbol_name + validate + str(range_starts) + type
         range_starts += 100

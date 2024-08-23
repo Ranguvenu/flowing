@@ -678,26 +678,31 @@ def stream_into_flow(connection_obj, connection_data):
         bears = [bear_onev, bear_twov, bear_threev]
         bulls = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
         bulls = [item for item in bulls if item is not None]
+        bears = [item for item in bears if item is not None]
         print("Bulls:::::", bulls)
         print("Bears:::::", bears)
-        bears = [item for item in bears if item is not None]
-        for bear in bears:
-            if bear is not None:
-                print("bear of variable:", bear)
-                bounds = [50595.88, 508331.11, 51033.42, 51349.26, 51769.07, 52066.61]
-                lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+        try:
+            for bear in bears:
+                if bear is not None:
+                    print("bear of variable:", bear)
+                    bounds = [50403, 50436, 50720, 50859, 50983, 51175, 51354, 51553, 51828]
 
-                option_order_response = option_order_record(connection_obj, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
-                print("option_order_response::", option_order_response)
+                    lower_bound = find_lower_bound(bounds, Historion['current_closing'], margin = 51)
 
-        for var in bulls:
-            if var is not None:
-                print("var of variable:", var)
-                bounds = [50595.88, 508331.11, 51033.42, 51349.26, 51769.07, 52066.61]
-                lower_bound, upper_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
-
-                option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
-                print("option_order_response::", option_order_response)
+                    option_order_response = option_order_record(connection_obj, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
+                    print("option_order_response::", option_order_response)
+        except Exception as e:
+            print(f"Error from bears:{(e)}")
+        try:
+            for var in bulls:
+                if var is not None:
+                    print("var of variable:", var)
+                    bounds = [50403, 50436, 50720, 50859, 50983, 51175, 51354, 51553, 51828]
+                    upper_bound = find_upper_bound(bounds, Historion['current_closing'], margin = 51)
+                    option_order_response = option_order_record(connection_obj, var, "BUY", Historion['current_closing'], upper_bound)
+                    print("option_order_response::", option_order_response)
+        except Exception as e:
+            print(f"Error from bulls:{(e)}")
 
         entered_options = get_entered_options()
         print("entered_options: ", entered_options)
@@ -1130,6 +1135,23 @@ def into_yesterday(past_time_starts_unix_readable):
 #     return BEST_OPTION
 
 
+def find_upper_bound(numbers, given_number, margin):
+    try:
+        for i in range(len(numbers) - 1):
+            if numbers[i] < given_number < numbers[i + 1]:
+                if (numbers[i + 1] - given_number) >= margin:
+                    return numbers[i + 1]
+                else:
+                    # If the difference is less than the margin, continue checking subsequent numbers
+                    for j in range(i + 2, len(numbers)):
+                        if (numbers[j] - given_number) >= margin:
+                            return numbers[j]
+                return None  # No suitable upper_bound found within the margin
+
+        return None  # In case given_number is outside the range of the numbers
+    except Exception as e:
+        print(f"Error with finding upper bound: {e}")
+
 
 
 
@@ -1149,7 +1171,25 @@ def find_bounds(numbers, given_number, margin):
     except Exception as e:
         print(f"Error with finding bounds: ", e)
 
+def find_lower_bound(numbers, given_number, margin):
+    try:
+        lower_bound = None
 
+        for i in range(len(numbers) - 1, 0, -1):
+            if numbers[i] > given_number > numbers[i - 1]:
+                for j in range(i - 1, -1, -1):
+                    if (given_number - numbers[j]) >= margin:
+                        return numbers[j]
+                    lower_bound = numbers[j]
+                return lower_bound
+
+        # If no number satisfies the conditions, return the smallest number if it's within the margin
+        if given_number > numbers[0] and (given_number - numbers[0]) >= margin:
+            return numbers[0]
+
+        return lower_bound
+    except Exception as e:
+        print(f"Error with finding lower bound: ", e)
 
 def fast_looping(connection_object, entered_options):
     conn = mysql.connector.connect(
@@ -1193,9 +1233,10 @@ def fast_looping(connection_object, entered_options):
             ltp = connection_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
             print("current ltp in fast loop: ", ltp)
         except Exception as e:
+            print(f"exiting from here while getting ltp {(e)}")
             print('second try for LTP..')
             ltp = connection_object.ltpData("NSE", "BANKNIFTY", "99926009")['data']['ltp']
-            print(f"exiting from here while getting ltp {(e)}")
+            print(f"LTP by second try is:{(ltp)}")
 
         try:
             for entered_option in entered_options:

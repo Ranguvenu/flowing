@@ -63,11 +63,11 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             # if '2024-07-01 09:35' == current_params['todate']:
             #     print('fdfdfdfffffffffffffffffffff', flowfilterv)
             #Bulls
-            # flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
+            flowfilterv = flowfilter(Historion, current_params['todate'], connection_data, connection_object)
 
-            # flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
-            # fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
-            # high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
+            flow_twov = flow_two(Historion, current_params['todate'], connection_data, connection_object)
+            fourth_flowv = fourth_flow(Historion, current_params['todate'], connection_data, connection_object)
+            high_fiveflowv = high_fiveflow(Historion, current_params['todate'], connection_data, connection_object)
 
             #Bears
             bear_onev = bear_one(Historion, current_params['todate'], connection_data, connection_object)
@@ -75,18 +75,32 @@ def forword_testing(connection_object, current_time, history_time, connection_da
             bear_threev = bear_three(Historion, current_params['todate'], connection_data, connection_object)
 
             #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            bulls = [flowfilterv, flow_twov, fourth_flowv, high_fiveflowv]
+            bulls = [item for item in bulls if item is not None]
+
             bears = [bear_onev, bear_twov, bear_threev]
             bears = [item for item in bears if item is not None]
 
             print("bears:::::", bears)
+            print("Bulls:::::", bulls)
             for bear in bears:
                 print("var of Bear:", bear)
 
                 if bear is not None:
                     bounds = [49700.51, 49800.93, 49900.21, 50000.59, 50100.74, 50200.99]
-                    lower_bound = find_bounds(bounds, Historion['current_closing'], margin = 51)
+                    lower_bound = find_lower_bound(bounds, Historion['current_closing'], margin = 51)
 
                     option_order_response = option_order_record(connection_object, bear, "BUY", Historion['current_closing'], lower_bound, 'PE')
+                    print("option_order_response::", option_order_response)
+
+            for bull in bulls:
+                print("var of Bull:", bull)
+
+                if bull is not None:
+                    bounds = [49700.51, 49800.93, 49900.21, 50000.59, 50100.74, 50200.99]
+                    upper_bound = find_upper_bound(bounds, Historion['current_closing'], margin = 55)
+
+                    option_order_response = option_order_record(connection_object, bull, "BUY", Historion['current_closing'], upper_bound, 'PE')
                     print("option_order_response::", option_order_response)
                     # if var > 0:
                     #     if var not in index_targets:
@@ -516,3 +530,40 @@ def find_bounds(numbers, given_number, margin):
         return upper_bound
     except Exception as e:
         print(f"Error with finding bounds: ", e)
+
+def find_upper_bound(numbers, given_number, margin):
+    try:
+        for i in range(len(numbers) - 1):
+            if numbers[i] < given_number < numbers[i + 1]:
+                if (numbers[i + 1] - given_number) >= margin:
+                    return numbers[i + 1]
+                else:
+                    # If the difference is less than the margin, continue checking subsequent numbers
+                    for j in range(i + 2, len(numbers)):
+                        if (numbers[j] - given_number) >= margin:
+                            return numbers[j]
+                return None  # No suitable upper_bound found within the margin
+
+        return None  # In case given_number is outside the range of the numbers
+    except Exception as e:
+        print(f"Error with finding upper bound: {e}")
+
+def find_lower_bound(numbers, given_number, margin):
+    try:
+        lower_bound = None
+
+        for i in range(len(numbers) - 1, 0, -1):
+            if numbers[i] > given_number > numbers[i - 1]:
+                for j in range(i - 1, -1, -1):
+                    if (given_number - numbers[j]) >= margin:
+                        return numbers[j]
+                    lower_bound = numbers[j]
+                return lower_bound
+
+        # If no number satisfies the conditions, return the smallest number if it's within the margin
+        if given_number > numbers[0] and (given_number - numbers[0]) >= margin:
+            return numbers[0]
+
+        return lower_bound
+    except Exception as e:
+        print(f"Error with finding lower bound: ", e)
